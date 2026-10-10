@@ -1,0 +1,69 @@
+PRIVACY POLICY FOR RACEPING
+
+Effective Date: October 10, 2026
+
+This Privacy Policy governs the collection, use, and sharing of personal information by RacePing, a Discord bot developed by kasey ("Bot Owner", "we", "us"). By using RacePing, you agree to the terms of this Privacy Policy.
+
+1. INFORMATION WE COLLECT
+
+We collect information that you provide to us through your use of the bot, such as:
+- Your Discord user ID and username
+- Server (guild) and channel IDs and names where the bot is used
+- Message content, but only to the extent required to execute bot commands and features
+- Command usage data, such as the frequency of command use
+
+We do not intentionally collect passwords, tokens, email addresses, or other sensitive credentials. Please do not share such information with the bot.
+
+2. HOW WE USE YOUR INFORMATION
+
+We use your information to:
+- Operate and maintain RacePing and provide its features
+- Provide support and respond to your requests
+- Improve the bot, develop new features, and fix bugs
+- Conduct aggregated research and analytics
+- Comply with legal obligations and enforce our Terms of Service
+
+3. SHARING YOUR INFORMATION
+
+We do not sell or share your personal information with third parties for marketing purposes.
+
+We may disclose your information only:
+- In response to legal process or a request from a law enforcement agency or regulatory authority
+- To protect the rights, safety, or integrity of RacePing, its users, or the public
+- As required to comply with Discord's Terms of Service and Community Guidelines
+
+Hosting and infrastructure providers used to run the bot may technically process data (e.g. logs), but only as necessary to provide the service.
+
+4. DATA RETENTION
+
+We retain your information for as long as necessary to provide RacePing's services or as required by law.
+
+- Server settings and configuration data are stored until the bot is removed from the server or an administrator requests deletion.
+- Command logs, if kept, are retained for a limited operational period and then deleted or anonymized.
+- We will delete your information upon your request or when it is no longer needed.
+
+To request deletion, contact us at kaseyowski@proton.me from the Discord account in question and include your user ID and the server ID if relevant.
+
+5. DATA SECURITY
+
+We take reasonable measures to protect your information from unauthorized access, alteration, or destruction. However, no security measure is perfect, and we cannot guarantee the absolute security of your information.
+
+6. CHILDREN'S PRIVACY
+
+RacePing is intended for Discord users who meet Discord's minimum age requirement (13 years old in most regions, higher where required by law). We do not knowingly collect data from children under that age.
+
+7. YOUR RIGHTS
+
+Depending on your location (e.g. EU/EEA under GDPR), you may have the right to access, correct, delete, restrict, or object to processing of your personal data, and to data portability. Contact us at kaseyowski@proton.me to exercise these rights.
+
+8. CHANGES TO THIS POLICY
+
+We may update this Privacy Policy from time to time. We will post the updated policy with a revised effective date. Your continued use of RacePing after changes are posted indicates your acceptance of the revised policy.
+
+9. CONTACT US
+
+If you have any questions or concerns about this Privacy Policy, please contact us at:
+
+Email: kaseyowski@proton.me
+Bot: RacePing
+Developer: kasey

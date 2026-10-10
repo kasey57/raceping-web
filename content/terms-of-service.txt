@@ -1,0 +1,64 @@
+TERMS OF SERVICE AGREEMENT FOR RACEPING
+
+Effective Date: October 10, 2026
+
+This Terms of Service Agreement (the "Agreement") is entered into between kasey ("Bot Owner") and the user ("User") of the RacePing Discord bot (the "Bot").
+
+By using the Bot, the User agrees to be bound by the terms of this Agreement. If the User does not agree to the terms of this Agreement, they should immediately discontinue use of the Bot and remove it from their server.
+
+1. USE OF THE BOT
+
+The Bot Owner grants the User a non-exclusive, non-transferable, limited license to use the Bot for personal or non-commercial purposes on the Discord platform, in accordance with Discord's Terms of Service (https://discord.com/terms) and Community Guidelines (https://discord.com/guidelines).
+
+The User must have permission from a server administrator to add or configure the Bot on a server.
+
+2. PROHIBITED USE
+
+The User may not:
+- Use the Bot in any way that violates applicable laws, rules, or regulations, or infringes upon the rights of any third party
+- Use the Bot to harass, abuse, spam, or harm others
+- Attempt to exploit, reverse-engineer, disrupt, or overload the Bot
+- Use the Bot for any commercial purposes without the express written consent of the Bot Owner
+- Use the Bot to collect other users' data or to circumvent Discord rate limits or restrictions
+
+Violation may result in loss of access to the Bot, including bans from using the Bot on specific servers or globally.
+
+3. AVAILABILITY AND MODIFICATIONS TO THE BOT
+
+The Bot is provided "as is" and "as available". The Bot Owner may modify, suspend, or discontinue the Bot or any feature at any time without notice. The User agrees that the Bot Owner shall not be liable to the User or any third party for any modification, suspension, or discontinuance of the Bot.
+
+We do not guarantee uninterrupted uptime, error-free operation, or preservation of settings and data.
+
+4. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by law, the Bot Owner shall not be liable for any damages arising out of the use or inability to use the Bot, including but not limited to damages for loss of profits, loss of data, or other intangible losses.
+
+5. INTELLECTUAL PROPERTY
+
+The Bot, its code, and all intellectual property rights therein are and shall remain the property of the Bot Owner. The User agrees not to copy, modify, distribute, or create derivative works of the Bot or any portion thereof without the express written consent of the Bot Owner.
+
+6. INDEMNIFICATION
+
+The User agrees to indemnify and hold harmless the Bot Owner, its affiliates, and their respective directors, officers, employees, and agents from any and all claims, damages, liabilities, costs, and expenses, including reasonable attorneys' fees, arising out of the User's use of the Bot or violation of this Agreement.
+
+7. TERMINATION
+
+This Agreement may be terminated by either party at any time for any reason. The User may terminate by removing the Bot and discontinuing all use. The Bot Owner may revoke access at any time. Upon termination, the User must immediately cease all use of the Bot.
+
+8. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with applicable law. Any dispute arising under or in connection with this Agreement should first be addressed by contacting the Bot Owner at kaseyowski@proton.me in an attempt to resolve it informally.
+
+9. ENTIRE AGREEMENT
+
+This Agreement, together with the RacePing Privacy Policy, constitutes the entire agreement between the parties relating to the Bot and supersedes all prior or contemporaneous agreements or representations, whether written or oral, relating to the Bot.
+
+10. CONTACT
+
+For questions about these Terms, contact:
+
+Email: kaseyowski@proton.me
+Bot: RacePing
+Developer: kasey
+
+By using the Bot, the User acknowledges that they have read this Agreement, understand it, and agree to be bound by its terms and conditions.

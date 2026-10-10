@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 
 // OAuth2 invite: bot + slash commands with minimal permissions
@@ -11,6 +12,9 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const ICON_SRC = `${BASE_PATH}/icon.png`;
 const INVITE_URL =
   'https://discord.com/oauth2/authorize?client_id=1558550077948043345&permissions=2147699712&scope=bot+applications.commands';
+
+// TODO: paste your Buy Me a Coffee account link here.
+const BMC_URL = '#';
 
 function SectionTitle({ kicker, title, text }) {
   return (
@@ -218,14 +222,29 @@ export default function Home() {
               <p className="mt-1 text-sm text-zinc-400">{t.contact.discordNote}</p>
             </div>
             <a
-              href="mailto:doxdel27@aol.com"
+              href="mailto:kaseyowski@proton.me"
               className="block rounded-xl border border-white/10 bg-panel p-6 text-center hover:border-brand/50"
             >
               <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.emailLabel}</p>
-              <p className="mt-2 font-display text-2xl font-bold">doxdel27@aol.com</p>
+              <p className="mt-2 font-display text-2xl font-bold">kaseyowski@proton.me</p>
               <p className="mt-1 text-sm text-zinc-400">{t.contact.emailNote}</p>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Support */}
+      <section className="mx-auto max-w-3xl px-4 pb-20">
+        <div className="rounded-2xl border border-white/10 bg-panel px-6 py-12 text-center">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.support.kicker}</p>
+          <h2 className="font-display text-3xl font-extrabold">{t.support.title}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-zinc-400">{t.support.text}</p>
+          <a
+            href={BMC_URL}
+            className="mt-8 inline-block rounded-xl bg-[#FFDD00] px-10 py-3 font-semibold text-black hover:brightness-105"
+          >
+            {t.support.cta}
+          </a>
         </div>
       </section>
 
@@ -251,6 +270,10 @@ export default function Home() {
             {t.footer.rights}
           </p>
           <p>{t.footer.disclaimer}</p>
+          <p className="flex items-center gap-4">
+            <Link href="/terms" className="hover:text-white">{t.footer.terms}</Link>
+            <Link href="/privacy" className="hover:text-white">{t.footer.privacy}</Link>
+          </p>
         </div>
       </footer>
     </div>

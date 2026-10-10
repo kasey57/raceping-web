@@ -98,7 +98,7 @@ export const translations = {
     commands: [
       ['/next [series]', 'Next race weekend'],
       ['/schedule [series]', 'Season calendar'],
-      ['/result [series]', 'Latest session result'],
+      ['/result [series] [class]', 'Latest session result'],
       ['/standings f1 / endurance', 'Standings & leaders'],
       ['/subscribe series', 'DM reminders before sessions'],
       ['/unsubscribe series', 'Stop reminders'],
@@ -152,6 +152,12 @@ export const translations = {
       text: 'Add RacePing to your server and get your first reminder before the next session.',
       cta: 'Add to Server',
     },
+    support: {
+      kicker: 'Support',
+      title: 'Fuel the pit crew',
+      text: 'RacePing is free and always will be. If it ever saved your race weekend, consider buying me a coffee.',
+      cta: 'Buy Me a Coffee',
+    },
     contact: {
       kicker: 'Contact',
       title: 'Talk racing with me',
@@ -164,6 +170,8 @@ export const translations = {
     footer: {
       rights: '© 2026 RacePing. Data: Jolpica, OpenWEC, Blacktop.',
       disclaimer: 'Not affiliated with FIA, Formula 1 or ACO.',
+      terms: 'Terms',
+      privacy: 'Privacy',
     },
   },
 
@@ -258,7 +266,7 @@ export const translations = {
     commands: [
       ['/next [series]', 'Następny weekend wyścigowy'],
       ['/schedule [series]', 'Kalendarz sezonu'],
-      ['/result [series]', 'Wynik ostatniej sesji'],
+      ['/result [series] [class]', 'Wynik ostatniej sesji'],
       ['/standings f1 / endurance', 'Klasyfikacja i liderzy'],
       ['/subscribe series', 'Remindery PW przed sesjami'],
       ['/unsubscribe series', 'Wyłącz remindery'],
@@ -312,6 +320,12 @@ export const translations = {
       text: 'Dodaj RacePing na swój serwer i pierwszy reminder dotrze przed następną sesją.',
       cta: 'Dodaj na serwer',
     },
+    support: {
+      kicker: 'Wsparcie',
+      title: 'Zasponsoruj pit stop',
+      text: 'RacePing jest darmowy i zawsze będzie. Jeśli kiedyś uratował Ci weekend wyścigowy, postaw mi kawę.',
+      cta: 'Postaw kawę',
+    },
     contact: {
       kicker: 'Kontakt',
       title: 'Pogadajmy o wyścigach',
@@ -324,6 +338,8 @@ export const translations = {
     footer: {
       rights: '© 2026 RacePing. Dane: Jolpica, OpenWEC, Blacktop.',
       disclaimer: 'Niepowiązane z FIA, Formułą 1 i ACO.',
+      terms: 'Regulamin',
+      privacy: 'Prywatność',
     },
   },
 };

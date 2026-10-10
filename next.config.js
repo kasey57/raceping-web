@@ -3,6 +3,9 @@ const nextConfig = {
   // Static export: produces a plain `out/` folder (HTML/CSS/JS) that can be
   // uploaded to any shared hosting (cPanel/Plesk) as-is.
   output: 'export',
+  // Emit /terms/index.html instead of /terms.html so routes resolve
+  // on plain static hosts (GitHub Pages, cPanel) without rewrites.
+  trailingSlash: true,
   // next/image optimization needs a Node server; use original files instead.
   images: { unoptimized: true },
   // Project pages live under https://<user>.github.io/<repo> (/...).
