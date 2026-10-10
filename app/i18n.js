@@ -18,6 +18,7 @@ export const translations = {
       features: 'Features',
       commands: 'Commands',
       faq: 'FAQ',
+      contact: 'Contact',
       cta: 'Add to Discord',
       langLabel: 'Language',
     },
@@ -98,7 +99,7 @@ export const translations = {
       ['/next [series]', 'Next race weekend'],
       ['/schedule [series]', 'Season calendar'],
       ['/result [series]', 'Latest session result'],
-      ['/standings [series]', 'Standings or season leaders'],
+      ['/standings f1 / endurance', 'Standings & leaders'],
       ['/subscribe series', 'DM reminders before sessions'],
       ['/unsubscribe series', 'Stop reminders'],
       ['/subscriptions', 'Your subscriptions'],
@@ -151,6 +152,15 @@ export const translations = {
       text: 'Add RacePing to your server and get your first reminder before the next session.',
       cta: 'Add to Server',
     },
+    contact: {
+      kicker: 'Contact',
+      title: 'Talk racing with me',
+      text: 'Running a league, spotted wrong data, or want a feature? Message me directly.',
+      discordLabel: 'Discord',
+      discordNote: 'Fastest way to reach me',
+      emailLabel: 'Email',
+      emailNote: 'For longer stuff',
+    },
     footer: {
       rights: '© 2026 RacePing. Data: Jolpica, OpenWEC, Blacktop.',
       disclaimer: 'Not affiliated with FIA, Formula 1 or ACO.',
@@ -159,7 +169,7 @@ export const translations = {
 
   pl: {
     meta: {
-      title: 'RacePing — kampytu: bot motorsportowy na Discorda',
+      title: 'RacePing — bot motorsportowy na Discorda',
       description:
         'Terminarze, wyniki, klasyfikacje i remindery PW dla F1, WEC, ELMS, Asian Le Mans, Le Mans Cup i IMSA, wprost na Discordzie.',
     },
@@ -168,6 +178,7 @@ export const translations = {
       features: 'Funkcje',
       commands: 'Komendy',
       faq: 'FAQ',
+      contact: 'Kontakt',
       cta: 'Dodaj do Discorda',
       langLabel: 'Język',
     },
@@ -248,7 +259,7 @@ export const translations = {
       ['/next [series]', 'Następny weekend wyścigowy'],
       ['/schedule [series]', 'Kalendarz sezonu'],
       ['/result [series]', 'Wynik ostatniej sesji'],
-      ['/standings [series]', 'Klasyfikacja lub liderzy sezonu'],
+      ['/standings f1 / endurance', 'Klasyfikacja i liderzy'],
       ['/subscribe series', 'Remindery PW przed sesjami'],
       ['/unsubscribe series', 'Wyłącz remindery'],
       ['/subscriptions', 'Twoje subskrypcje'],
@@ -284,7 +295,7 @@ export const translations = {
         a: 'Remindery przychodzą jako prywatne wiadomości, żeby nie zaśmiecać kanałów serwera. Włącz odbieranie PW od członków serwera w ustawieniach prywatności i będą działać.',
       },
       {
-        q: 'Któkie serie są obsługiwane?',
+          q: 'Które serie są obsługiwane?',
         a: 'Formuła 1, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup i IMSA.',
       },
       {
@@ -300,6 +311,15 @@ export const translations = {
       title: 'Gaśnie światło — oglądasz?',
       text: 'Dodaj RacePing na swój serwer i pierwszy reminder dotrze przed następną sesją.',
       cta: 'Dodaj na serwer',
+    },
+    contact: {
+      kicker: 'Kontakt',
+      title: 'Pogadajmy o wyścigach',
+      text: 'Prowadzisz ligę, znalazłeś błąd w danych albo chcesz nową funkcję? Napisz do mnie.',
+      discordLabel: 'Discord',
+      discordNote: 'Najszybszy kontakt',
+      emailLabel: 'Email',
+      emailNote: 'Do dłuższych spraw',
     },
     footer: {
       rights: '© 2026 RacePing. Dane: Jolpica, OpenWEC, Blacktop.',

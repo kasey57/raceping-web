@@ -16,7 +16,7 @@ function SectionTitle({ kicker, title, text }) {
   return (
     <div className="mx-auto mb-12 max-w-2xl text-center">
       <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{kicker}</p>
-      <h2 className="text-3xl font-bold sm:text-4xl">{title}</h2>
+      <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
       {text && <p className="mt-3 text-zinc-400">{text}</p>}
     </div>
   );
@@ -55,6 +55,7 @@ export default function Home() {
             <a href="#features" className="hover:text-white">{t.nav.features}</a>
             <a href="#commands" className="hover:text-white">{t.nav.commands}</a>
             <a href="#faq" className="hover:text-white">{t.nav.faq}</a>
+            <a href="#contact" className="hover:text-white">{t.nav.contact}</a>
           </nav>
           <div className="flex items-center gap-2">
             <LangToggle />
@@ -81,7 +82,7 @@ export default function Home() {
         <p className="mt-6 inline-block rounded-full border border-brand/40 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-red-400">
           {t.hero.badge}
         </p>
-        <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">
+        <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl">
           {t.hero.title1}
           <span className="text-brand">{t.hero.title2}</span>
         </h1>
@@ -202,10 +203,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact */}
+      <section id="contact" className="border-t border-white/10 bg-panel/40">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <SectionTitle
+            kicker={t.contact.kicker}
+            title={t.contact.title}
+            text={t.contact.text}
+          />
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-white/10 bg-panel p-6 text-center">
+              <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.discordLabel}</p>
+              <p className="mt-2 font-display text-2xl font-bold">kasey56</p>
+              <p className="mt-1 text-sm text-zinc-400">{t.contact.discordNote}</p>
+            </div>
+            <a
+              href="mailto:doxdel27@aol.com"
+              className="block rounded-xl border border-white/10 bg-panel p-6 text-center hover:border-brand/50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.emailLabel}</p>
+              <p className="mt-2 font-display text-2xl font-bold">doxdel27@aol.com</p>
+              <p className="mt-1 text-sm text-zinc-400">{t.contact.emailNote}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-2xl border border-brand/30 bg-gradient-to-b from-brand/15 to-transparent px-6 py-14 text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl">{t.final.title}</h2>
+          <h2 className="font-display text-3xl font-extrabold sm:text-4xl">{t.final.title}</h2>
           <p className="mx-auto mt-3 max-w-xl text-zinc-400">{t.final.text}</p>
           <a
             href={INVITE_URL}
