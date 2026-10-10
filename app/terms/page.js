@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import Link from 'next/link';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 import { LegalDoc } from '../LegalDoc';
 
 export const metadata = {
@@ -13,13 +14,12 @@ function readLegal(name) {
 
 export default function TermsPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
-      <Link href="/" className="text-sm text-zinc-400 hover:text-white">
-        ← RacePing
-      </Link>
-      <div className="mt-6">
+    <div className="min-h-screen">
+      <Navbar />
+      <div className="mx-auto max-w-3xl px-4 py-16">
         <LegalDoc text={readLegal('terms-of-service.txt')} />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,20 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import { useLang } from './LanguageProvider';
-
-// OAuth2 invite: bot + slash commands with minimal permissions
-// (View Channel, Send Messages, Embed Links, Mention Everyone, Read History, Use Commands).
-// Same value as basePath in next.config.js; prefixes image URLs that Next.js
-// does not rewrite automatically in a static export.
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-const ICON_SRC = `${BASE_PATH}/icon.png`;
-const INVITE_URL =
-  'https://discord.com/oauth2/authorize?client_id=1558550077948043345&permissions=2147699712&scope=bot+applications.commands';
-
-// TODO: paste your Buy Me a Coffee account link here.
-const BMC_URL = '#';
+import { ICON_SRC, INVITE_URL, BMC_URL } from './site';
 
 function SectionTitle({ kicker, title, text }) {
   return (
@@ -26,52 +16,12 @@ function SectionTitle({ kicker, title, text }) {
   );
 }
 
-function LangToggle() {
-  const { lang, toggle, t } = useLang();
-  return (
-    <button
-      type="button"
-      onClick={toggle}
-      aria-label={t.nav.langLabel}
-      className="flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-2 text-sm font-medium text-zinc-200 hover:border-white/30"
-    >
-      <span className={lang === 'en' ? 'text-white' : 'text-zinc-500'}>EN</span>
-      <span className="text-zinc-600">/</span>
-      <span className={lang === 'pl' ? 'text-white' : 'text-zinc-500'}>PL</span>
-    </button>
-  );
-}
-
 export default function Home() {
   const { t } = useLang();
 
   return (
     <div className="min-h-screen">
-      {/* Nav */}
-      <header className="sticky top-0 z-10 border-b border-white/10 bg-carbon/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-          <a href="#top" className="flex items-center gap-2 font-bold">
-            <Image src={ICON_SRC} alt="RacePing" width={32} height={32} className="rounded-full" />
-            RacePing
-          </a>
-          <nav className="hidden items-center gap-6 text-sm text-zinc-300 md:flex">
-            <a href="#series" className="hover:text-white">{t.nav.series}</a>
-            <a href="#features" className="hover:text-white">{t.nav.features}</a>
-            <a href="#commands" className="hover:text-white">{t.nav.commands}</a>
-            <a href="#faq" className="hover:text-white">{t.nav.faq}</a>
-            <a href="#contact" className="hover:text-white">{t.nav.contact}</a>
-          </nav>
-          <div className="flex items-center gap-2">
-            <LangToggle />
-            <a
-              href={INVITE_URL}
-              className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
-            >
-              {t.nav.cta}
-            </a>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero */}
       <section id="top" className="mx-auto max-w-6xl px-4 pb-16 pt-20 text-center sm:pt-28">
@@ -263,19 +213,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-sm text-zinc-500 sm:flex-row">
-          <p className="flex items-center gap-2">
-            <Image src={ICON_SRC} alt="" width={20} height={20} className="rounded-full" />
-            {t.footer.rights}
-          </p>
-          <p>{t.footer.disclaimer}</p>
-          <p className="flex items-center gap-4">
-            <Link href="/terms" className="hover:text-white">{t.footer.terms}</Link>
-            <Link href="/privacy" className="hover:text-white">{t.footer.privacy}</Link>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
