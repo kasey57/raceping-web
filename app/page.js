@@ -168,7 +168,7 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl border border-white/10 bg-panel p-6 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.discordLabel}</p>
-              <p className="mt-2 font-display text-2xl font-bold">kasey56</p>
+              <p className="mt-2 font-display text-2xl font-bold">kaseyowski</p>
               <p className="mt-1 text-sm text-zinc-400">{t.contact.discordNote}</p>
             </div>
             <a
