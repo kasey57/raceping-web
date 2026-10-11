@@ -106,7 +106,7 @@ export const translations = {
       },
       {
         title: 'Free & Open Data',
-        text: 'Powered by open racing data (Jolpica, OpenWEC, Blacktop). No paywalls, no accounts.',
+        text: 'Powered by racing APIs and official championship tables. No paywalls, no accounts.',
       },
     ],
     commands: [
@@ -115,7 +115,7 @@ export const translations = {
       ['/schedule [series]', 'Next weekend hour-by-hour timetable'],
       ['/timezone [zone]', 'Display timezone for race times'],
       ['/result [series]', 'Latest session result'],
-      ['/standings f1 / endurance', 'Standings, leaders & classes'],
+      ['/standings f1 / endurance', 'Championship points & classes'],
       ['/remindme series [before]', 'DM reminders before races'],
       ['/unremindme series', 'Stop reminders'],
       ['/subscriptions', 'Your active subscriptions'],
@@ -137,7 +137,7 @@ export const translations = {
       { cmd: '/schedule [series]', desc: 'Hour-by-hour timetable of the next race weekend.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
       { cmd: '/result [series] [class] [session]', desc: 'Latest qualifying or race result with paginated classification. Team classes appear when the provider supplies them.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Formula 1 championship tables.', args: 'type: drivers (default), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Official WEC Hypercar/LMGT3 points when available; otherwise race-win summaries for winning teams and manufacturers, not championship points.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
+      { cmd: '/standings endurance series [class]', desc: 'Published championship points by class for WEC, ELMS, Asian Le Mans Series, Le Mans Cup and IMSA. Complete tables are paginated. Unavailable points are reported instead of replaced with race wins.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
       { cmd: '/remindme series [before]', desc: 'Private DM reminder before every race of a series.', args: 'before: 15m, 1h (default), 3h, 24h' },
       { cmd: '/unremindme series', desc: 'Stop DM reminders for a series.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
       { cmd: '/subscriptions', desc: 'List your active DM subscriptions.', args: '—' },
@@ -190,7 +190,7 @@ export const translations = {
       },
       {
         q: 'Where does the data come from?',
-        a: 'F1 data comes from Jolpica, endurance data from OpenWEC, with Blacktop filling coverage gaps. API data is refreshed periodically. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
+        a: 'F1 data comes from Jolpica. Endurance schedules and results use OpenWEC, with Blacktop filling WEC coverage gaps. Championship points come from the official WEC, ELMS, ALMS and Le Mans Cup websites and IMSA’s official Al Kamel tables. Data is refreshed periodically; points tables are cached for ten minutes. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
       },
       {
         q: 'English or Polish?',
@@ -218,7 +218,7 @@ export const translations = {
       emailNote: 'For anything longer',
     },
     footer: {
-      rights: '© 2026 RacePing. Data: Jolpica, OpenWEC, Blacktop.',
+      rights: '© 2026 RacePing. Data: Jolpica, OpenWEC, Blacktop and series organisers.',
       disclaimer: 'Not affiliated with FIA, Formula 1 or ACO.',
       commands: 'Commands',
       terms: 'Terms',
@@ -319,7 +319,7 @@ export const translations = {
       },
       {
         title: 'Darmowe i otwarte źródła',
-        text: 'Oparte na otwartych danych wyścigowych (Jolpica, OpenWEC, Blacktop). Bez opłat, bez kont.',
+        text: 'Oparte na API wyścigowych i oficjalnych tabelach mistrzostw. Bez opłat, bez kont.',
       },
     ],
     commands: [
@@ -328,7 +328,7 @@ export const translations = {
       ['/schedule [series]', 'Plan godzinowy najbliższego weekendu'],
       ['/timezone [zone]', 'Strefa czasowa godzin wyścigów'],
       ['/result [series]', 'Wynik ostatniej sesji'],
-      ['/standings f1 / endurance', 'Klasyfikacja, liderzy i klasy'],
+      ['/standings f1 / endurance', 'Punktowe klasyfikacje i klasy'],
       ['/remindme series [before]', 'Prywatne przypomnienia przed wyścigami'],
       ['/unremindme series', 'Wyłącz przypomnienia'],
       ['/subscriptions', 'Twoje subskrypcje przypomnień'],
@@ -350,7 +350,7 @@ export const translations = {
       { cmd: '/schedule [series]', desc: 'Plan godzinowy najbliższego weekendu wyścigowego.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
       { cmd: '/result [series] [class] [session]', desc: 'Wynik ostatnich kwalifikacji lub wyścigu z paginacją. Klasy zespołów pokazujemy, jeśli są dostępne w danych.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Tabele mistrzostw Formuły 1.', args: 'type: drivers (domyślnie), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Punkty WEC Hypercar/LMGT3, gdy są dostępne. Pozostałe tabele pokazują zwycięstwa zespołów i producentów, a nie punkty mistrzostw.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
+      { cmd: '/standings endurance series [class]', desc: 'Punktowe klasyfikacje mistrzostw w klasach WEC, ELMS, Asian Le Mans Series, Le Mans Cup i IMSA. Pełne tabele mają paginację. Bot informuje o braku punktów, zamiast zastępować je liczbą zwycięstw.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
       { cmd: '/remindme series [before]', desc: 'Prywatne przypomnienie w wiadomości prywatnej przed każdym wyścigiem danej serii.', args: 'before: 15m, 1h (domyślnie), 3h, 24h' },
       { cmd: '/unremindme series', desc: 'Wyłącz przypomnienia dla serii.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
       { cmd: '/subscriptions', desc: 'Lista Twoich subskrypcji przypomnień.', args: '—' },
@@ -403,7 +403,7 @@ export const translations = {
       },
       {
         q: 'Skąd pochodzą dane?',
-        a: 'Dane F1 pochodzą z Jolpica, dane endurance z OpenWEC, a luki WEC uzupełnia Blacktop. Dane odświeżają się okresowo. Brakujące rundy mogą korzystać z przybliżonego kalendarza, oznaczonego w wiadomościach bota.',
+        a: 'Dane F1 pochodzą z Jolpica. Kalendarze i wyniki endurance korzystają z OpenWEC, a luki WEC uzupełnia Blacktop. Punkty mistrzostw pochodzą z oficjalnych stron WEC, ELMS, ALMS i Le Mans Cup oraz tabel IMSA w Al Kamel. Dane odświeżają się okresowo; tabele punktowe są przechowywane w pamięci przez dziesięć minut. Brakujące rundy mogą korzystać z przybliżonego kalendarza, oznaczonego w wiadomościach bota.',
       },
       {
         q: 'Po polsku czy po angielsku?',
@@ -431,7 +431,7 @@ export const translations = {
       emailNote: 'Do dłuższych spraw',
     },
     footer: {
-      rights: '© 2026 RacePing. Dane: Jolpica, OpenWEC, Blacktop.',
+      rights: '© 2026 RacePing. Dane: Jolpica, OpenWEC, Blacktop i organizatorzy serii.',
       disclaimer: 'Niepowiązane z FIA, Formułą 1 i ACO.',
       commands: 'Komendy',
       terms: 'Regulamin',
