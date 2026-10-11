@@ -16,23 +16,40 @@ function SectionTitle({ kicker, title, text }) {
 }
 
 export default function Home() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  function statLabel(s) {
+    if (s.label) return s.label;
+    const n = Number(s.count);
+    if (lang === 'pl') {
+      if (n === 1) return s.one;
+      const d10 = n % 10, d100 = n % 100;
+      if (d10 >= 2 && d10 <= 4 && (d100 < 12 || d100 > 14)) return s.few;
+      return s.many;
+    }
+    return n === 1 ? s.one : s.other;
+  }
 
   return (
     <div className="min-h-screen">
       <Navbar />
 
       {/* Hero */}
-      <section id="top" className="mx-auto max-w-6xl px-4 pb-16 pt-20 text-center sm:pt-28">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand">
+      <section id="top" className="relative overflow-hidden pb-16 text-center lg:text-left">
+        <div aria-hidden className="h-3 w-full" style={{ backgroundImage: 'repeating-conic-gradient(#e10600 0% 25%, #05070d 0% 50%)', backgroundSize: '18px 18px' }} />
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)', backgroundSize: '44px 44px', maskImage: 'radial-gradient(ellipse 90% 80% at 40% 10%, black 25%, transparent 75%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 80% at 40% 10%, black 25%, transparent 75%)' }} />
+        <div aria-hidden className="pointer-events-none absolute -top-24 left-[5%] h-80 w-80 rounded-full bg-brand/20 blur-[120px]" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 sm:pt-20 lg:grid-cols-2">
+        <div>
+        <p className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-red-400">
           {t.hero.badge}
         </p>
-        <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl">
+        <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:mx-0 lg:text-7xl">
           {t.hero.title1}
           <span className="text-brand">{t.hero.title2}</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">{t.hero.subtitle}</p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400 lg:mx-0">{t.hero.subtitle}</p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
           <a
             href={INVITE_URL}
             className="rounded-xl bg-brand px-8 py-3 font-semibold text-white hover:brightness-110"
@@ -49,9 +66,10 @@ export default function Home() {
         <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
           F1 · WEC · ELMS · ALMS · Le Mans Cup · IMSA
         </p>
-
+        </div>
+        <div>
         {/* Klu-style: command bar + product preview in a window frame */}
-        <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-panel text-left shadow-2xl shadow-black/50">
+        <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-panel text-left shadow-2xl shadow-black/50 lg:mx-0">
           <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-2.5 text-xs text-zinc-500">
             <span className="h-2.5 w-2.5 rounded-full bg-brand/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
@@ -73,13 +91,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-5">
-          {t.hero.stats.map((s) => (
-            <div key={s.label} className="rounded-xl border border-white/10 bg-panel p-4">
+        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-6 lg:mx-0">
+          {t.hero.stats.map((s, i) => (
+            <div key={i} className={`rounded-xl border border-white/10 bg-panel p-4 text-center ${i < 3 ? 'sm:col-span-2' : 'sm:col-span-3'}`}>
               <p className="text-3xl font-extrabold text-brand">{s.value}</p>
-              <p className="mt-1 text-sm text-zinc-400">{s.label}</p>
+              <p className="mt-1 text-sm text-zinc-400">{statLabel(s)}</p>
             </div>
           ))}
+        </div>
+        </div>
         </div>
       </section>
 

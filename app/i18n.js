@@ -39,8 +39,8 @@ export const translations = {
       stats: [
         { value: '6', label: 'series covered' },
         { value: '14', label: 'slash commands' },
-        { value: fmt(liveStats.guilds, 'en-US'), label: 'servers' },
-        { value: fmt(liveStats.users, 'en-US'), label: 'users' },
+        { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
+        { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'user', other: 'users' },
         { value: '2', label: 'languages' },
       ],
     },
@@ -224,8 +224,8 @@ export const translations = {
       stats: [
         { value: '6', label: 'serii w jednym bocie' },
         { value: '14', label: 'komend slash' },
-        { value: fmt(liveStats.guilds, 'pl-PL'), label: 'serwery' },
-        { value: fmt(liveStats.users, 'pl-PL'), label: 'użytkownicy' },
+        { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
+        { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'użytkownik', few: 'użytkownicy', many: 'użytkowników' },
         { value: '2', label: 'języki' },
       ],
     },
