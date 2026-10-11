@@ -30,9 +30,8 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          # Project pages are served under /<repo-name>.
-          # For a user site (<user>.github.io) or a custom domain, set this to ''.
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          # The site uses a custom domain, so assets and routes live at the domain root.
+          NEXT_PUBLIC_BASE_PATH: ''
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
