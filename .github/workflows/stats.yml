@@ -1,0 +1,58 @@
+# Nightly refresh of bot reach stats + static deploy to GitHub Pages.
+# Reads guild/user counts via the Discord API (bot token from the
+# DISCORD_BOT_TOKEN repo secret — Settings → Secrets and variables → Actions),
+# bakes them into the build, and deploys. No Discord Developer Portal changes
+# are needed: guild list + approximate member counts work with the default
+# bot token, no privileged intents required.
+# This workflow does its own build+deploy because pushes made with GITHUB_TOKEN
+# do not trigger the push-based deploy.yml workflow.
+# Repository layout: the contents of `web/` live at the repo root
+# (package.json, app/, public/, scripts/, this workflow).
+
+name: Nightly stats + deploy
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: node scripts/fetch-stats.mjs
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      - run: npm run build
+        env:
+          # Project pages are served under /<repo-name>.
+          # For a user site (<user>.github.io) or a custom domain, set this to ''.
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,5 +1,11 @@
 // All website copy lives here in both languages.
 // English stays the default; Polish is the second language.
+// Live bot reach (guild/user counts) is baked in at build time from stats.json,
+// refreshed nightly by the stats workflow (scripts/fetch-stats.mjs).
+
+import liveStats from '../stats.json';
+
+const fmt = (n, locale) => (typeof n === 'number' ? n.toLocaleString(locale) : '–');
 
 export const LANGUAGES = [
   { code: 'en', label: 'English' },
@@ -32,7 +38,9 @@ export const translations = {
       ctaSecondary: 'See commands',
       stats: [
         { value: '6', label: 'series covered' },
-        { value: '11', label: 'slash commands' },
+        { value: '13', label: 'slash commands' },
+        { value: fmt(liveStats.guilds, 'en-US'), label: 'servers' },
+        { value: fmt(liveStats.users, 'en-US'), label: 'users' },
         { value: '2', label: 'languages' },
       ],
     },
@@ -49,7 +57,7 @@ export const translations = {
       },
       commands: {
         kicker: 'Commands',
-        title: 'Eleven slash commands',
+        title: 'Thirteen slash commands',
         text: "Type / in any channel and pick what you need.",
       },
       setup: {
@@ -67,7 +75,7 @@ export const translations = {
       { code: 'ELMS', name: 'European LMS', emoji: '🏁', note: 'European endurance' },
       { code: 'ALMS', name: 'Asian LMS', emoji: '🏁', note: 'Asian endurance' },
       { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Feeder endurance' },
-      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'US sports cars' },
+      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American sports cars & GTP' },
     ],
     features: [
       {
@@ -96,13 +104,15 @@ export const translations = {
       },
     ],
     commands: [
-      ['/next [series]', 'Next race weekend'],
-      ['/schedule [series] [limit]', 'Season calendar'],
+      ['/next [series]', 'Next race weekend & countdown'],
+      ['/calendar [series]', 'Full season calendar'],
+      ['/schedule [series]', 'Next weekend hour-by-hour timetable'],
+      ['/timezone [zone]', 'Display timezone for race times'],
       ['/result [series] [class] [session]', 'Latest session result'],
       ['/standings f1 / endurance', 'Standings, leaders & classes'],
       ['/subscribe series [before]', 'DM reminders before sessions'],
       ['/unsubscribe series', 'Stop reminders'],
-      ['/subscriptions', 'Your subscriptions'],
+      ['/subscriptions', 'Your active subscriptions'],
       ['/language', 'Server language (admins)'],
       ['/setup', 'Server settings (admins)'],
       ['/ping', 'Bot latency check'],
@@ -179,7 +189,7 @@ export const translations = {
     meta: {
       title: 'RacePing — bot motorsportowy na Discorda',
       description:
-        'Terminarze, wyniki, klasyfikacje i remindery PW dla F1, WEC, ELMS, Asian Le Mans, Le Mans Cup i IMSA, wprost na Discordzie.',
+        'Terminarze, wyniki na żywo, klasyfikacje i prywatne powiadomienia przed sesjami F1, WEC, ELMS, Asian Le Mans, Le Mans Cup i IMSA na Twoim Discordzie.',
     },
     nav: {
       series: 'Serie',
@@ -192,15 +202,17 @@ export const translations = {
     },
     hero: {
       badge: 'Bot motorsportowy na Discorda',
-      title1: 'Nie przegap wyścigu ',
-      title2: 'nigdy',
+      title1: 'Już nigdy nie przegap ',
+      title2: 'wyścigu',
       subtitle:
-        'Terminarze, wyniki, klasyfikacje i remindery PW dla Formuły 1 i pięciu serii endurance — na Twoim Discordzie, po polsku i angielsku.',
+        'Harmonogramy, wyniki, klasyfikacje i prywatne przypomnienia przed sesjami Formuły 1 oraz pięciu serii endurance — na Twoim Discordzie, po polsku i angielsku.',
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
       stats: [
         { value: '6', label: 'serii w jednym bocie' },
-        { value: '11', label: 'komend slash' },
+        { value: '13', label: 'komend slash' },
+        { value: fmt(liveStats.guilds, 'pl-PL'), label: 'serwery' },
+        { value: fmt(liveStats.users, 'pl-PL'), label: 'użytkownicy' },
         { value: '2', label: 'języki' },
       ],
     },
@@ -217,11 +229,11 @@ export const translations = {
       },
       commands: {
         kicker: 'Komendy',
-        title: 'Jedenaście komend slash',
+        title: 'Trzynaście komend slash',
         text: 'Wpisz / w dowolnym kanale i wybierz, czego potrzebujesz.',
       },
       setup: {
-        kicker: 'Setup',
+        kicker: 'Konfiguracja',
         title: 'Działa w mniej niż minutę',
       },
       faq: {
@@ -235,16 +247,16 @@ export const translations = {
       { code: 'ELMS', name: 'European LMS', emoji: '🏁', note: 'Endurance europejski' },
       { code: 'ALMS', name: 'Asian LMS', emoji: '🏁', note: 'Endurance azjatycki' },
       { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Puchar Le Mans' },
-      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'US sports cars' },
+      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Amerykańska seria aut sportowych i GTP' },
     ],
     features: [
       {
-        title: 'Remindery PW',
-        text: 'Zasubskrybuj serię i dostanaj prywatne remindery przed każdą sesją — 15 minut, 1 godzinę, 3 godziny lub dzień wcześniej.',
+        title: 'Prywatne powiadomienia (DM)',
+        text: 'Zasubskrybuj serię i odbieraj prywatne przypomnienia przed każdą sesją — 15 minut, 1 godzinę, 3 godziny lub dzień wcześniej.',
       },
       {
         title: 'Tylko komendy slash',
-        text: 'Nowoczesne komendy Discorda z autouzupełnianiem. Żadnych prefiksów do zapamiętywania, żadnego śmieci na kanałach.',
+        text: 'Nowoczesne komendy Discorda z autouzupełnianiem. Żadnych prefiksów do zapamiętywania, żadnego spamu na kanałach.',
       },
       {
         title: 'Terminarze i wyniki',
@@ -265,7 +277,9 @@ export const translations = {
     ],
     commands: [
       ['/next [series]', 'Następny weekend wyścigowy'],
-      ['/schedule [series] [limit]', 'Kalendarz sezonu'],
+      ['/calendar [series]', 'Pełny kalendarz sezonu'],
+      ['/schedule [series]', 'Plan godzinowy najbliższego weekendu'],
+      ['/timezone [zone]', 'Strefa czasowa godzin wyścigów'],
       ['/result [series] [class] [session]', 'Wynik ostatniej sesji'],
       ['/standings f1 / endurance', 'Klasyfikacja, liderzy i klasy'],
       ['/subscribe series [before]', 'Remindery PW przed sesjami'],
@@ -285,7 +299,7 @@ export const translations = {
       {
         n: '2',
         title: 'Wybierz język',
-        text: 'Admin wywołuje /setup albo /language raz. Wszystko reszta dostosowuje się do języka każdego użytkownika Discorda.',
+        text: 'Admin wywołuje /setup albo /language raz. Cała reszta dostosowuje się do języka każdego użytkownika Discorda.',
       },
       {
         n: '3',
@@ -316,7 +330,7 @@ export const translations = {
       },
     ],
     final: {
-      title: 'Gaśnie światło — oglądasz?',
+      title: 'Światła gasną — oglądasz?',
       text: 'Dodaj RacePing na swój serwer i pierwszy reminder dotrze przed następną sesją.',
       cta: 'Dodaj na serwer',
     },

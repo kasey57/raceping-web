@@ -55,7 +55,34 @@ export default function Home() {
             {t.hero.ctaSecondary}
           </a>
         </div>
-        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4">
+
+        {/* Klu-style: command bar + product preview in a window frame */}
+        <div className="mx-auto mt-10 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-panel text-left shadow-2xl shadow-black/50">
+          <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-2.5 text-xs text-zinc-500">
+            <span className="h-2.5 w-2.5 rounded-full bg-brand/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+            <span className="ml-2">Discord — #race-weekend</span>
+          </div>
+          <div className="flex items-center gap-2 px-4 py-3">
+            <span className="rounded bg-black/60 px-2 py-1 font-mono text-sm text-red-300">/next WEC</span>
+            <span className="h-5 w-px animate-pulse bg-brand" />
+            <span className="text-sm text-zinc-500">＋ schedule · result · standings</span>
+          </div>
+          <div className="mx-4 mb-4 rounded-xl border-l-4 border-brand bg-carbon p-4">
+            <p className="font-bold text-white">6 Hours of Fuji <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">WEC · R7</span></p>
+            <p className="mt-1 text-sm text-zinc-400">Sun 11:00 JST · Fuji Speedway · countdown + DM reminder</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs">
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">⏱️ Qualifying Sat</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">🏁 Race Sun</span>
+              <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">🔔 /subscribe WEC</span>
+            </div>
+          </div>
+        </div>
+        <p className="mt-6 text-xs uppercase tracking-widest text-zinc-500">
+          F1 · WEC · ELMS · ALMS · Le Mans Cup · IMSA
+        </p>
+        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-5">
           {t.hero.stats.map((s) => (
             <div key={s.label} className="rounded-xl border border-white/10 bg-panel p-4">
               <p className="text-3xl font-extrabold text-brand">{s.value}</p>
