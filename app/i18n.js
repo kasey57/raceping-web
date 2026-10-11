@@ -86,7 +86,7 @@ export const translations = {
       },
       {
         title: 'Server channels',
-        text: 'Admins route a series to a text channel with /channel add — reminders land there before every race, and the top five results are posted automatically after each race.',
+        text: 'Admins route a series to a text channel with /channel add — reminders land there before every race, and the full paginated results are posted automatically after each race.',
       },
       {
         title: 'Slash Commands Only',
@@ -137,11 +137,11 @@ export const translations = {
       { cmd: '/schedule [series]', desc: 'Hour-by-hour timetable of the next race weekend.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
       { cmd: '/result [series] [class] [session]', desc: 'Latest qualifying or race result with paginated classification. Team classes appear when the provider supplies them.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Formula 1 championship tables.', args: 'type: drivers (default), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Published championship points by class for WEC, ELMS, Asian Le Mans Series, Le Mans Cup and IMSA. Complete tables are paginated. Unavailable points are reported instead of replaced with race wins.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
+      { cmd: '/standings endurance series [class]', desc: 'Published teams and manufacturers championship points by class for WEC, ELMS, Asian Le Mans Series, Le Mans Cup and IMSA. Complete tables are paginated. Unavailable points are reported instead of replaced with race wins.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
       { cmd: '/remindme series [before]', desc: 'Private DM reminder before every race of a series.', args: 'before: 15m, 1h (default), 3h, 24h' },
       { cmd: '/unremindme series', desc: 'Stop DM reminders for a series.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
       { cmd: '/subscriptions', desc: 'List your active DM subscriptions.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Post series reminders to a server channel; top results follow automatically after each race (admins only).', args: 'before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
+      { cmd: '/channel add series channel [before] [results]', desc: 'Post series reminders to a server channel; full paginated results follow automatically after each race (admins only).', args: 'before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
       { cmd: '/channel remove series', desc: 'Stop posting a series to the channel (admins only).', args: '—' },
       { cmd: '/channel list', desc: 'Show channel subscriptions on this server (admins only).', args: '—' },
       { cmd: '/timezone [zone]', desc: 'Display timezone for race times — server-wide, or personal in DMs.', args: 'zone: any IANA name, e.g. Europe/Warsaw' },
@@ -178,7 +178,7 @@ export const translations = {
       },
       {
         q: 'Can the bot post to a channel instead of DMs?',
-        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every race, and top results post automatically after each race unless turned off.',
+        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every race, and full paginated results post automatically after each race unless turned off.',
       },
       {
         q: 'Why do I need to allow direct messages from server members?',
@@ -299,7 +299,7 @@ export const translations = {
       },
       {
         title: 'Kanały serwera',
-        text: 'Administratorzy kierują serię na kanał tekstowy przez /channel add — przypomnienia lądują tam przed każdym wyścigiem, a po każdym wyścigu automatycznie trafia tam pięć pierwszych wyników.',
+        text: 'Administratorzy kierują serię na kanał tekstowy przez /channel add — przypomnienia lądują tam przed każdym wyścigiem, a po każdym wyścigu automatycznie trafiają tam pełne wyniki z paginacją.',
       },
       {
         title: 'Tylko komendy slash',
@@ -350,11 +350,11 @@ export const translations = {
       { cmd: '/schedule [series]', desc: 'Plan godzinowy najbliższego weekendu wyścigowego.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
       { cmd: '/result [series] [class] [session]', desc: 'Wynik ostatnich kwalifikacji lub wyścigu z paginacją. Klasy zespołów pokazujemy, jeśli są dostępne w danych.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Tabele mistrzostw Formuły 1.', args: 'type: drivers (domyślnie), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Punktowe klasyfikacje mistrzostw w klasach WEC, ELMS, Asian Le Mans Series, Le Mans Cup i IMSA. Pełne tabele mają paginację. Bot informuje o braku punktów, zamiast zastępować je liczbą zwycięstw.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
+      { cmd: '/standings endurance series [class]', desc: 'Punktowe klasyfikacje zespołów i producentów w klasach WEC, ELMS, Asian Le Mans Series, Le Mans Cup i IMSA. Pełne tabele mają paginację. Bot informuje o braku punktów, zamiast zastępować je liczbą zwycięstw.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
       { cmd: '/remindme series [before]', desc: 'Prywatne przypomnienie w wiadomości prywatnej przed każdym wyścigiem danej serii.', args: 'before: 15m, 1h (domyślnie), 3h, 24h' },
       { cmd: '/unremindme series', desc: 'Wyłącz przypomnienia dla serii.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
       { cmd: '/subscriptions', desc: 'Lista Twoich subskrypcji przypomnień.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Przypomnienia serii na kanał serwera; top wyników sam po każdym wyścigu (tylko administratorzy).', args: 'before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
+      { cmd: '/channel add series channel [before] [results]', desc: 'Przypomnienia serii na kanał serwera; pełne wyniki z paginacją same po każdym wyścigu (tylko administratorzy).', args: 'before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
       { cmd: '/channel remove series', desc: 'Wyłącz posty serii na kanał (tylko administratorzy).', args: '—' },
       { cmd: '/channel list', desc: 'Subskrypcje kanałowe na tym serwerze (tylko administratorzy).', args: '—' },
       { cmd: '/timezone [zone]', desc: 'Strefa czasowa godzin — dla serwera albo prywatnie dla Ciebie.', args: 'zone: nazwa IANA, np. Europe/Warsaw' },
@@ -391,7 +391,7 @@ export const translations = {
       },
       {
         q: 'Czy bot może pisać na kanał zamiast w wiadomości prywatnej?',
-        a: 'Tak. Administrator serwera używa komendy /channel add z serią i kanałem tekstowym. Przypomnienia przychodzą przed każdym wyścigiem, a pięć pierwszych wyników pojawia się po wyścigu. Automatyczne wyniki można wyłączyć opcją results: false.',
+        a: 'Tak. Administrator serwera używa komendy /channel add z serią i kanałem tekstowym. Przypomnienia przychodzą przed każdym wyścigiem, a pełne wyniki z paginacją pojawiają się po wyścigu. Automatyczne wyniki można wyłączyć opcją results: false.',
       },
       {
         q: 'Dlaczego muszę zezwolić na wiadomości prywatne od członków serwera?',
