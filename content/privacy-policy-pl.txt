@@ -1,0 +1,67 @@
+POLITYKA PRYWATNOŚCI RACEPING
+
+Data wejścia w życie: 11 października 2026
+
+Niniejsza Polityka Prywatności reguluje gromadzenie, wykorzystywanie i udostępnianie danych osobowych przez RacePing, bota na Discorda stworzonego przez kasey („Właściciel Bota", „my", „nas"). Korzystając z RacePing, akceptujesz warunki niniejszej Polityki Prywatności.
+
+1. JAKIE INFORMACJE GROMADZIMY
+
+Przechowujemy wyłącznie to, co bot musi zapamiętać, aby działały Twoje ustawienia:
+
+- Twój identyfikator użytkownika Discorda, gdy korzystasz z funkcji osobistych, takich jak subskrypcje przypomnień — wraz z preferencjami przypomnień (seria, wyprzedzenie, język i strefa czasowa).
+- Identyfikatory serwerów (guild) oraz ustawienia serwerów: domyślny język i strefę czasową, a — gdy skonfiguruje je administrator — subskrypcje kanałowe (identyfikator kanału, seria, wyprzedzenie oraz to, czy publikować wyniki).
+- Publiczne dane wyścigowe (terminarze, wyniki, klasyfikacje) pochodzą z zewnętrznych sportowych API i nie zawierają danych osobowych.
+
+Nie przechowujemy nazw użytkowników, treści wiadomości ani historii komend. Celowo nie gromadzimy haseł, tokenów, adresów e-mail ani innych wrażliwych danych. Prosimy, nie udostępniaj botowi takich informacji.
+
+2. JAK WYKORZYSTUJEMY TWOJE INFORMACJE
+
+Twoje informacje wykorzystujemy, aby:
+
+- obsługiwać i utrzymywać RacePing oraz jego funkcje (przypomnienia, posty na kanałach, ustawienia języka i strefy czasowej)
+- zapewniać wsparcie i odpowiadać na Twoje zgłoszenia
+- naprawiać błędy
+- wywiązywać się z obowiązków prawnych i egzekwować nasz Regulamin
+
+3. UDOSTĘPNIANIE TWOICH INFORMACJI
+
+Nie sprzedajemy ani nie udostępniamy Twoich danych osobowych stronom trzecim w celach marketingowych.
+
+Twoje informacje możemy ujawnić wyłącznie:
+
+- w odpowiedzi na czynności prawne albo żądanie organu ścigania lub organu regulacyjnego
+- w celu ochrony praw, bezpieczeństwa lub integralności RacePing, jego użytkowników albo ogółu społeczeństwa
+- gdy jest to wymagane dla zgodności z Regulaminem Discorda i Wytycznymi Społeczności
+
+Dostawcy hostingu i infrastruktury, z których korzysta bot, mogą technicznie przetwarzać dane (np. logi), ale wyłącznie w zakresie niezbędnym do świadczenia usługi.
+
+4. PRZECHOWYWANIE DANYCH
+
+Zapisane ustawienia i subskrypcje przechowujemy do czasu, aż poprosisz o ich usunięcie — nie wygasają one automatycznie, także po usunięciu bota z serwera.
+
+- Aby zażądać usunięcia, skontaktuj się z nami pod adresem kaseyowski@proton.me z konta Discord, którego sprawa dotyczy, podając swój identyfikator użytkownika oraz, jeśli to istotne, identyfikator serwera.
+- Usuniemy Twoje informacje na Twoje żądanie albo gdy nie będą już potrzebne.
+
+5. BEZPIECZEŃSTWO DANYCH
+
+Stosujemy rozsądne środki ochrony Twoich informacji przed nieuprawnionym dostępem, zmianą lub zniszczeniem. Żaden środek bezpieczeństwa nie jest jednak doskonały i nie możemy zagwarantować całkowitego bezpieczeństwa Twoich informacji.
+
+6. PRYWATNOŚĆ DZIECI
+
+RacePing jest przeznaczony dla użytkowników Discorda spełniających minimalny wymóg wieku Discorda (w większości regionów 13 lat, w niektórych wyższy, jeśli wymagają tego przepisy). Świadomie nie gromadzimy danych dzieci poniżej tego wieku.
+
+7. TWOJE PRAWA
+
+W zależności od Twojej lokalizacji (np. UE/EOG na gruncie RODO) możesz mieć prawo dostępu do swoich danych osobowych, ich poprawiania, usuwania, ograniczania lub sprzeciwu wobec ich przetwarzania, a także do przenoszenia danych. Aby skorzystać z tych praw, skontaktuj się z nami pod adresem kaseyowski@proton.me.
+
+8. ZMIANY NINIEJSZEJ POLITYKI
+
+Niniejszą Politykę Prywatności możemy co pewien czas aktualizować. Zaktualizowaną politykę opublikujemy wraz ze zmienioną datą wejścia w życie. Dalsze korzystanie z RacePing po opublikowaniu zmian oznacza akceptację zmienionej polityki.
+
+9. KONTAKT Z NAMI
+
+W razie pytań lub wątpliwości dotyczących niniejszej Polityki Prywatności skontaktuj się z nami:
+
+E-mail: kaseyowski@proton.me
+Bot: RacePing
+Deweloper: kasey

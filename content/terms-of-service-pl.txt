@@ -1,0 +1,63 @@
+REGULAMIN KORZYSTANIA Z RACEPING
+
+Data wejścia w życie: 10 października 2026
+
+Niniejszy Regulamin („Umowa") zawierany jest pomiędzy kasey („Właściciel Bota") a użytkownikiem („Użytkownik") bota RacePing na Discorda („Bot"). Korzystając z Bota, Użytkownik zobowiązuje się przestrzegać warunków niniejszej Umowy. Jeśli Użytkownik nie zgadza się z warunkami niniejszej Umowy, powinien niezwłocznie zaprzestać korzystania z Bota i usunąć go ze swojego serwera.
+
+1. KORZYSTANIE Z BOTA
+
+Właściciel Bota udziela Użytkownikowi niewyłącznej, niezbywalnej, ograniczonej licencji na korzystanie z Bota do celów osobistych lub niekomercyjnych na platformie Discord, zgodnie z Regulaminem Discorda (https://discord.com/terms) i Wytycznymi Społeczności (https://discord.com/guidelines).
+
+Użytkownik musi mieć zgodę administratora serwera, aby dodać Bota na serwer lub go na nim konfigurować.
+
+2. ZABRONIONE WYKORZYSTANIE
+
+Użytkownik nie może:
+
+- korzystać z Bota w sposób naruszający obowiązujące przepisy, zasady lub regulacje albo prawa osób trzecich
+- używać Bota do nękania, obrażania, spamowania lub krzywdzenia innych
+- podejmować prób wykorzystywania, inżynierii wstecznej, zakłócania działania Bota ani jego przeciążania
+- wykorzystywać Bota do celów komercyjnych bez wyraźnej pisemnej zgody Właściciela Bota
+- używać Bota do gromadzenia danych innych użytkowników ani do omijania limitów zapytań lub ograniczeń Discorda
+
+Naruszenie może skutkować utratą dostępu do Bota, w tym blokadą korzystania z Bota na poszczególnych serwerach lub globalnie.
+
+3. DOSTĘPNOŚĆ I ZMIANY BOTA
+
+Bot jest udostępniany w stanie, w jakim się znajduje („as is"), oraz w miarę dostępności („as available"). Właściciel Bota może w dowolnym momencie, bez powiadomienia, modyfikować, zawieszać lub wyłączać Bota albo dowolną jego funkcję. Użytkownik zgadza się, że Właściciel Bota nie ponosi wobec Użytkownika ani osób trzecich odpowiedzialności za modyfikację, zawieszenie lub wyłączenie Bota.
+
+Nie gwarantujemy nieprzerwanego działania, działania bez błędów ani zachowania ustawień i danych.
+
+4. OGRANICZENIE ODPOWIEDZIALNOŚCI
+
+W maksymalnym zakresie dozwolonym przez prawo Właściciel Bota nie odpowiada za szkody wynikające z korzystania lub niemożności korzystania z Bota, w tym między innymi za szkody z tytułu utraty zysków, utraty danych lub inne straty niematerialne.
+
+5. WŁASNOŚĆ INTELEKTUALNA
+
+Bot, jego kod oraz wszelkie prawa własności intelektualnej do nich są i pozostają własnością Właściciela Bota. Użytkownik zobowiązuje się nie kopiować, nie modyfikować, nie rozpowszechniać ani nie tworzyć opracowań Bota ani żadnej jego części bez wyraźnej pisemnej zgody Właściciela Bota.
+
+6. ODSZKODOWANIE
+
+Użytkownik zobowiązuje się zabezpieczyć i zwolnić z odpowiedzialności Właściciela Bota, jego podmioty powiązane oraz ich dyrektorów, członków kadry kierowniczej, pracowników i agentów od wszelkich roszczeń, szkód, zobowiązań, kosztów i wydatków, w tym uzasadnionych kosztów obsługi prawnej, wynikających z korzystania przez Użytkownika z Bota lub naruszenia niniejszej Umowy.
+
+7. ROZWIĄZANIE UMOWY
+
+Niniejsza Umowa może zostać rozwiązana przez każdą ze stron w dowolnym momencie z dowolnego powodu. Użytkownik może ją rozwiązać, usuwając Bota i całkowicie zaprzestając korzystania z niego. Właściciel Bota może w dowolnym momencie cofnąć dostęp. Po rozwiązaniu Użytkownik musi niezwłocznie zaprzestać wszelkiego korzystania z Bota.
+
+8. PRAWO WŁAŚCIWE
+
+Niniejsza Umowa podlega przepisom prawa właściwego i powinna być zgodnie z nimi interpretowana. Wszelkie spory wynikające z niniejszej Umowy lub z nią związane należy w pierwszej kolejności zgłosić Właścicielowi Bota pod adresem kaseyowski@proton.me w celu podjęcia próby polubownego rozwiązania.
+
+9. CAŁOŚĆ POROZUMIENIA
+
+Niniejsza Umowa wraz z Polityką Prywatności RacePing stanowi całość porozumienia stron dotyczącego Bota i zastępuje wszelkie wcześniejsze lub równoczesne porozumienia bądź oświadczenia, pisemne lub ustne, dotyczące Bota.
+
+10. KONTAKT
+
+W sprawach dotyczących niniejszego Regulaminu prosimy o kontakt:
+
+E-mail: kaseyowski@proton.me
+Bot: RacePing
+Deweloper: kasey
+
+Korzystając z Bota, Użytkownik potwierdza, że zapoznał się z niniejszą Umową, rozumie ją i zobowiązuje się jej przestrzegać.

@@ -17,7 +17,7 @@ export const translations = {
     meta: {
       title: 'RacePing — Multi-Series Motorsport Discord Bot',
       description:
-        'Schedules, live results, standings and DM reminders for F1, WEC, ELMS, Asian Le Mans, Le Mans Cup and IMSA, right inside Discord.',
+        'Schedules, live results, standings and DM reminders for Formula 1, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup and IMSA, right inside Discord.',
     },
     nav: {
       series: 'Series',
@@ -25,7 +25,7 @@ export const translations = {
       commands: 'Commands',
       faq: 'FAQ',
       contact: 'Contact',
-      cta: 'Add to Discord',
+      cta: 'Add to Server',
       langLabel: 'Language',
     },
     hero: {
@@ -53,11 +53,11 @@ export const translations = {
       features: {
         kicker: 'Features',
         title: 'Everything a race fan needs',
-        text: 'Set it up once. The bot does the watching for you.',
+        text: 'Set it up once. It tracks every calendar, so you never miss a session.',
       },
       commands: {
         kicker: 'Commands',
-        title: 'Fourteen slash commands',
+        title: '14 top-level slash commands',
         text: 'Type / in any channel and pick what you need.',
       },
       setup: {
@@ -72,19 +72,19 @@ export const translations = {
     series: [
       { code: 'F1', name: 'Formula 1', emoji: '🏎️', note: 'Schedules, results, standings' },
       { code: 'WEC', name: 'FIA WEC', emoji: '⏱️', note: 'Endurance world championship' },
-      { code: 'ELMS', name: 'European LMS', emoji: '🏁', note: 'European endurance' },
-      { code: 'ALMS', name: 'Asian LMS', emoji: '🏁', note: 'Asian endurance' },
-      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Feeder endurance' },
+      { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'European endurance championship' },
+      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Asian endurance championship' },
+      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Sprint endurance cup' },
       { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American sports cars & GTP' },
     ],
     features: [
       {
         title: 'DM Reminders',
-        text: 'Subscribe to a series and get a private reminder before every session — 15 minutes, 1 hour, 3 hours or a day ahead.',
+        text: 'Subscribe to a series and get a private reminder before every race — 15 minutes, 1 hour, 3 hours or a day ahead.',
       },
       {
         title: 'Server channels',
-        text: 'Admins route a series to a text channel with /channel add — reminders land there before every session, and top results post automatically after each race.',
+        text: 'Admins route a series to a text channel with /channel add — reminders land there before every race, and top results post automatically after each race.',
       },
       {
         title: 'Slash Commands Only',
@@ -92,7 +92,7 @@ export const translations = {
       },
       {
         title: 'Schedules & Results',
-        text: 'Upcoming calendars, latest session results and championship tables, always in clean embeds.',
+        text: 'Upcoming calendars, latest session results and championship tables, always in clean Discord messages.',
       },
       {
         title: 'Six Series',
@@ -100,7 +100,7 @@ export const translations = {
       },
       {
         title: 'English & Polish',
-        text: 'Full interface in two languages. Pick per server, or let the bot follow your Discord client.',
+        text: 'Full interface in two languages. Admins pick the server language; personal commands follow your Discord client language.',
       },
       {
         title: 'Free & Open Data',
@@ -114,7 +114,7 @@ export const translations = {
       ['/timezone [zone]', 'Display timezone for race times'],
       ['/result [series]', 'Latest session result'],
       ['/standings f1 / endurance', 'Standings, leaders & classes'],
-      ['/remindme series [before]', 'DM reminders before sessions'],
+      ['/remindme series [before]', 'DM reminders before races'],
       ['/unremindme series', 'Stop reminders'],
       ['/subscriptions', 'Your active subscriptions'],
       ['/channel add', 'Channel reminders & auto results (admins)'],
@@ -127,7 +127,7 @@ export const translations = {
     commandPage: {
       kicker: 'Reference',
       title: 'Every command, every option',
-      text: 'Pick a series — f1, wec, elms, alms, lmc, imsa — and the bot handles the rest. Anything in [brackets] is optional.',
+      text: 'Pick a series — f1, wec, elms, alms, lmc, imsa — and the bot handles the rest. Anything in [brackets] is optional. /standings and /channel come in variants: f1/endurance and add/remove/list.',
     },
     fullCommands: [
       { cmd: '/next [series]', desc: 'Next race weekend: countdown, round, circuit and a reminder shortcut.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
@@ -136,14 +136,14 @@ export const translations = {
       { cmd: '/result [series] [class] [session]', desc: 'Latest session result with full paginated classification and each team’s class.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Formula 1 championship tables.', args: 'type: drivers (default), constructors' },
       { cmd: '/standings endurance series [class]', desc: 'Endurance leaders: official points for WEC, team and manufacturer wins elsewhere.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
-      { cmd: '/remindme series [before]', desc: 'Private DM reminder before every session of a series.', args: 'before: 15m, 1h (default), 3h, 24h' },
+      { cmd: '/remindme series [before]', desc: 'Private DM reminder before every race of a series.', args: 'before: 15m, 1h (default), 3h, 24h' },
       { cmd: '/unremindme series', desc: 'Stop DM reminders for a series.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
       { cmd: '/subscriptions', desc: 'List your active DM subscriptions.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Post series reminders to a server channel; results follow automatically after each session (admins only).', args: 'before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
+      { cmd: '/channel add series channel [before] [results]', desc: 'Post series reminders to a server channel; top results follow automatically after each race (admins only).', args: 'before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
       { cmd: '/channel remove series', desc: 'Stop posting a series to the channel (admins only).', args: '—' },
       { cmd: '/channel list', desc: 'Show channel subscriptions on this server (admins only).', args: '—' },
       { cmd: '/timezone [zone]', desc: 'Display timezone for race times — server-wide, or personal in DMs.', args: 'zone: any IANA name, e.g. Europe/Warsaw' },
-      { cmd: '/language lang', desc: 'Server language (admins only).', args: 'lang: en, pl' },
+      { cmd: '/language [language]', desc: 'Server language (admins only).', args: 'language: en, pl' },
       { cmd: '/setup [language]', desc: 'Server settings (admins only).', args: '—' },
       { cmd: '/ping', desc: 'Bot latency check.', args: '—' },
       { cmd: '/help', desc: 'Command list inside Discord.', args: '—' },
@@ -152,12 +152,12 @@ export const translations = {
       {
         n: '1',
         title: 'Add the bot',
-        text: 'Invite RacePing to your server with the button below. It only asks for the permissions it needs.',
+        text: 'Invite RacePing to your server with the button below to get started.',
       },
       {
         n: '2',
         title: 'Pick a language',
-        text: 'Admins run /setup or /language once. Everything else follows each member’s own Discord language.',
+        text: 'Admins set a default server language with /setup or /language. In DMs, personal commands follow your Discord client language.',
       },
       {
         n: '3',
@@ -172,15 +172,15 @@ export const translations = {
       },
       {
         q: 'How do I get personal reminders?',
-        a: 'Run /remindme with a series and lead time. The bot DMs you before every session. Manage everything with /subscriptions and /unremindme.',
+        a: 'Run /remindme with a series and lead time. The bot DMs you before every race. Manage everything with /subscriptions and /unremindme.',
       },
       {
         q: 'Can the bot post to a channel instead of DMs?',
-        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every session, and results post automatically after each session unless turned off.',
+        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every race, and top results post automatically after each race unless turned off.',
       },
       {
-        q: 'Why do I need open DMs?',
-        a: 'Reminders are sent as private messages so server channels stay clean. Allow DMs from server members in your privacy settings and they will arrive.',
+        q: 'Why do I need to allow direct messages from server members?',
+        a: 'Reminders are sent as private messages so server channels stay clean. In your Discord privacy settings, allow direct messages from members of that server — otherwise the bot cannot deliver them.',
       },
       {
         q: 'Which series are supported?',
@@ -188,16 +188,16 @@ export const translations = {
       },
       {
         q: 'Where does the data come from?',
-        a: 'F1 data comes from Jolpica, endurance data from OpenWEC, gap-filled by Blacktop. Race weekends update automatically.',
+        a: 'F1 data comes from Jolpica, endurance data from OpenWEC, with Blacktop filling coverage gaps. Race weekends update automatically.',
       },
       {
         q: 'English or Polish?',
-        a: 'Both. Servers set a default language; in DMs the bot follows your own Discord client language.',
+        a: 'Both. Admins set a default server language. In DMs, personal commands follow your Discord client language.',
       },
     ],
     final: {
       title: 'Lights out — are you watching?',
-      text: 'Add RacePing to your server and get your first reminder before the next session.',
+      text: 'Add RacePing to your server and get your first reminder before the next race.',
       cta: 'Add to Server',
     },
     support: {
@@ -213,7 +213,7 @@ export const translations = {
       discordLabel: 'Discord',
       discordNote: 'Fastest way to reach me',
       emailLabel: 'Email',
-      emailNote: 'For longer stuff',
+      emailNote: 'For anything longer',
     },
     footer: {
       rights: '© 2026 RacePing. Data: Jolpica, OpenWEC, Blacktop.',
@@ -236,7 +236,7 @@ export const translations = {
       commands: 'Komendy',
       faq: 'FAQ',
       contact: 'Kontakt',
-      cta: 'Dodaj do Discorda',
+      cta: 'Dodaj na serwer',
       langLabel: 'Język',
     },
     hero: {
@@ -268,7 +268,7 @@ export const translations = {
       },
       commands: {
         kicker: 'Komendy',
-        title: 'Czternaście komend slash',
+        title: '14 głównych komend slash',
         text: 'Wpisz / w dowolnym kanale i wybierz, czego potrzebujesz.',
       },
       setup: {
@@ -283,19 +283,19 @@ export const translations = {
     series: [
       { code: 'F1', name: 'Formuła 1', emoji: '🏎️', note: 'Terminarze, wyniki, klasyfikacje' },
       { code: 'WEC', name: 'FIA WEC', emoji: '⏱️', note: 'Mistrzostwa świata endurance' },
-      { code: 'ELMS', name: 'European LMS', emoji: '🏁', note: 'Endurance europejski' },
-      { code: 'ALMS', name: 'Asian LMS', emoji: '🏁', note: 'Endurance azjatycki' },
-      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Puchar Le Mans' },
+      { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'Europejskie mistrzostwa endurance' },
+      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Azjatyckie mistrzostwa endurance' },
+      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Sprinterski puchar endurance' },
       { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Amerykańska seria aut sportowych i GTP' },
     ],
     features: [
       {
         title: 'Prywatne powiadomienia (DM)',
-        text: 'Zasubskrybuj serię i odbieraj prywatne przypomnienia przed każdą sesją — 15 minut, 1 godzinę, 3 godziny lub dzień wcześniej.',
+        text: 'Użyj komendy /remindme, aby odbierać prywatne przypomnienia przed każdym wyścigiem — 15 minut, godzinę, 3 godziny lub dzień wcześniej.',
       },
       {
         title: 'Kanały serwera',
-        text: 'Admini kierują serię na kanał tekstowy przez /channel add — remindery lądują tam przed każdą sesją, a po każdym wyścigu automatycznie top wyników.',
+        text: 'Administratorzy kierują serię na kanał tekstowy przez /channel add — przypomnienia lądują tam przed każdym wyścigiem, a po każdym wyścigu automatycznie trafia tam top wyników.',
       },
       {
         title: 'Tylko komendy slash',
@@ -303,7 +303,7 @@ export const translations = {
       },
       {
         title: 'Terminarze i wyniki',
-        text: 'Nadchodzące kalendarze, wyniki ostatnich sesji i tabele mistrzostw, zawsze w schludnych embedach.',
+        text: 'Kalendarz nadchodzących sesji, wyniki ostatnich sesji i tabele mistrzostw w czytelnych wiadomościach Discorda.',
       },
       {
         title: 'Sześć serii',
@@ -311,7 +311,7 @@ export const translations = {
       },
       {
         title: 'Angielski i polski',
-        text: 'Pełny interfejs w dwóch językach. Wybierz na serwerze albo pozwól botowi użyć języka Twojego klienta Discorda.',
+        text: 'Pełny interfejs w dwóch językach. Administrator wybiera język serwera, a komendy osobiste podążają za językiem Twojego klienta Discorda.',
       },
       {
         title: 'Darmowe i otwarte źródła',
@@ -325,10 +325,10 @@ export const translations = {
       ['/timezone [zone]', 'Strefa czasowa godzin wyścigów'],
       ['/result [series]', 'Wynik ostatniej sesji'],
       ['/standings f1 / endurance', 'Klasyfikacja, liderzy i klasy'],
-      ['/remindme series [before]', 'Remindery PW przed sesjami'],
-      ['/unremindme series', 'Wyłącz remindery'],
-      ['/subscriptions', 'Twoje subskrypcje'],
-      ['/channel add', 'Remindery i wyniki na kanale (admini)'],
+      ['/remindme series [before]', 'Prywatne przypomnienia przed wyścigami'],
+      ['/unremindme series', 'Wyłącz przypomnienia'],
+      ['/subscriptions', 'Twoje subskrypcje przypomnień'],
+      ['/channel add', 'Przypomnienia i wyniki na kanale (administratorzy)'],
       ['/language', 'Język serwera (dla adminów)'],
       ['/setup', 'Ustawienia serwera (dla adminów)'],
       ['/ping', 'Sprawdzenie opóźnienia'],
@@ -338,7 +338,7 @@ export const translations = {
     commandPage: {
       kicker: 'Lista komend',
       title: 'Każda komenda, każda opcja',
-      text: 'Wybierz serię — f1, wec, elms, alms, lmc, imsa — resztą zajmie się bot. Wszystko w [nawiasach] jest opcjonalne.',
+      text: 'Wybierz serię — f1, wec, elms, alms, lmc, imsa — resztą zajmie się bot. Wszystko w [nawiasach] jest opcjonalne. Komendy /standings i /channel mają warianty: f1/endurance oraz add/remove/list.',
     },
     fullCommands: [
       { cmd: '/next [series]', desc: 'Następny weekend wyścigowy z odliczaniem, rundą i torem.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
@@ -347,15 +347,15 @@ export const translations = {
       { cmd: '/result [series] [class] [session]', desc: 'Wynik ostatniej sesji z pełną stronicowaną klasyfikacją i klasą każdego teamu.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
       { cmd: '/standings f1 [type]', desc: 'Tabele mistrzostw Formuły 1.', args: 'type: drivers (domyślnie), constructors' },
       { cmd: '/standings endurance series [class]', desc: 'Liderzy endurance: oficjalne punkty dla WEC, gdzie indziej zwycięstwa teamów i producentów.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
-      { cmd: '/remindme series [before]', desc: 'Prywatny reminder na PW przed każdą sesją danej serii.', args: 'before: 15m, 1h (domyślnie), 3h, 24h' },
-      { cmd: '/unremindme series', desc: 'Wyłącz remindery dla serii.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
-      { cmd: '/subscriptions', desc: 'Lista Twoich subskrypcji reminderów.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Remindery serii na kanał serwera; wyniki same po każdej sesji (tylko admini).', args: 'before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
-      { cmd: '/channel remove series', desc: 'Wyłącz posty serii na kanał (tylko admini).', args: '—' },
-      { cmd: '/channel list', desc: 'Subskrypcje kanałowe na tym serwerze (tylko admini).', args: '—' },
-      { cmd: '/timezone [zone]', desc: 'Strefa czasowa godzin — dla serwera albo prywatnie na PW.', args: 'zone: nazwa IANA, np. Europe/Warsaw' },
-      { cmd: '/language lang', desc: 'Język serwera (tylko admini).', args: 'lang: en, pl' },
-      { cmd: '/setup [language]', desc: 'Ustawienia serwera (tylko admini).', args: '—' },
+      { cmd: '/remindme series [before]', desc: 'Prywatne przypomnienie w wiadomości prywatnej przed każdym wyścigiem danej serii.', args: 'before: 15m, 1h (domyślnie), 3h, 24h' },
+      { cmd: '/unremindme series', desc: 'Wyłącz przypomnienia dla serii.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
+      { cmd: '/subscriptions', desc: 'Lista Twoich subskrypcji przypomnień.', args: '—' },
+      { cmd: '/channel add series channel [before] [results]', desc: 'Przypomnienia serii na kanał serwera; top wyników sam po każdym wyścigu (tylko administratorzy).', args: 'before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
+      { cmd: '/channel remove series', desc: 'Wyłącz posty serii na kanał (tylko administratorzy).', args: '—' },
+      { cmd: '/channel list', desc: 'Subskrypcje kanałowe na tym serwerze (tylko administratorzy).', args: '—' },
+      { cmd: '/timezone [zone]', desc: 'Strefa czasowa godzin — dla serwera albo prywatnie dla Ciebie.', args: 'zone: nazwa IANA, np. Europe/Warsaw' },
+      { cmd: '/language [language]', desc: 'Język serwera (tylko administratorzy).', args: 'language: en, pl' },
+      { cmd: '/setup [language]', desc: 'Ustawienia serwera (tylko administratorzy).', args: '—' },
       { cmd: '/ping', desc: 'Sprawdzenie opóźnienia bota.', args: '—' },
       { cmd: '/help', desc: 'Lista komend na Discordzie.', args: '—' },
     ],
@@ -363,17 +363,17 @@ export const translations = {
       {
         n: '1',
         title: 'Dodaj bota',
-        text: 'Zaproś RacePing na swój serwer przyciskiem poniżej. Bot prosi tylko o potrzebne uprawnienia.',
+        text: 'Zaproś RacePing na swój serwer przyciskiem poniżej.',
       },
       {
         n: '2',
         title: 'Wybierz język',
-        text: 'Admin wywołuje /setup albo /language raz. Cała reszta dostosowuje się do języka każdego użytkownika Discorda.',
+        text: 'Administrator ustawia domyślny język serwera komendą /setup albo /language. Komendy osobiste w wiadomościach prywatnych podążają za językiem Twojego klienta Discorda.',
       },
       {
         n: '3',
         title: 'Subskrybuj',
-        text: 'Każdy użytkownik odpala /remindme z wybraną serią i wyprzedzeniem. Remindery przychodzą prosto na PW. Admini mogą też skierować serię na wspólny kanał przez /channel add.',
+        text: 'Każdy użytkownik używa komendy /remindme z wybraną serią i wyprzedzeniem. Przypomnienia o wyścigu przychodzą prosto w wiadomościach prywatnych. Administratorzy mogą też skierować serię na wspólny kanał przez /channel add.',
       },
     ],
     faq: [
@@ -382,16 +382,16 @@ export const translations = {
         a: 'Tak. Bot i wszystkie jego komendy są darmowe, oparte na otwartych źródłach danych wyścigowych.',
       },
       {
-        q: 'Jak dostać prywatne remindery?',
-        a: 'Odpal /remindme z serią i wyprzedzeniem. Bot napisze na PW przed każdą sesją. Wszystkim zarządzisz przez /subscriptions i /unremindme.',
+        q: 'Jak dostać prywatne przypomnienia?',
+        a: 'Użyj komendy /remindme z serią i wyprzedzeniem. Bot napisze wiadomość prywatną przed każdym wyścigiem. Wszystkim zarządzisz przez /subscriptions i /unremindme.',
       },
       {
-        q: 'Czy bot może pisać na kanał zamiast na PW?',
-        a: 'Tak. Admin serwera odpala /channel add z serią i kanałem tekstowym. Remindery przychodzą przed każdą sesją, a wyniki same po każdej sesji, chyba że je wyłączysz.',
+        q: 'Czy bot może pisać na kanał zamiast w wiadomości prywatnej?',
+        a: 'Tak. Administrator serwera używa komendy /channel add z serią i kanałem tekstowym. Przypomnienia przychodzą przed każdym wyścigiem, a top wyników sam po każdym wyścigu, chyba że je wyłączysz.',
       },
       {
-        q: 'Po co mi otwarte PW?',
-        a: 'Remindery przychodzą jako prywatne wiadomości, żeby nie zaśmiecać kanałów serwera. Włącz odbieranie PW od członków serwera w ustawieniach prywatności i będą działać.',
+        q: 'Dlaczego muszę zezwolić na wiadomości prywatne od członków serwera?',
+        a: 'Przypomnienia to wiadomości prywatne, żeby nie zaśmiecać kanałów serwera. W ustawieniach prywatności serwera włącz odbieranie wiadomości prywatnych od jego członków — inaczej bot nie będzie mógł ich wysłać.',
       },
       {
           q: 'Które serie są obsługiwane?',
@@ -403,12 +403,12 @@ export const translations = {
       },
       {
         q: 'Po polsku czy po angielsku?',
-        a: 'Oba języki. Serwer ustawia język domyślny, a na PW bot używa języka Twojego klienta Discorda.',
+        a: 'Oba języki. Administrator ustawia domyślny język serwera. W wiadomościach prywatnych komendy osobiste mogą używać języka Twojego klienta Discorda.',
       },
     ],
     final: {
       title: 'Światła gasną — oglądasz?',
-      text: 'Dodaj RacePing na swój serwer i pierwszy reminder dotrze przed następną sesją.',
+      text: 'Dodaj RacePing na swój serwer i pierwsze przypomnienie dotrze przed następnym wyścigiem.',
       cta: 'Dodaj na serwer',
     },
     support: {
