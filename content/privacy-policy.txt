@@ -9,8 +9,9 @@ This Privacy Policy governs the collection, use, and sharing of personal informa
 We store only what the bot needs to remember your settings:
 
 - Your Discord user ID, when you use personal features such as reminder subscriptions — together with your reminder preferences (series, lead time, language and timezone).
+- Notification delivery records: recipient user or server/channel IDs, series and event identifiers, delivery status and timestamps, used to prevent duplicate posts.
 - Server (guild) IDs and server settings: default language and timezone, and — when an administrator configures them — channel subscriptions (channel ID, series, lead time and whether results should be posted).
-- Public race data (schedules, results, standings) comes from third-party sports-data APIs and contains no personal information.
+- Public race data (schedules, results, standings) comes from third-party sports-data APIs and may include publicly listed driver names and profile details. Responses are temporarily cached in memory.
 
 We do not store usernames, message content, or command history. We do not intentionally collect passwords, tokens, email addresses, or other sensitive credentials. Please do not share such information with the bot.
 
@@ -39,7 +40,7 @@ Hosting and infrastructure providers used to run the bot may technically process
 
 We keep stored settings and subscriptions until you ask us to delete them — there is no automatic expiry, including after the bot is removed from a server.
 
-- To request deletion, contact us at kaseyowski@proton.me from the Discord account in question and include your user ID and the server ID if relevant.
+- To request deletion, contact us by email at kaseyowski@proton.me or on Discord as kaseyowski and include your user ID and the server ID if relevant.
 - We will delete your information upon your request or when it is no longer needed.
 
 5. DATA SECURITY

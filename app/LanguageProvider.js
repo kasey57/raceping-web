@@ -9,24 +9,27 @@ const STORAGE_KEY = 'raceping-lang';
 
 function initialLang() {
   if (typeof window === 'undefined') return 'en';
-  const stored = window.localStorage.getItem(STORAGE_KEY);
+  let stored;
+  try { stored = window.localStorage.getItem(STORAGE_KEY); } catch { /* Storage may be blocked. */ }
   if (stored && translations[stored]) return stored;
   return navigator.language?.toLowerCase().startsWith('pl') ? 'pl' : 'en';
 }
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState('en');
+  const [ready, setReady] = useState(false);
 
   // Resolve after mount so SSR and the first client render stay in sync.
   useEffect(() => {
     setLang(initialLang());
+    setReady(true);
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    window.localStorage.setItem(STORAGE_KEY, lang);
+    if (!ready) return;
+    try { window.localStorage.setItem(STORAGE_KEY, lang); } catch { /* Keep the interface usable. */ }
     document.documentElement.lang = lang;
-  }, [lang]);
+  }, [lang, ready]);
 
   const toggle = useCallback(() => {
     setLang((prev) => (prev === 'en' ? 'pl' : 'en'));

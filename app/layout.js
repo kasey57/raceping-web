@@ -25,10 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LanguageProvider>
+    <html lang="en">
       <body className={`${display.variable} ${body.variable} bg-carbon font-sans text-zinc-100 antialiased`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
-    </LanguageProvider>
+    </html>
   );
 }

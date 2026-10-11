@@ -83,11 +83,12 @@ export default function Home() {
             <span className="text-sm text-zinc-500">＋ schedule · result · standings</span>
           </div>
           <div className="mx-4 mb-4 rounded-xl border-l-4 border-brand bg-carbon p-4">
-            <p className="font-bold text-white">6 Hours of Fuji <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">WEC · R7</span></p>
-            <p className="mt-1 text-sm text-zinc-400">Sun 11:00 JST · Fuji Speedway · countdown + DM reminder</p>
+            <p className="mb-2 text-xs uppercase tracking-wide text-zinc-500">{t.hero.demo.label}</p>
+            <p className="font-bold text-white">6 Hours of Fuji <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">WEC</span></p>
+            <p className="mt-1 text-sm text-zinc-400">{t.hero.demo.detail}</p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">Qualifying Sat</span>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">Race Sun</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.qualifying}</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.race}</span>
               <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">/remindme WEC</span>
             </div>
           </div>
@@ -100,6 +101,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="mt-3 text-xs text-zinc-500">{t.hero.statsNote}</p>
         </div>
         </div>
       </section>
@@ -207,18 +209,18 @@ export default function Home() {
             title={t.contact.title}
             text={t.contact.text}
           />
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-white/10 bg-panel p-6 text-center">
+          <div className="grid min-w-0 gap-4 sm:grid-cols-2">
+            <div className="min-w-0 rounded-xl border border-white/10 bg-panel p-4 text-center sm:p-6">
               <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.discordLabel}</p>
               <p className="mt-2 font-display text-2xl font-bold">kaseyowski</p>
               <p className="mt-1 text-sm text-zinc-400">{t.contact.discordNote}</p>
             </div>
             <a
               href="mailto:kaseyowski@proton.me"
-              className="block rounded-xl border border-white/10 bg-panel p-6 text-center hover:border-brand/50"
+              className="block min-w-0 rounded-xl border border-white/10 bg-panel p-4 text-center hover:border-brand/50 sm:p-6"
             >
               <p className="text-sm font-semibold uppercase tracking-widest text-zinc-400">{t.contact.emailLabel}</p>
-              <p className="mt-2 font-display text-2xl font-bold">kaseyowski@proton.me</p>
+              <p className="mt-2 break-all font-display text-xl font-bold sm:text-2xl">kaseyowski@proton.me</p>
               <p className="mt-1 text-sm text-zinc-400">{t.contact.emailNote}</p>
             </a>
           </div>
@@ -226,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* Support */}
-      <section className="mx-auto max-w-3xl px-4 pb-20">
+      {BMC_URL && <section className="mx-auto max-w-3xl px-4 pb-20">
         <div className="rounded-2xl border border-white/10 bg-panel px-6 py-12 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.support.kicker}</p>
           <h2 className="font-display text-3xl font-extrabold">{t.support.title}</h2>
@@ -238,7 +240,7 @@ export default function Home() {
             {t.support.cta}
           </a>
         </div>
-      </section>
+      </section>}
 
       {/* Final CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">

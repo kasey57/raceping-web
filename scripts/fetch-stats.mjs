@@ -9,14 +9,15 @@ import { writeFile } from 'node:fs/promises';
 const TOKEN = process.env.DISCORD_BOT_TOKEN;
 const OUT = new URL('../stats.json', import.meta.url);
 
-async function api(path) {
+async function api(path, attempt = 0) {
   const res = await fetch(`https://discord.com/api/v10${path}`, {
     headers: { Authorization: `Bot ${TOKEN}` },
+    signal: AbortSignal.timeout(15000),
   });
-  if (res.status === 429) {
-    const retry = Number(res.headers.get('retry-after') ?? 5);
+  if (res.status === 429 && attempt < 3) {
+    const retry = Math.min(30, Math.max(1, Number(res.headers.get('retry-after') ?? 5) || 5));
     await new Promise((r) => setTimeout(r, retry * 1000));
-    return api(path);
+    return api(path, attempt + 1);
   }
   if (!res.ok) throw new Error(`Discord API ${res.status} on ${path}`);
   return res.json();
@@ -40,12 +41,9 @@ try {
   const guilds = await listGuilds();
   let users = 0;
   for (const guild of guilds) {
-    try {
-      const full = await api(`/guilds/${guild.id}?with_counts=true`);
-      users += full.approximate_member_count ?? 0;
-    } catch (error) {
-      console.warn(`stats: skipping guild ${guild.id}: ${error.message}`);
-    }
+    const full = await api(`/guilds/${guild.id}?with_counts=true`);
+    if (!Number.isFinite(full.approximate_member_count)) throw new Error('Missing member count');
+    users += full.approximate_member_count;
   }
   const stats = { guilds: guilds.length, users, updatedAt: new Date().toISOString() };
   await writeFile(OUT, JSON.stringify(stats, null, 2) + '\n');
