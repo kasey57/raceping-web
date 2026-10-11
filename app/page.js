@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useLang } from './LanguageProvider';
@@ -162,6 +163,9 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm">
+          <Link href="/commands" className="text-red-400 hover:text-red-300">{t.commandsMore}</Link>
+        </p>
       </section>
 
       {/* Setup steps */}
