@@ -78,24 +78,24 @@ export default function Home() {
             <span className="ml-2">Discord — #race-weekend</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-3">
-            <span className="rounded bg-black/60 px-2 py-1 font-sans text-sm text-red-300">/next WEC</span>
+            <span className="rounded bg-black/60 px-2 py-1 font-sans text-sm text-red-300">/next F1</span>
             <span className="h-5 w-px animate-pulse bg-brand" />
             <span className="text-sm text-zinc-500">＋ schedule · result · standings</span>
           </div>
           <div className="mx-4 mb-4 rounded-xl border-l-4 border-brand bg-carbon p-4">
             <p className="mb-2 text-xs uppercase tracking-wide text-zinc-500">{t.hero.demo.label}</p>
-            <p className="font-bold text-white">6 Hours of Fuji <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">WEC</span></p>
+            <p className="font-bold text-white">United States Grand Prix <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">F1</span></p>
             <p className="mt-1 text-sm text-zinc-400">{t.hero.demo.detail}</p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.qualifying}</span>
               <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.race}</span>
-              <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">/remindme WEC</span>
+              <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">/remindme F1</span>
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-6 lg:mx-0">
+        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 lg:mx-0">
           {t.hero.stats.map((s, i) => (
-            <div key={i} className={`rounded-xl border border-white/10 bg-panel p-4 text-center ${i < 3 ? 'sm:col-span-2' : 'sm:col-span-3'}`}>
+            <div key={i} className="rounded-xl border border-white/10 bg-panel p-4 text-center">
               <p className="text-3xl font-extrabold text-brand">{s.value}</p>
               <p className="mt-1 text-sm text-zinc-400">{statLabel(s)}</p>
             </div>

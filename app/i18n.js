@@ -37,12 +37,12 @@ export const translations = {
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
       statsNote: '* Combined server reach estimate; includes bots and people on multiple servers. Refreshed periodically.',
-      demo: { label: 'Example preview', detail: 'Sun 11:00 JST · Fuji Speedway · countdown & race reminder', qualifying: 'Qualifying Sat', race: 'Race Sun' },
+      demo: { label: 'Example preview', detail: 'Oct 23–25 · Austin · Circuit of The Americas · race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
         { value: '11', label: 'series covered' },
         { value: '14', label: 'slash commands' },
-        { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
         { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'user*', other: 'users*' },
+        { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
       ],
     },
     sections: {
@@ -259,12 +259,12 @@ export const translations = {
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
       statsNote: '* Łączny szacunkowy zasięg serwerów; obejmuje boty i osoby obecne na więcej niż jednym serwerze. Odświeżany okresowo.',
-      demo: { label: 'Przykładowy podgląd', detail: 'Niedz. 11:00 JST · Fuji Speedway · odliczanie i przypomnienie o wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
+      demo: { label: 'Przykładowy podgląd', detail: '23–25 października · Austin · Circuit of The Americas · odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
         { value: '11', label: 'serii w jednym bocie' },
         { value: '14', label: 'komend slash' },
-        { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
         { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'użytkownik*', few: 'użytkownicy*', many: 'użytkowników*' },
+        { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
       ],
     },
     sections: {
