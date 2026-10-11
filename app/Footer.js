@@ -17,6 +17,7 @@ export default function Footer() {
         <p>{t.footer.disclaimer}</p>
         <p className="flex items-center gap-4">
           <Link href="/commands" className="hover:text-white">{t.footer.commands}</Link>
+          <Link href="/changelog" className="hover:text-white">{t.footer.changelog}</Link>
           <Link href="/terms" className="hover:text-white">{t.footer.terms}</Link>
           <Link href="/privacy" className="hover:text-white">{t.footer.privacy}</Link>
         </p>
