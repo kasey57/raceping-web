@@ -36,14 +36,13 @@ export const translations = {
       subtitle: 'Schedules, results, standings and reminders for 11 series — right inside Discord, in English and Polish.',
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
-      statsNote: '* Sum of server member counts, including bots and memberships on multiple servers; refreshed periodically.',
+      statsNote: '* Combined server reach estimate; includes bots and people on multiple servers. Refreshed periodically.',
       demo: { label: 'Example preview', detail: 'Sun 11:00 JST · Fuji Speedway · countdown & race reminder', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
         { value: '11', label: 'series covered' },
         { value: '14', label: 'slash commands' },
         { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
-        { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'server membership*', other: 'server memberships*' },
-        { value: '2', label: 'languages' },
+        { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'user*', other: 'users*' },
       ],
     },
     sections: {
@@ -259,14 +258,13 @@ export const translations = {
       subtitle: 'Terminarze, wyniki, klasyfikacje i prywatne przypomnienia dla 11 serii — na Discordzie, po polsku i angielsku.',
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
-      statsNote: '* Suma członków serwerów, obejmująca boty i członkostwa na kilku serwerach; odświeżana okresowo.',
+      statsNote: '* Łączny szacunkowy zasięg serwerów; obejmuje boty i osoby obecne na więcej niż jednym serwerze. Odświeżany okresowo.',
       demo: { label: 'Przykładowy podgląd', detail: 'Niedz. 11:00 JST · Fuji Speedway · odliczanie i przypomnienie o wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
         { value: '11', label: 'serii w jednym bocie' },
         { value: '14', label: 'komend slash' },
         { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
-        { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'członkostwo na serwerze*', few: 'członkostwa na serwerach*', many: 'członkostw na serwerach*' },
-        { value: '2', label: 'języki' },
+        { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'użytkownik*', few: 'użytkownicy*', many: 'użytkowników*' },
       ],
     },
     sections: {

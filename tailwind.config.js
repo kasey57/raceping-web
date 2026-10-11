@@ -9,8 +9,8 @@ module.exports = {
         panel: '#101b30',
       },
       fontFamily: {
-        sans: ['var(--font-body)', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-dm-sans)', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },
     },
   },

@@ -1,17 +1,11 @@
 import './globals.css';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import { LanguageProvider } from './LanguageProvider';
 
-const display = Space_Grotesk({
+const font = DM_Sans({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-display',
-});
-
-const body = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
 });
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -26,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${body.variable} bg-carbon font-sans text-zinc-100 antialiased`}>
+      <body className={`${font.variable} bg-carbon font-sans text-zinc-100 antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

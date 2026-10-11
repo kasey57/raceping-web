@@ -21,9 +21,9 @@ export default function CommandsPage() {
         <div className="space-y-3">
           {t.fullCommands.map((c) => (
             <div key={c.cmd} className="rounded-xl border border-white/10 bg-panel px-5 py-4">
-              <code className="rounded bg-black/50 px-2 py-1 font-mono text-sm text-red-300">{c.cmd}</code>
+              <code className="rounded bg-black/50 px-2 py-1 font-sans text-sm text-red-300">{c.cmd}</code>
               <p className="mt-2 text-sm leading-relaxed text-zinc-200">{c.desc}</p>
-              <p className="mt-1 font-mono text-xs leading-relaxed text-zinc-500">{c.args}</p>
+              <p className="mt-1 font-sans text-xs leading-relaxed text-zinc-500">{c.args}</p>
             </div>
           ))}
         </div>

@@ -40,7 +40,7 @@ export default function Home() {
         <div aria-hidden className="h-3 w-full" style={{ backgroundImage: 'repeating-conic-gradient(#e10600 0% 25%, #05070d 0% 50%)', backgroundSize: '18px 18px' }} />
         <div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)', backgroundSize: '44px 44px', maskImage: 'radial-gradient(ellipse 90% 80% at 40% 10%, black 25%, transparent 75%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 80% at 40% 10%, black 25%, transparent 75%)' }} />
         <div aria-hidden className="pointer-events-none absolute -top-24 left-[5%] h-80 w-80 rounded-full bg-brand/20 blur-[120px]" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 sm:pt-20 lg:grid-cols-2">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pt-14 sm:pt-20 lg:grid-cols-2">
         <div>
         <p className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-red-400">
           {t.hero.badge}
@@ -78,7 +78,7 @@ export default function Home() {
             <span className="ml-2">Discord — #race-weekend</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-3">
-            <span className="rounded bg-black/60 px-2 py-1 font-mono text-sm text-red-300">/next WEC</span>
+            <span className="rounded bg-black/60 px-2 py-1 font-sans text-sm text-red-300">/next WEC</span>
             <span className="h-5 w-px animate-pulse bg-brand" />
             <span className="text-sm text-zinc-500">＋ schedule · result · standings</span>
           </div>
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Series */}
-      <section id="series" className="mx-auto max-w-6xl px-4 py-16">
+      <section id="series" className="mx-auto max-w-7xl px-4 py-16">
         <SectionTitle
           kicker={t.sections.series.kicker}
           title={t.sections.series.title}
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Features */}
       <section id="features" className="border-y border-white/10 bg-panel/40">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mx-auto max-w-7xl px-4 py-16">
           <SectionTitle
             kicker={t.sections.features.kicker}
             title={t.sections.features.title}
@@ -160,7 +160,7 @@ export default function Home() {
                 i % 2 === 0 ? 'bg-panel' : 'bg-carbon'
               }`}
             >
-              <code className="rounded bg-black/50 px-2 py-1 font-mono text-red-300">{cmd}</code>
+              <code className="rounded bg-black/50 px-2 py-1 font-sans text-red-300">{cmd}</code>
               <span className="text-right text-zinc-400">{desc}</span>
             </div>
           ))}
@@ -172,7 +172,7 @@ export default function Home() {
 
       {/* Setup steps */}
       <section className="border-y border-white/10 bg-panel/40">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mx-auto max-w-7xl px-4 py-16">
           <SectionTitle kicker={t.sections.setup.kicker} title={t.sections.setup.title} />
           <div className="grid gap-4 md:grid-cols-3">
             {t.steps.map((s) => (
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="mx-auto max-w-6xl px-4 pb-20">
+      <section className="mx-auto max-w-7xl px-4 pb-20">
         <div className="rounded-2xl border border-brand/30 bg-gradient-to-b from-brand/15 to-transparent px-6 py-14 text-center">
           <h2 className="font-display text-3xl font-extrabold sm:text-4xl">{t.final.title}</h2>
           <p className="mx-auto mt-3 max-w-xl text-zinc-400">{t.final.text}</p>
