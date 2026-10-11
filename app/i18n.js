@@ -38,7 +38,7 @@ export const translations = {
       ctaSecondary: 'See commands',
       stats: [
         { value: '6', label: 'series covered' },
-        { value: '13', label: 'slash commands' },
+        { value: '14', label: 'slash commands' },
         { value: fmt(liveStats.guilds, 'en-US'), label: 'servers' },
         { value: fmt(liveStats.users, 'en-US'), label: 'users' },
         { value: '2', label: 'languages' },
@@ -57,8 +57,8 @@ export const translations = {
       },
       commands: {
         kicker: 'Commands',
-        title: 'Thirteen slash commands',
-        text: "Type / in any channel and pick what you need.",
+        title: 'Fourteen slash commands',
+        text: "Type /next f1 — every series is its own subcommand, no options needed.",
       },
       setup: {
         kicker: 'Setup',
@@ -83,6 +83,10 @@ export const translations = {
         text: 'Subscribe to a series and get a private reminder before every session — 15 minutes, 1 hour, 3 hours or a day ahead.',
       },
       {
+        title: 'Server channels',
+        text: 'Admins route a series to a text channel with /channel add — reminders land there before every session, and top results post automatically after each race.',
+      },
+      {
         title: 'Slash Commands Only',
         text: "Modern Discord commands with autocomplete. No prefixes to memorize, no clutter in your channels.",
       },
@@ -104,15 +108,16 @@ export const translations = {
       },
     ],
     commands: [
-      ['/next [series]', 'Next race weekend & countdown'],
-      ['/calendar [series]', 'Full season calendar'],
-      ['/schedule [series]', 'Next weekend hour-by-hour timetable'],
+      ['/next f1', 'Next race weekend & countdown'],
+      ['/calendar f1', 'Full season calendar'],
+      ['/schedule f1', 'Next weekend hour-by-hour timetable'],
       ['/timezone [zone]', 'Display timezone for race times'],
-      ['/result [series] [class] [session]', 'Latest session result'],
+      ['/result f1', 'Latest session result'],
       ['/standings f1 / endurance', 'Standings, leaders & classes'],
-      ['/subscribe series [before]', 'DM reminders before sessions'],
-      ['/unsubscribe series', 'Stop reminders'],
+      ['/remindme series [before]', 'DM reminders before sessions'],
+      ['/unremindme series', 'Stop reminders'],
       ['/subscriptions', 'Your active subscriptions'],
+      ['/channel add', 'Channel reminders & auto results (admins)'],
       ['/language', 'Server language (admins)'],
       ['/setup', 'Server settings (admins)'],
       ['/ping', 'Bot latency check'],
@@ -132,13 +137,21 @@ export const translations = {
       {
         n: '3',
         title: 'Subscribe',
-        text: 'Every member runs /subscribe with their series and lead time. Reminders land straight in DMs.',
+        text: 'Every member runs /remindme with their series and lead time. Reminders land straight in DMs. Admins can also post a series to a shared channel with /channel add.',
       },
     ],
     faq: [
       {
         q: 'Is RacePing free?',
         a: 'Yes. The bot and all its commands are free, built on open racing data sources.',
+      },
+      {
+        q: 'How do I get personal reminders?',
+        a: 'Run /remindme with a series and lead time. The bot DMs you before every session. Manage everything with /subscriptions and /unremindme.',
+      },
+      {
+        q: 'Can the bot post to a channel instead of DMs?',
+        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every session, and results post automatically after each session unless turned off.',
       },
       {
         q: 'Why do I need open DMs?',
@@ -210,7 +223,7 @@ export const translations = {
       ctaSecondary: 'Zobacz komendy',
       stats: [
         { value: '6', label: 'serii w jednym bocie' },
-        { value: '13', label: 'komend slash' },
+        { value: '14', label: 'komend slash' },
         { value: fmt(liveStats.guilds, 'pl-PL'), label: 'serwery' },
         { value: fmt(liveStats.users, 'pl-PL'), label: 'użytkownicy' },
         { value: '2', label: 'języki' },
@@ -229,8 +242,8 @@ export const translations = {
       },
       commands: {
         kicker: 'Komendy',
-        title: 'Trzynaście komend slash',
-        text: 'Wpisz / w dowolnym kanale i wybierz, czego potrzebujesz.',
+        title: 'Czternaście komend slash',
+        text: 'Wpisz /next f1 — każda seria to osobna subkomenda, bez wypełniania opcji.',
       },
       setup: {
         kicker: 'Konfiguracja',
@@ -255,6 +268,10 @@ export const translations = {
         text: 'Zasubskrybuj serię i odbieraj prywatne przypomnienia przed każdą sesją — 15 minut, 1 godzinę, 3 godziny lub dzień wcześniej.',
       },
       {
+        title: 'Kanały serwera',
+        text: 'Admini kierują serię na kanał tekstowy przez /channel add — remindery lądują tam przed każdą sesją, a po każdym wyścigu automatycznie top wyników.',
+      },
+      {
         title: 'Tylko komendy slash',
         text: 'Nowoczesne komendy Discorda z autouzupełnianiem. Żadnych prefiksów do zapamiętywania, żadnego spamu na kanałach.',
       },
@@ -276,15 +293,16 @@ export const translations = {
       },
     ],
     commands: [
-      ['/next [series]', 'Następny weekend wyścigowy'],
-      ['/calendar [series]', 'Pełny kalendarz sezonu'],
-      ['/schedule [series]', 'Plan godzinowy najbliższego weekendu'],
+      ['/next f1', 'Następny weekend wyścigowy'],
+      ['/calendar f1', 'Pełny kalendarz sezonu'],
+      ['/schedule f1', 'Plan godzinowy najbliższego weekendu'],
       ['/timezone [zone]', 'Strefa czasowa godzin wyścigów'],
-      ['/result [series] [class] [session]', 'Wynik ostatniej sesji'],
+      ['/result f1', 'Wynik ostatniej sesji'],
       ['/standings f1 / endurance', 'Klasyfikacja, liderzy i klasy'],
-      ['/subscribe series [before]', 'Remindery PW przed sesjami'],
-      ['/unsubscribe series', 'Wyłącz remindery'],
+      ['/remindme series [before]', 'Remindery PW przed sesjami'],
+      ['/unremindme series', 'Wyłącz remindery'],
       ['/subscriptions', 'Twoje subskrypcje'],
+      ['/channel add', 'Remindery i wyniki na kanale (admini)'],
       ['/language', 'Język serwera (dla adminów)'],
       ['/setup', 'Ustawienia serwera (dla adminów)'],
       ['/ping', 'Sprawdzenie opóźnienia'],
@@ -304,13 +322,21 @@ export const translations = {
       {
         n: '3',
         title: 'Subskrybuj',
-        text: 'Każdy użytkownik odpala /subscribe z wybraną serią i wyprzedzeniem. Remindery przychodzą prosto na PW.',
+        text: 'Każdy użytkownik odpala /remindme z wybraną serią i wyprzedzeniem. Remindery przychodzą prosto na PW. Admini mogą też skierować serię na wspólny kanał przez /channel add.',
       },
     ],
     faq: [
       {
         q: 'Czy RacePing jest darmowy?',
         a: 'Tak. Bot i wszystkie jego komendy są darmowe, oparte na otwartych źródłach danych wyścigowych.',
+      },
+      {
+        q: 'Jak dostać prywatne remindery?',
+        a: 'Odpal /remindme z serią i wyprzedzeniem. Bot napisze na PW przed każdą sesją. Wszystkim zarządzisz przez /subscriptions i /unremindme.',
+      },
+      {
+        q: 'Czy bot może pisać na kanał zamiast na PW?',
+        a: 'Tak. Admin serwera odpala /channel add z serią i kanałem tekstowym. Remindery przychodzą przed każdą sesją, a wyniki same po każdej sesji, chyba że je wyłączysz.',
       },
       {
         q: 'Po co mi otwarte PW?',

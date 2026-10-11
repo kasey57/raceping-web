@@ -1,10 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useLang } from './LanguageProvider';
-import { ICON_SRC, INVITE_URL, BMC_URL } from './site';
+import { INVITE_URL, BMC_URL } from './site';
 
 function SectionTitle({ kicker, title, text }) {
   return (
@@ -25,15 +24,7 @@ export default function Home() {
 
       {/* Hero */}
       <section id="top" className="mx-auto max-w-6xl px-4 pb-16 pt-20 text-center sm:pt-28">
-        <Image
-          src={ICON_SRC}
-          alt="RacePing bot avatar"
-          width={112}
-          height={112}
-          className="mx-auto rounded-3xl shadow-2xl shadow-brand/20"
-          priority
-        />
-        <p className="mt-6 inline-block rounded-full border border-brand/40 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-red-400">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand">
           {t.hero.badge}
         </p>
         <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-extrabold leading-tight sm:text-6xl">
@@ -55,9 +46,12 @@ export default function Home() {
             {t.hero.ctaSecondary}
           </a>
         </div>
+        <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          F1 · WEC · ELMS · ALMS · Le Mans Cup · IMSA
+        </p>
 
         {/* Klu-style: command bar + product preview in a window frame */}
-        <div className="mx-auto mt-10 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-panel text-left shadow-2xl shadow-black/50">
+        <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-panel text-left shadow-2xl shadow-black/50">
           <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-2.5 text-xs text-zinc-500">
             <span className="h-2.5 w-2.5 rounded-full bg-brand/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
@@ -73,15 +67,12 @@ export default function Home() {
             <p className="font-bold text-white">6 Hours of Fuji <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">WEC · R7</span></p>
             <p className="mt-1 text-sm text-zinc-400">Sun 11:00 JST · Fuji Speedway · countdown + DM reminder</p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">⏱️ Qualifying Sat</span>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">🏁 Race Sun</span>
-              <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">🔔 /subscribe WEC</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">Qualifying Sat</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">Race Sun</span>
+              <span className="rounded-full bg-brand/15 px-3 py-1 font-semibold text-red-300">/remindme WEC</span>
             </div>
           </div>
         </div>
-        <p className="mt-6 text-xs uppercase tracking-widest text-zinc-500">
-          F1 · WEC · ELMS · ALMS · Le Mans Cup · IMSA
-        </p>
         <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-5">
           {t.hero.stats.map((s) => (
             <div key={s.label} className="rounded-xl border border-white/10 bg-panel p-4">
