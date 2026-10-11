@@ -204,9 +204,9 @@ export const translations = {
     },
     support: {
       kicker: 'Support',
-      title: 'Fuel the pit crew',
-      text: 'RacePing is currently free to use. If it ever saved your race weekend, consider buying me a coffee.',
-      cta: 'Buy Me a Coffee',
+      title: 'Support RacePing',
+      text: 'If you enjoy using RacePing, you can support its continued development on Suppi.',
+      cta: 'Support on Suppi',
     },
     contact: {
       kicker: 'Contact',
@@ -417,9 +417,9 @@ export const translations = {
     },
     support: {
       kicker: 'Wsparcie',
-      title: 'Zasponsoruj pit stop',
-      text: 'Korzystanie z RacePing jest obecnie bezpłatne. Jeśli kiedyś uratował Ci weekend wyścigowy, postaw mi kawę.',
-      cta: 'Postaw kawę',
+      title: 'Wesprzyj rozwój RacePing',
+      text: 'Jeśli RacePing ułatwia Ci śledzenie wyścigów, możesz wesprzeć jego dalszy rozwój na Suppi.',
+      cta: 'Wesprzyj na Suppi',
     },
     contact: {
       kicker: 'Kontakt',

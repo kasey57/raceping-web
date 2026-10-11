@@ -7,5 +7,4 @@ export const ICON_SRC = `${BASE_PATH}/icon.png`;
 export const INVITE_URL =
   'https://discord.com/oauth2/authorize?client_id=1558550077948043345&permissions=19456&scope=bot+applications.commands';
 
-// TODO: paste your Buy Me a Coffee account link here.
-export const BMC_URL = process.env.NEXT_PUBLIC_BMC_URL || '';
+export const SUPPI_URL = 'https://www.suppi.pl/kaseyowski';

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useLang } from './LanguageProvider';
-import { INVITE_URL, BMC_URL } from './site';
+import { INVITE_URL, SUPPI_URL } from './site';
 
 function SectionTitle({ kicker, title, text }) {
   return (
@@ -228,19 +228,21 @@ export default function Home() {
       </section>
 
       {/* Support */}
-      {BMC_URL && <section className="mx-auto max-w-3xl px-4 pb-20">
+      <section id="support" className="mx-auto max-w-3xl px-4 pb-20">
         <div className="rounded-2xl border border-white/10 bg-panel px-6 py-12 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.support.kicker}</p>
           <h2 className="font-display text-3xl font-extrabold">{t.support.title}</h2>
           <p className="mx-auto mt-3 max-w-xl text-zinc-400">{t.support.text}</p>
           <a
-            href={BMC_URL}
-            className="mt-8 inline-block rounded-xl bg-[#FFDD00] px-10 py-3 font-semibold text-black hover:brightness-105"
+            href={SUPPI_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block rounded-xl bg-brand px-10 py-3 font-semibold text-white hover:brightness-110"
           >
             {t.support.cta}
           </a>
         </div>
-      </section>}
+      </section>
 
       {/* Final CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">

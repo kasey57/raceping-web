@@ -52,6 +52,6 @@ Manual alternative: `npm run build`, then upload the contents of `out/`
 - English copy (matches the bot's docs).
 - Brand color `#e10600` (see `tailwind.config.js` → `brand`).
 - The Discord invite URL lives in `app/site.js` (`INVITE_URL`).
-- Set `NEXT_PUBLIC_BMC_URL` to a public donation profile at build time to show the support button. It stays hidden while no address is configured.
+- The support CTA below the contact section links to the RacePing Suppi page (`app/site.js`, `SUPPI_URL`).
 - Hero output is a labelled example. Server membership counts are approximate totals, including bots and overlapping memberships, not unique bot users. The stats script retains the previous file if any server request fails.
 - Legal licence and commercial-use decisions require the owner's confirmation; translations do not establish a new licence.
