@@ -2,18 +2,38 @@
 
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { useLang } from '../LanguageProvider';
+import { translations } from '../i18n';
 
-// Add bilingual entries here when significant changes reach production.
-const entries = [];
+// Keep changelog entries in English. Add major updates when they reach production.
+const entries = [
+  {
+    date: '2026-10-11',
+    title: 'Coverage expanded to 11 racing series',
+    body: 'RacePing now covers Formula E, MotoGP, Moto2, Moto3 and IndyCar alongside Formula 1 and five endurance championships. Series shortcuts are available from /next, with calendars, schedules, results and standings where supported.',
+  },
+  {
+    date: '2026-10-11',
+    title: 'Complete paginated results in server channels',
+    body: 'Channel result posts now include the full classification with pagination instead of a short top-five list. Administrators can turn automatic result posts off in /channel add settings.',
+  },
+  {
+    date: '2026-10-11',
+    title: 'Championship standings and result embeds improved',
+    body: 'Endurance standings now use championship points for teams and manufacturers where official tables are available. Result embeds put session details first and use a consistent podium layout.',
+  },
+  {
+    date: '2026-10-11',
+    title: 'Race-aware bot activity',
+    body: 'The bot shows the name of a currently running race as its Watching activity. When no race is underway, it points users to /help and raceping.xyz.',
+  },
+];
 
 export default function ChangelogPage() {
-  const { lang, t } = useLang();
-  const copy = t.changelog;
+  const copy = translations.en.changelog;
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar forceEnglish />
       <main className="mx-auto max-w-3xl px-4 py-16">
         <header className="mb-12 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{copy.kicker}</p>
@@ -24,14 +44,14 @@ export default function ChangelogPage() {
         {entries.length > 0 ? (
           <ol className="space-y-4">
             {entries.map((entry) => (
-              <li key={entry.date} className="rounded-xl border border-white/10 bg-panel px-5 py-5">
+              <li key={`${entry.date}-${entry.title}`} className="rounded-xl border border-white/10 bg-panel px-5 py-5">
                 <time dateTime={entry.date} className="text-sm font-medium text-red-400">
-                  {new Intl.DateTimeFormat(lang === 'pl' ? 'pl-PL' : 'en-GB', {
+                  {new Intl.DateTimeFormat('en-GB', {
                     day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
                   }).format(new Date(`${entry.date}T12:00:00Z`))}
                 </time>
-                <h2 className="mt-2 font-display text-xl font-semibold">{entry[lang].title}</h2>
-                <p className="mt-2 leading-relaxed text-zinc-300">{entry[lang].body}</p>
+                <h2 className="mt-2 font-display text-xl font-semibold">{entry.title}</h2>
+                <p className="mt-2 leading-relaxed text-zinc-300">{entry.body}</p>
               </li>
             ))}
           </ol>
@@ -41,7 +61,7 @@ export default function ChangelogPage() {
           </p>
         )}
       </main>
-      <Footer />
+      <Footer forceEnglish />
     </div>
   );
 }

@@ -3,10 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLang } from './LanguageProvider';
+import { translations } from './i18n';
 import { ICON_SRC } from './site';
 
-export default function Footer() {
-  const { t } = useLang();
+export default function Footer({ forceEnglish = false }) {
+  const { t: currentT } = useLang();
+  const t = forceEnglish ? translations.en : currentT;
   return (
     <footer className="border-t border-white/10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-sm text-zinc-500 sm:flex-row">

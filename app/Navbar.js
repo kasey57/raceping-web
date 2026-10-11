@@ -3,15 +3,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLang } from './LanguageProvider';
+import { translations } from './i18n';
 import { ICON_SRC, INVITE_URL } from './site';
 
-function LangToggle() {
+function LangToggle({ forceEnglish = false }) {
   const { lang, toggle, t } = useLang();
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-label={t.nav.langLabel}
+      aria-label={(forceEnglish ? translations.en : t).nav.langLabel}
       className="flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-2 text-sm font-medium text-zinc-200 hover:border-white/30"
     >
       <span className={lang === 'en' ? 'text-white' : 'text-zinc-500'}>EN</span>
@@ -21,8 +22,9 @@ function LangToggle() {
   );
 }
 
-export default function Navbar() {
-  const { t } = useLang();
+export default function Navbar({ forceEnglish = false }) {
+  const { t: currentT } = useLang();
+  const t = forceEnglish ? translations.en : currentT;
   return (
     <header className="sticky top-0 z-10 border-b border-white/10 bg-carbon/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
@@ -38,7 +40,7 @@ export default function Navbar() {
           <Link href="/#contact" className="hover:text-white">{t.nav.contact}</Link>
         </nav>
         <div className="flex items-center gap-2">
-          <LangToggle />
+          <LangToggle forceEnglish={forceEnglish} />
           <a
             href={INVITE_URL}
             className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:brightness-110"

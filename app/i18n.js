@@ -17,7 +17,7 @@ export const translations = {
     meta: {
       title: 'RacePing — Multi-Series Motorsport Discord Bot',
       description:
-        'Schedules, live results, standings and DM reminders for Formula 1, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup and IMSA, right inside Discord.',
+        'Schedules, results, standings and reminders for Formula 1, Formula E, MotoGP, Moto2, Moto3, IndyCar and five endurance series, right inside Discord.',
     },
     nav: {
       series: 'Series',
@@ -33,14 +33,13 @@ export const translations = {
       badge: 'Discord motorsport bot',
       title1: 'Never miss a race ',
       title2: 'again',
-      subtitle:
-        'Schedules, results, standings and DM reminders for Formula 1 and five endurance series — right inside Discord, in English and Polish.',
+      subtitle: 'Schedules, results, standings and reminders for 11 series — right inside Discord, in English and Polish.',
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
       statsNote: '* Sum of server member counts, including bots and memberships on multiple servers; refreshed periodically.',
       demo: { label: 'Example preview', detail: 'Sun 11:00 JST · Fuji Speedway · countdown & race reminder', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
-        { value: '6', label: 'series covered' },
+        { value: '11', label: 'series covered' },
         { value: '14', label: 'slash commands' },
         { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
         { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'server membership*', other: 'server memberships*' },
@@ -50,8 +49,8 @@ export const translations = {
     sections: {
       series: {
         kicker: 'Coverage',
-        title: 'Six series, one bot',
-        text: 'From Formula 1 Sundays to 24-hour endurance classics.',
+        title: 'Eleven series, one bot',
+        text: 'From Formula 1 and Formula E to MotoGP and endurance classics.',
       },
       features: {
         kicker: 'Features',
@@ -61,7 +60,7 @@ export const translations = {
       commands: {
         kicker: 'Commands',
         title: '14 top-level slash commands',
-        text: 'Type / in any channel and pick what you need.',
+        text: '14 top-level commands include series shortcuts and variants for /standings and /channel.',
       },
       setup: {
         kicker: 'Setup',
@@ -74,11 +73,16 @@ export const translations = {
     },
     series: [
       { code: 'F1', name: 'Formula 1', emoji: '🏎️', note: 'Schedules, results, standings' },
-      { code: 'WEC', name: 'FIA WEC', emoji: '⏱️', note: 'Endurance world championship' },
+      { code: 'FE', name: 'Formula E', emoji: '⚡', note: 'Electric single-seater championship' },
+      { code: 'MOTOGP', name: 'MotoGP', emoji: '🏍️', note: 'Premier motorcycle class' },
+      { code: 'MOTO2', name: 'Moto2', emoji: '🏍️', note: 'Intermediate motorcycle class' },
+      { code: 'MOTO3', name: 'Moto3', emoji: '🏍️', note: 'Lightweight motorcycle class' },
+      { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'North American open-wheel racing' },
+      { code: 'WEC', name: 'FIA WEC', emoji: '🏁', note: 'Endurance world championship' },
       { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'European endurance championship' },
       { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Asian endurance championship' },
-      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Sprint endurance cup' },
-      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American sports cars & GTP' },
+      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏁', note: 'Sprint endurance cup' },
+      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American sports cars and GTP' },
     ],
     features: [
       {
@@ -98,8 +102,8 @@ export const translations = {
         text: 'Upcoming calendars, latest session results and championship tables, always in clean Discord messages.',
       },
       {
-        title: 'Six Series',
-        text: 'Formula 1 plus five endurance series — WEC, ELMS, Asian Le Mans, Le Mans Cup and IMSA.',
+        title: '11 Series',
+        text: 'Formula 1, Formula E, MotoGP, Moto2, Moto3 and IndyCar, plus WEC, ELMS, Asian Le Mans, Le Mans Cup and IMSA.',
       },
       {
         title: 'English & Polish',
@@ -130,26 +134,31 @@ export const translations = {
     commandPage: {
       kicker: 'Reference',
       title: 'Every command, every option',
-      text: 'Pick a series — f1, wec, elms, alms, lmc, imsa — and the bot handles the rest. Anything in [brackets] is optional. /standings and /channel come in variants: f1/endurance and add/remove/list.',
+      text: 'The reference covers 14 top-level commands, /next shortcuts for all 11 series, seven /standings variants and add/remove/list for /channel. Anything in [brackets] is optional.',
     },
     fullCommands: [
-      { cmd: '/next [series]', desc: 'Next race weekend: countdown, round, circuit and a reminder shortcut.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
-      { cmd: '/calendar [series]', desc: 'Full season calendar, from the next round to the finale.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
-      { cmd: '/schedule [series]', desc: 'Hour-by-hour timetable of the next race weekend.', args: 'series: f1 (default), wec, elms, alms, lmc, imsa' },
-      { cmd: '/result [series] [class] [session]', desc: 'Latest qualifying or race result with paginated classification. Team classes appear when the provider supplies them.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
-      { cmd: '/standings f1 [type]', desc: 'Formula 1 championship tables.', args: 'type: drivers (default), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Published teams and manufacturers championship points by class for WEC, ELMS, Asian Le Mans Series, Le Mans Cup and IMSA. Complete tables are paginated. Unavailable points are reported instead of replaced with race wins.', args: 'series: wec, elms, alms, lmc, imsa · class: as above' },
-      { cmd: '/remindme series [before]', desc: 'Private DM reminder before every race of a series.', args: 'before: 15m, 1h (default), 3h, 24h' },
-      { cmd: '/unremindme series', desc: 'Stop DM reminders for a series.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
-      { cmd: '/subscriptions', desc: 'List your active DM subscriptions.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Post series reminders to a server channel; full paginated results follow automatically after each race (admins only).', args: 'before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
-      { cmd: '/channel remove series', desc: 'Stop posting a series to the channel (admins only).', args: '—' },
-      { cmd: '/channel list', desc: 'Show channel subscriptions on this server (admins only).', args: '—' },
-      { cmd: '/timezone [zone]', desc: 'Display timezone for race times — server-wide, or personal in DMs.', args: 'zone: any IANA name, e.g. Europe/Warsaw' },
-      { cmd: '/language [language]', desc: 'Server language (admins only).', args: 'language: en, pl' },
-      { cmd: '/setup [language]', desc: 'Server settings (admins only).', args: '—' },
-      { cmd: '/ping', desc: 'Bot latency check.', args: '—' },
-      { cmd: '/help', desc: 'Command list inside Discord.', args: '—' },
+      { cmd: '/next [series]', desc: 'Show the next race weekend, countdown, round, circuit and reminder shortcut. Every series also has a direct /next variant.', args: 'series: f1 (default), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/calendar [series]', desc: 'Show the full season calendar from the next round to the finale.', args: 'series: f1 (default), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/schedule [series]', desc: 'Show the hour-by-hour timetable for the next race weekend.', args: 'series: f1 (default), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/result [series] [class] [session]', desc: 'Show the latest qualifying or race result with a complete paginated classification. MotoGP also supports sprint results.', args: 'series: all 11 · class: endurance only · session: last (default), race, qualifying; sprint (MotoGP)' },
+      { cmd: '/standings f1 [type]', desc: 'Show Formula 1 championship standings.', args: 'type: drivers (default), constructors' },
+      { cmd: '/standings fe [type]', desc: 'Show Formula E championship standings.', args: 'type: drivers (default), teams' },
+      { cmd: '/standings motogp [type]', desc: 'Show MotoGP championship standings.', args: 'type: riders (default), teams, constructors' },
+      { cmd: '/standings moto2 [type]', desc: 'Show Moto2 championship standings.', args: 'type: riders (default), teams, constructors' },
+      { cmd: '/standings moto3 [type]', desc: 'Show Moto3 championship standings.', args: 'type: riders (default), teams, constructors' },
+      { cmd: '/standings indycar [type]', desc: 'Show IndyCar championship standings.', args: 'type: drivers (default), teams, engine manufacturers' },
+      { cmd: '/standings endurance [series] [class]', desc: 'Show team and manufacturer championship points by class. Missing points are reported, never replaced with race wins.', args: 'series: wec, elms, alms, lmc, imsa · class: optional class' },
+      { cmd: '/remindme [series] [before]', desc: 'Get a private DM reminder before every race in a series.', args: 'series: any of the 11 supported series · before: 15m, 1h (default), 3h, 24h' },
+      { cmd: '/unremindme [series]', desc: 'Stop personal reminders for a series.', args: 'series: any of the 11 supported series' },
+      { cmd: '/subscriptions', desc: 'List your active personal reminder subscriptions.', args: 'No options' },
+      { cmd: '/channel add [series] [channel] [before] [results]', desc: 'Route reminders to a server channel; full race results can be disabled (admins only).', args: 'series: any of the 11 · channel: required · before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
+      { cmd: '/channel remove [series]', desc: 'Remove a series channel subscription (admins only).', args: 'series: choose a configured series' },
+      { cmd: '/channel list', desc: 'List channel subscriptions on this server (admins only).', args: 'No options' },
+      { cmd: '/timezone [zone]', desc: 'Show or set the display timezone. Server-wide in a server, personal in DMs.', args: 'zone: any IANA timezone, e.g. Europe/Warsaw; omit to show current setting' },
+      { cmd: '/language [language]', desc: 'Show or change the default server language (admins only).', args: 'language: en, pl; omit to show current setting' },
+      { cmd: '/setup [language]', desc: 'Set the server language (admins only).', args: 'language: en, pl' },
+      { cmd: '/ping', desc: 'Check bot response latency.', args: 'No options' },
+      { cmd: '/help', desc: 'Show the command guide in Discord.', args: 'No options' },
     ],
     steps: [
       {
@@ -169,33 +178,26 @@ export const translations = {
       },
     ],
     faq: [
-      {
-        q: 'Is RacePing free?',
+      { q: 'Is RacePing free?',
         a: 'Yes. The bot and all its commands are free, built on open racing data sources.',
       },
-      {
-        q: 'How do I get personal reminders?',
-        a: 'Run /remindme with a series and lead time. The bot DMs you before every race. Manage everything with /subscriptions and /unremindme.',
+      { q: 'How do I get personal reminders?',
+        a: 'Run /remindme with a series and lead time. The bot DMs you before every race. Manage subscriptions with /subscriptions and /unremindme.',
       },
-      {
-        q: 'Can the bot post to a channel instead of DMs?',
-        a: 'Yes. Server admins run /channel add with a series and a text channel. Reminders arrive before every race, and full paginated results post automatically after each race unless turned off.',
+      { q: 'Can the bot post to a channel instead of DMs?',
+        a: 'Yes. Admins can route reminders to a server channel with /channel add. They can also enable automatic full results after each race; this option can be turned off.',
       },
-      {
-        q: 'Why do I need to allow direct messages from server members?',
-        a: 'Reminders are sent as private messages so server channels stay clean. In your Discord privacy settings, allow direct messages from members of that server — otherwise the bot cannot deliver them.',
+      { q: 'Why do I need to allow direct messages from server members?',
+        a: 'This setting lets the bot deliver personal reminders. Allow direct messages from members of that server in its privacy settings.',
       },
-      {
-        q: 'Which series are supported?',
-        a: 'Formula 1, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup and IMSA.',
+      { q: 'Which series are supported?',
+        a: 'Formula 1, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup and IMSA.',
       },
-      {
-        q: 'Where does the data come from?',
-        a: 'F1 data comes from Jolpica. Endurance schedules and results use OpenWEC, with Blacktop filling WEC coverage gaps. Championship points come from the official WEC, ELMS, ALMS and Le Mans Cup websites and IMSA’s official Al Kamel tables. Data is refreshed periodically; points tables are cached for ten minutes. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
+      { q: 'Where does the data come from?',
+        a: 'F1 data comes from Jolpica. Formula E, MotoGP, Moto2, Moto3 and IndyCar use Blacktop. Endurance schedules and results use OpenWEC, with Blacktop filling WEC coverage gaps. Championship points come from official series tables. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
       },
-      {
-        q: 'English or Polish?',
-        a: 'Both. Admins set a default server language. In DMs, personal commands follow your Discord client language.',
+      { q: 'English or Polish?',
+        a: 'Both. Admins set the default server language. In DMs, the bot may use the user’s Discord client language.',
       },
     ],
     final: {
@@ -238,7 +240,7 @@ export const translations = {
     meta: {
       title: 'RacePing — bot motorsportowy na Discorda',
       description:
-        'Terminarze, wyniki na żywo, klasyfikacje i prywatne powiadomienia przed wyścigami F1, WEC, ELMS, Asian Le Mans, Le Mans Cup i IMSA na Twoim Discordzie.',
+        'Terminarze, wyniki, klasyfikacje i przypomnienia dla Formuły 1, Formuły E, MotoGP, Moto2, Moto3, IndyCar oraz pięciu serii endurance na Discordzie.',
     },
     nav: {
       series: 'Serie',
@@ -254,14 +256,13 @@ export const translations = {
       badge: 'Bot motorsportowy na Discorda',
       title1: 'Już nigdy nie przegap ',
       title2: 'wyścigu',
-      subtitle:
-        'Harmonogramy, wyniki, klasyfikacje i prywatne przypomnienia przed wyścigami Formuły 1 oraz pięciu serii endurance — na Twoim Discordzie, po polsku i angielsku.',
+      subtitle: 'Terminarze, wyniki, klasyfikacje i prywatne przypomnienia dla 11 serii — na Discordzie, po polsku i angielsku.',
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
       statsNote: '* Suma członków serwerów, obejmująca boty i członkostwa na kilku serwerach; odświeżana okresowo.',
       demo: { label: 'Przykładowy podgląd', detail: 'Niedz. 11:00 JST · Fuji Speedway · odliczanie i przypomnienie o wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
-        { value: '6', label: 'serii w jednym bocie' },
+        { value: '11', label: 'serii w jednym bocie' },
         { value: '14', label: 'komend slash' },
         { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
         { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'członkostwo na serwerze*', few: 'członkostwa na serwerach*', many: 'członkostw na serwerach*' },
@@ -271,8 +272,8 @@ export const translations = {
     sections: {
       series: {
         kicker: 'Zakres',
-        title: 'Sześć serii, jeden bot',
-        text: 'Od niedzielnych wyścigów F1 po 24-godzinne klasyki endurance.',
+        title: 'Jedenaście serii, jeden bot',
+        text: 'Od wyścigów Formuły 1 i Formuły E po MotoGP oraz klasyki endurance.',
       },
       features: {
         kicker: 'Funkcje',
@@ -282,7 +283,7 @@ export const translations = {
       commands: {
         kicker: 'Komendy',
         title: '14 głównych komend slash',
-        text: 'Wpisz / w dowolnym kanale i wybierz, czego potrzebujesz.',
+        text: '14 komend głównych obejmuje też skróty serii oraz warianty /standings i /channel.',
       },
       setup: {
         kicker: 'Konfiguracja',
@@ -295,11 +296,16 @@ export const translations = {
     },
     series: [
       { code: 'F1', name: 'Formuła 1', emoji: '🏎️', note: 'Terminarze, wyniki, klasyfikacje' },
-      { code: 'WEC', name: 'FIA WEC', emoji: '⏱️', note: 'Mistrzostwa świata endurance' },
+      { code: 'FE', name: 'Formuła E', emoji: '⚡', note: 'Elektryczne wyścigi jednomiejscowe' },
+      { code: 'MOTOGP', name: 'MotoGP', emoji: '🏍️', note: 'Najwyższa klasa wyścigów motocyklowych' },
+      { code: 'MOTO2', name: 'Moto2', emoji: '🏍️', note: 'Średnia klasa wyścigów motocyklowych' },
+      { code: 'MOTO3', name: 'Moto3', emoji: '🏍️', note: 'Lekka klasa wyścigów motocyklowych' },
+      { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'Amerykańskie wyścigi jednomiejscowe' },
+      { code: 'WEC', name: 'FIA WEC', emoji: '🏁', note: 'Mistrzostwa świata endurance' },
       { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'Europejskie mistrzostwa endurance' },
       { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Azjatyckie mistrzostwa endurance' },
-      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏆', note: 'Sprinterski puchar endurance' },
-      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Amerykańska seria aut sportowych i GTP' },
+      { code: 'LMC', name: 'Le Mans Cup', emoji: '🏁', note: 'Sprinterski puchar endurance' },
+      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Amerykańskie wyścigi aut sportowych i GTP' },
     ],
     features: [
       {
@@ -351,26 +357,31 @@ export const translations = {
     commandPage: {
       kicker: 'Lista komend',
       title: 'Każda komenda, każda opcja',
-      text: 'Wybierz serię — f1, wec, elms, alms, lmc, imsa — resztą zajmie się bot. Wszystko w [nawiasach] jest opcjonalne. Komendy /standings i /channel mają warianty: f1/endurance oraz add/remove/list.',
+      text: 'Pełna lista obejmuje 14 komend głównych, warianty /next dla 11 serii, siedem wariantów /standings oraz add/remove/list dla /channel. Wszystko w [nawiasach] jest opcjonalne.',
     },
     fullCommands: [
-      { cmd: '/next [series]', desc: 'Następny weekend wyścigowy z odliczaniem, rundą i torem.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
-      { cmd: '/calendar [series]', desc: 'Pełny kalendarz sezonu, od następnej rundy do finału.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
-      { cmd: '/schedule [series]', desc: 'Plan godzinowy najbliższego weekendu wyścigowego.', args: 'series: f1 (domyślnie), wec, elms, alms, lmc, imsa' },
-      { cmd: '/result [series] [class] [session]', desc: 'Wynik ostatnich kwalifikacji lub wyścigu z paginacją. Klasy zespołów pokazujemy, jeśli są dostępne w danych.', args: 'class: Hypercar, LMP2 (+Pro/Am), LMP3 (+Pro/Am), LMGT3, GT, GT3, GTD, GTD PRO, GTP, P3 · session: last, race, qualifying' },
-      { cmd: '/standings f1 [type]', desc: 'Tabele mistrzostw Formuły 1.', args: 'type: drivers (domyślnie), constructors' },
-      { cmd: '/standings endurance series [class]', desc: 'Punktowe klasyfikacje zespołów i producentów w klasach WEC, ELMS, Asian Le Mans Series, Le Mans Cup i IMSA. Pełne tabele mają paginację. Bot informuje o braku punktów, zamiast zastępować je liczbą zwycięstw.', args: 'series: wec, elms, alms, lmc, imsa · class: jak wyżej' },
-      { cmd: '/remindme series [before]', desc: 'Prywatne przypomnienie w wiadomości prywatnej przed każdym wyścigiem danej serii.', args: 'before: 15m, 1h (domyślnie), 3h, 24h' },
-      { cmd: '/unremindme series', desc: 'Wyłącz przypomnienia dla serii.', args: 'series: f1, wec, elms, alms, lmc, imsa' },
-      { cmd: '/subscriptions', desc: 'Lista Twoich subskrypcji przypomnień.', args: '—' },
-      { cmd: '/channel add series channel [before] [results]', desc: 'Przypomnienia serii na kanał serwera; pełne wyniki z paginacją same po każdym wyścigu (tylko administratorzy).', args: 'before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
-      { cmd: '/channel remove series', desc: 'Wyłącz posty serii na kanał (tylko administratorzy).', args: '—' },
-      { cmd: '/channel list', desc: 'Subskrypcje kanałowe na tym serwerze (tylko administratorzy).', args: '—' },
-      { cmd: '/timezone [zone]', desc: 'Strefa czasowa godzin — dla serwera albo prywatnie dla Ciebie.', args: 'zone: nazwa IANA, np. Europe/Warsaw' },
-      { cmd: '/language [language]', desc: 'Język serwera (tylko administratorzy).', args: 'language: en, pl' },
-      { cmd: '/setup [language]', desc: 'Ustawienia serwera (tylko administratorzy).', args: '—' },
-      { cmd: '/ping', desc: 'Sprawdzenie opóźnienia bota.', args: '—' },
-      { cmd: '/help', desc: 'Lista komend na Discordzie.', args: '—' },
+      { cmd: '/next [series]', desc: 'Najbliższy weekend, odliczanie, runda, tor i skrót przypomnienia. Każda seria ma bezpośredni wariant /next.', args: 'series: f1 (domyślnie), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/calendar [series]', desc: 'Pełny kalendarz sezonu od najbliższej rundy do finału.', args: 'series: f1 (domyślnie), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/schedule [series]', desc: 'Godzinowy plan najbliższego weekendu wyścigowego.', args: 'series: f1 (domyślnie), fe, motogp, moto2, moto3, indycar, wec, elms, alms, lmc, imsa' },
+      { cmd: '/result [series] [class] [session]', desc: 'Pełne, stronicowane wyniki ostatnich kwalifikacji lub wyścigu. MotoGP obsługuje też sprint.', args: 'series: wszystkie 11 · class: tylko endurance · session: last (domyślnie), race, qualifying; sprint (MotoGP)' },
+      { cmd: '/standings f1 [type]', desc: 'Klasyfikacja mistrzostw Formuły 1.', args: 'type: drivers (domyślnie), constructors' },
+      { cmd: '/standings fe [type]', desc: 'Klasyfikacja mistrzostw Formuły E.', args: 'type: drivers (domyślnie), teams' },
+      { cmd: '/standings motogp [type]', desc: 'Klasyfikacja mistrzostw MotoGP.', args: 'type: riders (domyślnie), teams, constructors' },
+      { cmd: '/standings moto2 [type]', desc: 'Klasyfikacja mistrzostw Moto2.', args: 'type: riders (domyślnie), teams, constructors' },
+      { cmd: '/standings moto3 [type]', desc: 'Klasyfikacja mistrzostw Moto3.', args: 'type: riders (domyślnie), teams, constructors' },
+      { cmd: '/standings indycar [type]', desc: 'Klasyfikacja mistrzostw IndyCar.', args: 'type: drivers (domyślnie), teams, engine manufacturers' },
+      { cmd: '/standings endurance [series] [class]', desc: 'Punktowe klasyfikacje zespołów i producentów według klas. Brak punktów jest zgłaszany, nie zastępowany liczbą zwycięstw.', args: 'series: wec, elms, alms, lmc, imsa · class: opcjonalna klasa' },
+      { cmd: '/remindme [series] [before]', desc: 'Prywatne przypomnienie przed każdym wyścigiem wybranej serii.', args: 'series: jedna z 11 serii · before: 15m, 1h (domyślnie), 3h, 24h' },
+      { cmd: '/unremindme [series]', desc: 'Wyłącz prywatne przypomnienia dla serii.', args: 'series: jedna z 11 serii' },
+      { cmd: '/subscriptions', desc: 'Wyświetl aktywne subskrypcje przypomnień.', args: 'Brak opcji' },
+      { cmd: '/channel add [series] [channel] [before] [results]', desc: 'Skieruj przypomnienia na kanał serwera; pełne wyniki po wyścigu można wyłączyć (administratorzy).', args: 'series: jedna z 11 · channel: wymagany · before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
+      { cmd: '/channel remove [series]', desc: 'Usuń subskrypcję serii na kanale (administratorzy).', args: 'series: skonfigurowana seria' },
+      { cmd: '/channel list', desc: 'Pokaż subskrypcje kanałowe serwera (administratorzy).', args: 'Brak opcji' },
+      { cmd: '/timezone [zone]', desc: 'Wyświetl lub ustaw strefę czasową. Na serwerze wspólną, w wiadomościach prywatnych osobistą.', args: 'zone: strefa IANA, np. Europe/Warsaw; pomiń, aby wyświetlić bieżącą' },
+      { cmd: '/language [language]', desc: 'Wyświetl lub zmień domyślny język serwera (administratorzy).', args: 'language: en, pl; pomiń, aby wyświetlić bieżący' },
+      { cmd: '/setup [language]', desc: 'Ustaw język serwera (administratorzy).', args: 'language: en, pl' },
+      { cmd: '/ping', desc: 'Sprawdź opóźnienie bota.', args: 'Brak opcji' },
+      { cmd: '/help', desc: 'Pokaż przewodnik po komendach na Discordzie.', args: 'Brak opcji' },
     ],
     steps: [
       {
@@ -390,33 +401,26 @@ export const translations = {
       },
     ],
     faq: [
-      {
-        q: 'Czy RacePing jest darmowy?',
+      { q: 'Czy RacePing jest darmowy?',
         a: 'Tak. Bot i wszystkie jego komendy są darmowe, oparte na otwartych źródłach danych wyścigowych.',
       },
-      {
-        q: 'Jak dostać prywatne przypomnienia?',
-        a: 'Użyj komendy /remindme z serią i wyprzedzeniem. Bot napisze wiadomość prywatną przed każdym wyścigiem. Wszystkim zarządzisz przez /subscriptions i /unremindme.',
+      { q: 'Jak dostać prywatne przypomnienia?',
+        a: 'Użyj komendy /remindme z serią i wyprzedzeniem. Bot napisze wiadomość prywatną przed każdym wyścigiem. Zarządzaj subskrypcjami przez /subscriptions i /unremindme.',
       },
-      {
-        q: 'Czy bot może pisać na kanał zamiast w wiadomości prywatnej?',
-        a: 'Tak. Administrator serwera używa komendy /channel add z serią i kanałem tekstowym. Przypomnienia przychodzą przed każdym wyścigiem, a pełne wyniki z paginacją pojawiają się po wyścigu. Automatyczne wyniki można wyłączyć opcją results: false.',
+      { q: 'Czy bot może pisać na kanał zamiast w wiadomości prywatnej?',
+        a: 'Tak. Administratorzy mogą ustawić przypomnienia na wybranym kanale przez /channel add. Mogą też włączyć automatyczne publikowanie pełnych wyników po wyścigu; tę opcję można wyłączyć.',
       },
-      {
-        q: 'Dlaczego muszę zezwolić na wiadomości prywatne od członków serwera?',
-        a: 'Przypomnienia to wiadomości prywatne, żeby nie zaśmiecać kanałów serwera. W ustawieniach prywatności serwera włącz odbieranie wiadomości prywatnych od jego członków — inaczej bot nie będzie mógł ich wysłać.',
+      { q: 'Dlaczego muszę zezwolić na wiadomości prywatne od członków serwera?',
+        a: 'To ustawienie jest potrzebne, aby bot mógł wysyłać prywatne przypomnienia. Włącz odbieranie wiadomości prywatnych od członków serwera w ustawieniach prywatności tego serwera.',
       },
-      {
-          q: 'Które serie są obsługiwane?',
-        a: 'Formuła 1, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup i IMSA.',
+      { q: 'Które serie są obsługiwane?',
+        a: 'Formuła 1, Formuła E, MotoGP, Moto2, Moto3, IndyCar, FIA WEC, European Le Mans Series, Asian Le Mans Series, Le Mans Cup i IMSA.',
       },
-      {
-        q: 'Skąd pochodzą dane?',
-        a: 'Dane F1 pochodzą z Jolpica. Kalendarze i wyniki endurance korzystają z OpenWEC, a luki WEC uzupełnia Blacktop. Punkty mistrzostw pochodzą z oficjalnych stron WEC, ELMS, ALMS i Le Mans Cup oraz tabel IMSA w Al Kamel. Dane odświeżają się okresowo; tabele punktowe są przechowywane w pamięci przez dziesięć minut. Brakujące rundy mogą korzystać z przybliżonego kalendarza, oznaczonego w wiadomościach bota.',
+      { q: 'Skąd pochodzą dane?',
+        a: 'Dane F1 pochodzą z Jolpica. Formuła E, MotoGP, Moto2, Moto3 i IndyCar korzystają z Blacktop. Kalendarze i wyniki endurance pochodzą z OpenWEC, a luki WEC uzupełnia Blacktop. Punkty pochodzą z oficjalnych tabel serii. Brakujące rundy mogą korzystać z przybliżonego kalendarza oznaczonego w wiadomościach bota.',
       },
-      {
-        q: 'Po polsku czy po angielsku?',
-        a: 'Oba języki. Administrator ustawia domyślny język serwera. W wiadomościach prywatnych komendy osobiste mogą używać języka Twojego klienta Discorda.',
+      { q: 'Po polsku czy po angielsku?',
+        a: 'Oba języki. Administrator ustawia domyślny język serwera; w wiadomościach prywatnych bot może używać języka klienta Discorda użytkownika.',
       },
     ],
     final: {
