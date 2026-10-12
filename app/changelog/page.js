@@ -8,12 +8,12 @@ import { translations } from '../i18n';
 const entries = [
   {
     date: '2026-10-12',
-    title: 'NASCAR coverage and an in-bot update feed',
-    body: 'RacePing now covers the NASCAR Cup Series, Xfinity Series and Craftsman Truck Series, including calendars, schedules, results, standings, reminders and race-aware activity. The new /info command summarizes supported series and the five latest updates.',
+    title: 'NASCAR coverage, 14 series and /info',
+    body: 'RacePing now supports 14 racing series and 15 top-level slash commands. NASCAR Cup, O’Reilly and Craftsman Truck coverage includes calendars, schedules, results, standings and reminders. The new /info command summarizes supported series and recent features; /reminders lists active personal reminders.',
   },
   {
     date: '2026-10-11',
-    title: 'Coverage expanded to 11 racing series',
+    title: 'Formula E, motorcycle racing and IndyCar added',
     body: 'RacePing now covers Formula E, MotoGP, Moto2, Moto3 and IndyCar alongside Formula 1 and five endurance championships. Series shortcuts are available from /next, with calendars, schedules, results and standings where supported.',
   },
   {
