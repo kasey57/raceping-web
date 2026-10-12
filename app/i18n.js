@@ -115,6 +115,14 @@ export const translations = {
         title: 'Free & Open Data',
         text: 'Powered by racing APIs and official championship tables. No paywalls, no accounts.',
       },
+      {
+        title: 'Race-aware activity',
+        text: 'The bot shows the name of a race that is currently underway. When no race is live, its activity points to /help and raceping.xyz.',
+      },
+      {
+        title: 'Times in your timezone',
+        text: 'Set a server timezone for shared race times, or choose a personal timezone for direct messages. Event times are easier to follow wherever you are.',
+      },
     ],
     commands: [
       ['/next [series]', 'Next race weekend & countdown'],
@@ -342,6 +350,14 @@ export const translations = {
       {
         title: 'Darmowe i otwarte źródła',
         text: 'Oparte na API wyścigowych i oficjalnych tabelach mistrzostw. Bez opłat, bez kont.',
+      },
+      {
+        title: 'Status podczas wy\u015bcigu',
+        text: 'Gdy trwa wy\u015bcig, bot pokazuje jego nazw\u0119 w aktywno\u015bci. Poza wy\u015bcigami aktywno\u015b\u0107 wskazuje /help i raceping.xyz.',
+      },
+      {
+        title: 'Godziny w Twojej strefie',
+        text: 'Ustaw stref\u0119 czasow\u0105 dla ca\u0142ego serwera albo w\u0142asn\u0105 dla wiadomo\u015bci prywatnych. Godziny sesji b\u0119d\u0105 czytelne w Twojej lokalnej strefie.',
       },
     ],
     commands: [
