@@ -13,6 +13,8 @@ Przechowujemy wyłącznie to, co bot musi zapamiętać, aby działały Twoje ust
 - Identyfikatory serwerów (guild) oraz ustawienia serwerów: domyślny język i strefę czasową, a — gdy skonfiguruje je administrator — subskrypcje kanałowe (identyfikator kanału, seria, wyprzedzenie oraz to, czy publikować wyniki).
 - Publiczne dane wyścigowe (terminarze, wyniki, klasyfikacje) pochodzą z zewnętrznych API sportowych i mogą obejmować publiczne imiona, nazwiska oraz informacje profilowe kierowców. Odpowiedzi są tymczasowo buforowane w pamięci.
 
+- Analityka strony: witryna korzysta z Google Analytics 4 (GA4). Narzędzie zbiera dane o użyciu i interakcjach, odwiedzanych stronach i źródłach ruchu, przybliżonej lokalizacji oraz przeglądarce i urządzeniu. GA4 może używać własnych plików cookie, takich jak _ga, do rozróżniania przeglądarek i sesji. Google informuje, że GA4 używa adresu IP podczas zbierania danych do określenia lokalizacji, a następnie odrzuca go przed zapisaniem danych. Informacje Google: https://support.google.com/analytics/answer/11593727 oraz https://support.google.com/analytics/answer/11397207.
+
 Nie przechowujemy nazw użytkowników, treści wiadomości ani historii komend. Celowo nie gromadzimy haseł, tokenów, adresów e-mail ani innych wrażliwych danych. Prosimy, nie udostępniaj botowi takich informacji.
 
 2. JAK WYKORZYSTUJEMY TWOJE INFORMACJE
@@ -26,7 +28,7 @@ Twoje informacje wykorzystujemy, aby:
 
 3. UDOSTĘPNIANIE TWOICH INFORMACJI
 
-Nie sprzedajemy ani nie udostępniamy Twoich danych osobowych stronom trzecim w celach marketingowych.
+Nie sprzedajemy Twoich danych osobowych ani nie udostępniamy ich stronom trzecim do ich własnych celów marketingowych. Dane analityczne strony są przesyłane do Google Analytics, aby tworzyć zagregowane raporty o korzystaniu z witryny. Zasady Google opisuje pod adresem https://policies.google.com/privacy.
 
 Twoje informacje możemy ujawnić wyłącznie:
 

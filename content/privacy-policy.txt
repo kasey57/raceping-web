@@ -12,6 +12,7 @@ We store only what the bot needs to remember your settings:
 - Notification delivery records: recipient user or server/channel IDs, series and event identifiers, delivery status and timestamps, used to prevent duplicate posts.
 - Server (guild) IDs and server settings: default language and timezone, and — when an administrator configures them — channel subscriptions (channel ID, series, lead time and whether results should be posted).
 - Public race data (schedules, results, standings) comes from third-party sports-data APIs and may include publicly listed driver names and profile details. Responses are temporarily cached in memory.
+- Website analytics: this website uses Google Analytics 4 (GA4). It collects usage and interaction events, page and traffic-source information, approximate location, and browser/device details. GA4 may use first-party cookies such as _ga to distinguish browsers and sessions. Google says GA4 uses IP addresses at collection to derive location information and discards them before the data is logged. See Google's Analytics data collection: https://support.google.com/analytics/answer/11593727 and cookie information: https://support.google.com/analytics/answer/11397207.
 
 We do not store usernames, message content, or command history. We do not intentionally collect passwords, tokens, email addresses, or other sensitive credentials. Please do not share such information with the bot.
 
@@ -26,7 +27,7 @@ We use your information to:
 
 3. SHARING YOUR INFORMATION
 
-We do not sell or share your personal information with third parties for marketing purposes.
+We do not sell your personal information or share it with third parties for their marketing purposes. Website analytics data is sent to Google Analytics so we can review aggregated site usage reports; Google's handling is described in its Privacy Policy: https://policies.google.com/privacy.
 
 We may disclose your information only:
 
