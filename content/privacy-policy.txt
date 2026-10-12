@@ -8,9 +8,9 @@ This Privacy Policy governs the collection, use, and sharing of personal informa
 
 We store only what the bot needs to remember your settings:
 
-- Your Discord user ID, when you use personal features such as reminder subscriptions — together with your reminder preferences (series, lead time, language and timezone).
+- Your Discord user ID, when you use personal features such as /lang, /timezone or reminder subscriptions, together with your saved language, timezone and reminder preferences.
 - Notification delivery records: recipient user or server/channel IDs, series and event identifiers, delivery status and timestamps, used to prevent duplicate posts.
-- Server (guild) IDs and server settings: default language and timezone, and — when an administrator configures them — channel subscriptions (channel ID, series, lead time and whether results should be posted).
+- Server (guild) IDs and settings: the default language for shared channel posts and the timezone used in shared posts, plus channel subscriptions (channel ID, series, lead time and whether results should be posted).
 - Public race data (schedules, results, standings) comes from third-party sports-data APIs and may include publicly listed driver names and profile details. Responses are temporarily cached in memory.
 - Website analytics: this website uses Google Analytics 4 (GA4). It collects usage and interaction events, page and traffic-source information, approximate location, and browser/device details. GA4 may use first-party cookies such as _ga to distinguish browsers and sessions. Google says GA4 uses IP addresses at collection to derive location information and discards them before the data is logged. See Google's Analytics data collection: https://support.google.com/analytics/answer/11593727 and cookie information: https://support.google.com/analytics/answer/11397207.
 

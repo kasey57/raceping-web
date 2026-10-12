@@ -8,9 +8,9 @@ Niniejsza Polityka Prywatności reguluje gromadzenie, wykorzystywanie i udostęp
 
 Przechowujemy wyłącznie to, co bot musi zapamiętać, aby działały Twoje ustawienia:
 
-- Twój identyfikator użytkownika Discorda, gdy korzystasz z funkcji osobistych, takich jak subskrypcje przypomnień — wraz z preferencjami przypomnień (seria, wyprzedzenie, język i strefa czasowa).
+- Twój identyfikator użytkownika Discorda, gdy korzystasz z osobistych ustawień /lang, /timezone lub subskrypcji przypomnień, wraz z zapisanym językiem, strefą czasową i preferencjami przypomnień.
 - Rejestr dostarczeń powiadomień: identyfikatory użytkownika lub serwera/kanału, serii i wydarzenia, status dostarczenia oraz znaczniki czasu; służą zapobieganiu duplikatom.
-- Identyfikatory serwerów (guild) oraz ustawienia serwerów: domyślny język i strefę czasową, a — gdy skonfiguruje je administrator — subskrypcje kanałowe (identyfikator kanału, seria, wyprzedzenie oraz to, czy publikować wyniki).
+- Identyfikatory serwerów (guild) i ustawienia: domyślny język postów na wspólnych kanałach oraz strefa czasowa tych postów, a także subskrypcje kanałowe (identyfikator kanału, seria, wyprzedzenie i publikowanie wyników).
 - Publiczne dane wyścigowe (terminarze, wyniki, klasyfikacje) pochodzą z zewnętrznych API sportowych i mogą obejmować publiczne imiona, nazwiska oraz informacje profilowe kierowców. Odpowiedzi są tymczasowo buforowane w pamięci.
 
 - Analityka strony: witryna korzysta z Google Analytics 4 (GA4). Narzędzie zbiera dane o użyciu i interakcjach, odwiedzanych stronach i źródłach ruchu, przybliżonej lokalizacji oraz przeglądarce i urządzeniu. GA4 może używać własnych plików cookie, takich jak _ga, do rozróżniania przeglądarek i sesji. Google informuje, że GA4 używa adresu IP podczas zbierania danych do określenia lokalizacji, a następnie odrzuca go przed zapisaniem danych. Informacje Google: https://support.google.com/analytics/answer/11593727 oraz https://support.google.com/analytics/answer/11397207.

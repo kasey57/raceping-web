@@ -109,7 +109,7 @@ export const translations = {
       },
       {
         title: 'English & Polish',
-        text: 'Full interface in two languages. Admins pick the server language; personal commands follow your Discord client language.',
+        text: 'Each member can choose English or Polish for server commands with /lang en or /lang pl. DMs still follow the Discord client language.',
       },
       {
         title: 'Free & Open Data',
@@ -121,14 +121,14 @@ export const translations = {
       },
       {
         title: 'Times in your timezone',
-        text: 'Set a server timezone for shared race times, or choose a personal timezone for direct messages. Event times are easier to follow wherever you are.',
+        text: 'Set your personal timezone with /timezone. Command responses and your private reminders use your setting.',
       },
     ],
     commands: [
       ['/next [series]', 'Next race weekend & countdown'],
       ['/calendar [series]', 'Full season calendar'],
       ['/schedule [series]', 'Next weekend hour-by-hour timetable'],
-      ['/timezone [zone]', 'Display timezone for race times'],
+      ['/timezone [zone]', 'Set your personal timezone for race times'],
       ['/result [series]', 'Latest session result'],
       ['/standings f1 / endurance', 'Championship points & classes'],
       ['/remindme series [before]', 'DM reminders before races'],
@@ -136,7 +136,7 @@ export const translations = {
       ['/reminders', 'Your active reminder subscriptions'],
       ['/info', 'Bot information and latest features'],
       ['/channel add', 'Channel reminders & auto results (admins)'],
-      ['/language', 'Server language (admins)'],
+      ['/lang', 'Choose your personal language for server commands'],
       ['/setup', 'Server settings (admins)'],
       ['/ping', 'Bot latency check'],
       ['/help', 'Command list'],
@@ -167,9 +167,9 @@ export const translations = {
       { cmd: '/channel add [series] [channel] [before] [results]', desc: 'Route reminders to a server channel; full race results can be disabled (admins only).', args: 'series: any of the 14 · channel: required · before: 15m, 1h (default), 3h, 24h · results: true (default), false' },
       { cmd: '/channel remove [series]', desc: 'Remove a series channel subscription (admins only).', args: 'series: choose a configured series' },
       { cmd: '/channel list', desc: 'List channel subscriptions on this server (admins only).', args: 'No options' },
-      { cmd: '/timezone [zone]', desc: 'Show or set the display timezone. Server-wide in a server, personal in DMs.', args: 'zone: any IANA timezone, e.g. Europe/Warsaw; omit to show current setting' },
-      { cmd: '/language [language]', desc: 'Show or change the default server language (admins only).', args: 'language: en, pl; omit to show current setting' },
-      { cmd: '/setup [language]', desc: 'Set the server language (admins only).', args: 'language: en, pl' },
+      { cmd: '/timezone [zone]', desc: 'Show or set your personal timezone for command responses and private reminders.', args: 'zone: any IANA timezone, e.g. Europe/Warsaw; omit to show your setting' },
+      { cmd: '/lang en | /lang pl | /lang current', desc: 'Choose your language for server commands or show the current setting.', args: 'No options; choose a subcommand' },
+      { cmd: '/setup [language]', desc: 'Set the default language for shared channel posts (admins).', args: 'language: en, pl' },
       { cmd: '/ping', desc: 'Check bot response latency.', args: 'No options' },
       { cmd: '/help', desc: 'Show the command guide in Discord.', args: 'No options' },
     ],
@@ -182,7 +182,7 @@ export const translations = {
       {
         n: '2',
         title: 'Pick a language',
-        text: 'Admins set a default server language with /setup or /language. In DMs, personal commands follow your Discord client language.',
+        text: 'Choose your personal server-command language with /lang en or /lang pl. DMs continue to follow your Discord client language.',
       },
       {
         n: '3',
@@ -210,7 +210,7 @@ export const translations = {
         a: 'F1 data comes from Jolpica. Formula E, MotoGP, Moto2, Moto3 and IndyCar use Blacktop. Endurance schedules and results use OpenWEC, with Blacktop filling WEC coverage gaps. Championship points come from official series tables. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
       },
       { q: 'English or Polish?',
-        a: 'Both. Admins set the default server language. In DMs, the bot may use the user’s Discord client language.',
+        a: 'Each member chooses a language for server commands with /lang en or /lang pl. In DMs, RacePing follows the Discord client language.',
       },
     ],
     final: {
@@ -345,7 +345,7 @@ export const translations = {
       },
       {
         title: 'Angielski i polski',
-        text: 'Pełny interfejs w dwóch językach. Administrator wybiera język serwera, a komendy osobiste podążają za językiem Twojego klienta Discorda.',
+        text: 'Każdy wybiera język komend serwerowych przez /lang en lub /lang pl. W DM-ach bot nadal używa języka klienta Discorda.',
       },
       {
         title: 'Darmowe i otwarte źródła',
@@ -357,14 +357,14 @@ export const translations = {
       },
       {
         title: 'Godziny w Twojej strefie',
-        text: 'Ustaw stref\u0119 czasow\u0105 dla ca\u0142ego serwera albo w\u0142asn\u0105 dla wiadomo\u015bci prywatnych. Godziny sesji b\u0119d\u0105 czytelne w Twojej lokalnej strefie.',
+        text: 'Ustaw osobistą strefę przez /timezone. Odpowiedzi na komendy i prywatne przypomnienia korzystają z Twojego ustawienia.',
       },
     ],
     commands: [
       ['/next [series]', 'Następny weekend wyścigowy'],
       ['/calendar [series]', 'Pełny kalendarz sezonu'],
       ['/schedule [series]', 'Plan godzinowy najbliższego weekendu'],
-      ['/timezone [zone]', 'Strefa czasowa godzin wyścigów'],
+      ['/timezone [zone]', 'Ustaw osobistą strefę czasową'],
       ['/result [series]', 'Wynik ostatniej sesji'],
       ['/standings f1 / endurance', 'Punktowe klasyfikacje i klasy'],
       ['/remindme series [before]', 'Prywatne przypomnienia przed wyścigami'],
@@ -372,7 +372,7 @@ export const translations = {
       ['/reminders', 'Twoje aktywne przypomnienia'],
       ['/info', 'Informacje o bocie i najnowsze funkcje'],
       ['/channel add', 'Przypomnienia i wyniki na kanale (administratorzy)'],
-      ['/language', 'Język serwera (dla administratorów)'],
+      ['/lang', 'Wybierz osobisty język komend serwerowych'],
       ['/setup', 'Ustawienia serwera (dla administratorów)'],
       ['/ping', 'Sprawdzenie opóźnienia'],
       ['/help', 'Lista komend'],
@@ -403,9 +403,9 @@ export const translations = {
       { cmd: '/channel add [series] [channel] [before] [results]', desc: 'Skieruj przypomnienia na kanał serwera; pełne wyniki po wyścigu można wyłączyć (administratorzy).', args: 'series: jedna z 14 · channel: wymagany · before: 15m, 1h (domyślnie), 3h, 24h · results: true (domyślnie), false' },
       { cmd: '/channel remove [series]', desc: 'Usuń subskrypcję serii na kanale (administratorzy).', args: 'series: skonfigurowana seria' },
       { cmd: '/channel list', desc: 'Pokaż subskrypcje kanałowe serwera (administratorzy).', args: 'Brak opcji' },
-      { cmd: '/timezone [zone]', desc: 'Wyświetl lub ustaw strefę czasową. Na serwerze wspólną, w wiadomościach prywatnych osobistą.', args: 'zone: strefa IANA, np. Europe/Warsaw; pomiń, aby wyświetlić bieżącą' },
-      { cmd: '/language [language]', desc: 'Wyświetl lub zmień domyślny język serwera (administratorzy).', args: 'language: en, pl; pomiń, aby wyświetlić bieżący' },
-      { cmd: '/setup [language]', desc: 'Ustaw język serwera (administratorzy).', args: 'language: en, pl' },
+      { cmd: '/timezone [zone]', desc: 'Pokaż lub ustaw osobistą strefę dla odpowiedzi na komendy i prywatnych przypomnień.', args: 'zone: dowolna strefa IANA, np. Europe/Warsaw; pomiń, aby wyświetlić ustawienie' },
+      { cmd: '/lang en | /lang pl | /lang current', desc: 'Wybierz język komend serwerowych lub pokaż aktualne ustawienie.', args: 'Bez opcji; wybierz podkomendę' },
+      { cmd: '/setup [language]', desc: 'Ustaw domyślny język postów na kanałach (administratorzy).', args: 'language: en, pl' },
       { cmd: '/ping', desc: 'Sprawdź opóźnienie bota.', args: 'Brak opcji' },
       { cmd: '/help', desc: 'Pokaż przewodnik po komendach na Discordzie.', args: 'Brak opcji' },
     ],
@@ -418,7 +418,7 @@ export const translations = {
       {
         n: '2',
         title: 'Wybierz język',
-        text: 'Administrator ustawia domyślny język serwera komendą /setup albo /language. Komendy osobiste w wiadomościach prywatnych podążają za językiem Twojego klienta Discorda.',
+        text: 'Ustaw osobisty język komend serwerowych przez /lang en lub /lang pl. W DM-ach bot nadal podąża za językiem klienta Discorda.',
       },
       {
         n: '3',
@@ -446,7 +446,7 @@ export const translations = {
         a: 'Dane F1 pochodzą z Jolpica. Formuła E, MotoGP, Moto2, Moto3 i IndyCar korzystają z Blacktop. Kalendarze i wyniki endurance pochodzą z OpenWEC, a luki WEC uzupełnia Blacktop. Punkty pochodzą z oficjalnych tabel serii. Brakujące rundy mogą korzystać z przybliżonego kalendarza oznaczonego w wiadomościach bota.',
       },
       { q: 'Po polsku czy po angielsku?',
-        a: 'Oba języki. Administrator ustawia domyślny język serwera; w wiadomościach prywatnych bot może używać języka klienta Discorda użytkownika.',
+        a: 'Każdy użytkownik wybiera język komend serwerowych przez /lang en lub /lang pl. W wiadomościach prywatnych RacePing używa języka klienta Discorda.',
       },
     ],
     final: {

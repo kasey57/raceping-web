@@ -8,6 +8,11 @@ import { translations } from '../i18n';
 const entries = [
   {
     date: '2026-10-12',
+    title: 'Personal language and timezone settings',
+    body: 'Each member can choose English or Polish for server commands with /lang en or /lang pl, check their choice with /lang current, and set a personal timezone with /timezone. Direct messages still follow the Discord client language. Administrators use /setup to choose the default language for shared channel posts.',
+  },
+  {
+    date: '2026-10-12',
     title: 'NASCAR coverage, 14 series and /info',
     body: 'RacePing now supports 14 racing series and 15 top-level slash commands. NASCAR Cup, O’Reilly and Craftsman Truck coverage includes calendars, schedules, results, standings and reminders. The new /info command summarizes supported series and recent features; /reminders lists active personal reminders.',
   },
