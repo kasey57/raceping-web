@@ -30,7 +30,7 @@ export default function Home() {
         const response = await fetch(`${basePath}/stats.json?refresh=${Date.now()}`, { cache: 'no-store' });
         if (!response.ok) return;
         const data = await response.json();
-        if (!Number.isFinite(data.guilds) || !Number.isFinite(data.users) || !data.updatedAt) return;
+        if (!Number.isFinite(data.guilds) || !Number.isFinite(data.users)) return;
         if (active) setLiveStats(data);
       } catch {
         // Keep the build-time values visible when the stats asset is unavailable.
@@ -63,11 +63,6 @@ export default function Home() {
     const count = liveStats[stat.key];
     return { ...stat, count, value: count.toLocaleString(numberLocale) };
   });
-  const statsUpdatedAt = liveStats?.updatedAt || t.hero.statsUpdatedAt;
-  const statsUpdatedLabel = statsUpdatedAt
-    ? new Intl.DateTimeFormat(numberLocale, { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' })
-      .format(new Date(statsUpdatedAt))
-    : null;
 
   return (
     <div className="min-h-screen">
@@ -140,7 +135,6 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-3 text-xs text-zinc-500">{t.hero.statsNote}</p>
-        {statsUpdatedLabel && <p className="mt-1 text-xs text-zinc-500">{t.hero.statsUpdated.replace('{date}', `${statsUpdatedLabel} UTC`)}</p>}
         </div>
         </div>
       </section>

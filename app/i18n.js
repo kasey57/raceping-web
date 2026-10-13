@@ -36,8 +36,6 @@ export const translations = {
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
       statsNote: '* Combined server reach estimate; includes bots and people present in multiple servers.',
-      statsUpdated: 'Stats updated: {date}',
-      statsUpdatedAt: liveStats.updatedAt,
       demo: { label: 'Example preview', detail: 'Oct 23–25 · Austin · Circuit of The Americas · race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
         { value: '14', label: 'series covered' },
@@ -274,8 +272,6 @@ export const translations = {
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
       statsNote: '* Łączny szacunkowy zasięg; obejmuje boty i osoby obecne na wielu serwerach.',
-      statsUpdated: 'Statystyki zaktualizowano: {date}',
-      statsUpdatedAt: liveStats.updatedAt,
       demo: { label: 'Przykładowy podgląd', detail: '23–25 października · Austin · Circuit of The Americas · odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
         { value: '14', label: 'serii w jednym bocie' },
