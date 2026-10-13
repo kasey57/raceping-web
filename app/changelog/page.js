@@ -14,12 +14,12 @@ const entries = [
   {
     date: '2026-10-12',
     title: 'NASCAR coverage, 14 series and /info',
-    body: 'RacePing now supports 14 racing series and 15 top-level slash commands. NASCAR Cup, O’Reilly and Craftsman Truck coverage includes calendars, schedules, results, standings and reminders. The new /info command summarizes supported series and recent features; /reminders lists active personal reminders.',
+    body: 'RacePing now supports 14 racing series and 15 top-level slash commands. NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series and NASCAR Craftsman Truck Series coverage includes calendars, schedules, results, standings and reminders. The new /info command summarizes supported series and recent features; /reminders lists active personal reminders.',
   },
   {
     date: '2026-10-11',
     title: 'Formula E, motorcycle racing and IndyCar added',
-    body: 'RacePing now covers Formula E, MotoGP, Moto2, Moto3 and IndyCar alongside Formula 1 and five endurance championships. Series shortcuts are available from /next, with calendars, schedules, results and standings where supported.',
+    body: 'RacePing now covers Formula E, MotoGP, Moto2, Moto3 and IndyCar alongside Formula 1 (F1), FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup and IMSA. Series shortcuts are available from /next, with calendars, schedules, results and standings where supported.',
   },
   {
     date: '2026-10-11',

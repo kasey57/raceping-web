@@ -15,7 +15,7 @@ const GA_MEASUREMENT_ID = 'G-BK83PH0Z8M';
 export const metadata = {
   title: 'RacePing — Multi-Series Motorsport Discord Bot',
   description:
-    'Schedules, live results, standings and DM reminders for F1, WEC, ELMS, Asian Le Mans, Le Mans Cup and IMSA, right inside Discord.',
+    'Schedules, results, standings and reminders for Formula 1 (F1), Formula E, MotoGP, Moto2, Moto3, IndyCar, NASCAR and endurance racing, right inside Discord.',
   icons: { icon: `${BASE_PATH}/icon.png` },
 };
 
