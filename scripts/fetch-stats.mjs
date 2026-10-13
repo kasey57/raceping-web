@@ -38,6 +38,9 @@ async function listGuilds() {
 
 try {
   if (!TOKEN) throw new Error('DISCORD_BOT_TOKEN is not set');
+  const bot = await api('/users/@me');
+  if (!bot.bot) throw new Error('DISCORD_BOT_TOKEN did not authenticate as a bot account');
+  console.log(`stats: authenticated as ${bot.username} (${bot.id})`);
   const guilds = await listGuilds();
   let users = 0;
   for (const guild of guilds) {
