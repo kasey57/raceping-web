@@ -78,14 +78,14 @@ export const translations = {
       { code: 'MOTO2', name: 'Moto2', emoji: '🏍️', note: 'The intermediate 765 cc class and a common next step for riders progressing toward MotoGP.' },
       { code: 'MOTO3', name: 'Moto3', emoji: '🏍️', note: 'The 250 cc entry class, where many riders begin their Grand Prix path toward Moto2 and MotoGP.' },
       { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'North America’s premier open-wheel series, racing on ovals, street circuits and road courses.' },
-      { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'NASCAR’s premier stock-car series, racing on oval, road and street courses.' },
-      { code: 'O’REILLY', name: 'NASCAR O’Reilly Auto Parts Series', emoji: '🏁', note: 'NASCAR’s second-tier national stock-car series.' },
-      { code: 'TRUCK', name: 'NASCAR Craftsman Truck Series', emoji: '🏁', note: 'NASCAR’s national series for racing trucks based on pickup designs.' },
       { code: 'FIA WEC', name: 'FIA World Endurance Championship', emoji: '🏁', note: 'The FIA’s world championship for multi-class endurance racing.' },
       { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'A European multi-class endurance series featuring LMP2, LMP3 and LMGT3 cars.' },
       { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Asia’s international multi-class endurance series.' },
       { code: 'LMC', name: 'Michelin Le Mans Cup', emoji: '🏁', note: 'Endurance racing for LMP3 prototypes and GT3 cars.' },
       { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American multi-class sports-car racing, with GTP and LMP2 prototypes alongside GTD cars.' },
+      { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'NASCAR’s premier stock-car series, racing on oval, road and street courses.' },
+      { code: 'O’REILLY', name: 'NASCAR O’Reilly Auto Parts Series', emoji: '🏁', note: 'NASCAR’s second-tier national stock-car series.' },
+      { code: 'TRUCK', name: 'NASCAR Craftsman Truck Series', emoji: '🏁', note: 'NASCAR’s national series for racing trucks based on pickup designs.' },
     ],
     features: [
       {
@@ -106,7 +106,7 @@ export const translations = {
       },
       {
         title: '16 Series',
-        text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series, NASCAR Craftsman Truck Series, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup and IMSA.',
+        text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series and NASCAR Craftsman Truck Series.',
       },
       {
         title: 'English & Polish',
@@ -213,7 +213,7 @@ export const translations = {
         a: 'This setting lets the bot deliver personal reminders. Allow direct messages from members of that server in its privacy settings.',
       },
       { q: 'Which series are supported?',
-        a: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series, NASCAR Craftsman Truck Series, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup and IMSA.',
+        a: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series and NASCAR Craftsman Truck Series.',
       },
       { q: 'Where does the data come from?',
         a: 'Formula 1 (F1) data comes from Jolpica. Formula 2 and Formula 3 use official FIA classifications with maintained calendars. Formula E, MotoGP, Moto2, Moto3 and IndyCar use Blacktop. Endurance schedules and results use OpenWEC with official Al Kamel classifications for WEC, ELMS and IMSA, plus Blacktop for FIA WEC gaps. Championship points come from official series tables. /next prefers maintained calendar feeds and falls back to APIs. Missing rounds may use an approximate fallback calendar, marked in bot messages.',
@@ -324,14 +324,14 @@ export const translations = {
       { code: 'MOTO2', name: 'Moto2', emoji: '🏍️', note: 'Pośrednia klasa o pojemności 765 cm³ i częsty etap na drodze zawodników do MotoGP.' },
       { code: 'MOTO3', name: 'Moto3', emoji: '🏍️', note: 'Klasa o pojemności 250 cm³, w której wielu zawodników rozpoczyna drogę w wyścigach Grand Prix i później przechodzi do Moto2 oraz MotoGP.' },
       { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'Najważniejsza północnoamerykańska seria wyścigów jednomiejscowych; zawody odbywają się na owalach, ulicznych trasach i torach drogowych.' },
-      { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'Najwyższa seria NASCAR dla samochodów typu stock car, ścigających się na owalach, torach drogowych i ulicznych.' },
-      { code: 'O’REILLY', name: 'NASCAR O’Reilly Auto Parts Series', emoji: '🏁', note: 'Druga krajowa seria NASCAR dla samochodów typu stock car.' },
-      { code: 'TRUCK', name: 'NASCAR Craftsman Truck Series', emoji: '🏁', note: 'Krajowa seria NASCAR dla samochodów wyścigowych wzorowanych na pickupach.' },
       { code: 'FIA WEC', name: 'FIA World Endurance Championship', emoji: '🏁', note: 'Mistrzostwa świata FIA w wieloklasowych wyścigach długodystansowych.' },
       { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'Europejska wieloklasowa seria wyścigów długodystansowych aut LMP2, LMP3 i LMGT3.' },
       { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Międzynarodowa wieloklasowa seria wyścigów długodystansowych rozgrywana w Azji.' },
       { code: 'LMC', name: 'Michelin Le Mans Cup', emoji: '🏁', note: 'Seria wyścigów długodystansowych prototypów LMP3 i samochodów GT3.' },
       { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Północnoamerykańskie wieloklasowe wyścigi aut sportowych: prototypy GTP i LMP2 obok samochodów klasy GTD.' },
+      { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'Najwyższa seria NASCAR dla samochodów typu stock car, ścigających się na owalach, torach drogowych i ulicznych.' },
+      { code: 'O’REILLY', name: 'NASCAR O’Reilly Auto Parts Series', emoji: '🏁', note: 'Druga krajowa seria NASCAR dla samochodów typu stock car.' },
+      { code: 'TRUCK', name: 'NASCAR Craftsman Truck Series', emoji: '🏁', note: 'Krajowa seria NASCAR dla samochodów wyścigowych wzorowanych na pickupach.' },
     ],
     features: [
       {
@@ -352,7 +352,7 @@ export const translations = {
       },
       {
         title: '16 serii',
-        text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series, NASCAR Craftsman Truck Series, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup i IMSA.',
+        text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series i NASCAR Craftsman Truck Series.',
       },
       {
         title: 'Angielski i polski',
@@ -459,7 +459,7 @@ export const translations = {
         a: 'To ustawienie jest potrzebne, aby bot mógł wysyłać prywatne przypomnienia. Włącz odbieranie wiadomości prywatnych od członków serwera w ustawieniach prywatności tego serwera.',
       },
       { q: 'Które serie są obsługiwane?',
-        a: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series, NASCAR Craftsman Truck Series, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup i IMSA.',
+        a: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series i NASCAR Craftsman Truck Series.',
       },
       { q: 'Skąd pochodzą dane?',
         a: 'Dane Formula 1 (F1) pochodzą z Jolpica. Formula 2 i Formula 3 korzystają z oficjalnych klasyfikacji FIA oraz prowadzonych kalendarzy. Formula E, MotoGP, Moto2, Moto3 i IndyCar korzystają z Blacktop. Kalendarze i wyniki endurance pochodzą z OpenWEC z oficjalnymi klasyfikacjami Al Kamel dla WEC, ELMS i IMSA oraz uzupełnieniem luk FIA WEC przez Blacktop. Punkty pochodzą z oficjalnych tabel serii. /next najpierw korzysta z prowadzonych kalendarzy, a przy ich braku z API. Brakujące rundy mogą korzystać z przybliżonego kalendarza oznaczonego w wiadomościach bota.',

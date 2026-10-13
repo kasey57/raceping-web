@@ -98,7 +98,7 @@ export default function Home() {
           </a>
         </div>
         <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-          Formula 1 (F1) · Formula 2 · Formula 3 · Formula E · MotoGP · Moto2 · Moto3 · IndyCar · NASCAR Cup Series · NASCAR O’Reilly · NASCAR Craftsman Truck · FIA WEC · ELMS · ALMS · Michelin Le Mans Cup · IMSA
+          Formula 1 (F1) · Formula 2 · Formula 3 · Formula E · MotoGP · Moto2 · Moto3 · IndyCar · FIA WEC · ELMS · ALMS · Michelin Le Mans Cup · IMSA · NASCAR Cup Series · NASCAR O’Reilly · NASCAR Craftsman Truck
         </p>
         </div>
         <div>
