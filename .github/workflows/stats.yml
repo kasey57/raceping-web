@@ -1,4 +1,4 @@
-# Nightly refresh of bot reach stats + static deploy to GitHub Pages.
+# Refresh bot reach stats every two hours + static deploy to GitHub Pages.
 # Reads guild/user counts via the Discord API (bot token from the
 # DISCORD_BOT_TOKEN repo secret — Settings → Secrets and variables → Actions),
 # bakes them into the build, and deploys. No Discord Developer Portal changes
@@ -9,11 +9,11 @@
 # Repository layout: the contents of `web/` live at the repo root
 # (package.json, app/, public/, scripts/, this workflow).
 
-name: Nightly stats + deploy
+name: Stats refresh + deploy
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 permissions:

@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -18,6 +19,31 @@ function SectionTitle({ kicker, title, text }) {
 
 export default function Home() {
   const { t, lang } = useLang();
+  const [liveStats, setLiveStats] = useState(null);
+
+  useEffect(() => {
+    let active = true;
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+    async function refreshStats() {
+      try {
+        const response = await fetch(`${basePath}/stats.json?refresh=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) return;
+        const data = await response.json();
+        if (!Number.isFinite(data.guilds) || !Number.isFinite(data.users) || !data.updatedAt) return;
+        if (active) setLiveStats(data);
+      } catch {
+        // Keep the build-time values visible when the stats asset is unavailable.
+      }
+    }
+
+    refreshStats();
+    const interval = setInterval(refreshStats, 15 * 60 * 1000);
+    return () => {
+      active = false;
+      clearInterval(interval);
+    };
+  }, []);
 
   function statLabel(s) {
     if (s.label) return s.label;
@@ -30,6 +56,18 @@ export default function Home() {
     }
     return n === 1 ? s.one : s.other;
   }
+
+  const numberLocale = lang === 'pl' ? 'pl-PL' : 'en-US';
+  const stats = t.hero.stats.map((stat) => {
+    if (!stat.key || !liveStats || !Number.isFinite(liveStats[stat.key])) return stat;
+    const count = liveStats[stat.key];
+    return { ...stat, count, value: count.toLocaleString(numberLocale) };
+  });
+  const statsUpdatedAt = liveStats?.updatedAt || t.hero.statsUpdatedAt;
+  const statsUpdatedLabel = statsUpdatedAt
+    ? new Intl.DateTimeFormat(numberLocale, { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' })
+      .format(new Date(statsUpdatedAt))
+    : null;
 
   return (
     <div className="min-h-screen">
@@ -94,7 +132,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 lg:mx-0">
-          {t.hero.stats.map((s, i) => (
+          {stats.map((s, i) => (
             <div key={i} className="rounded-xl border border-white/10 bg-panel p-4 text-center">
               <p className="text-3xl font-extrabold text-brand">{s.value}</p>
               <p className="mt-1 text-sm text-zinc-400">{statLabel(s)}</p>
@@ -102,6 +140,7 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-3 text-xs text-zinc-500">{t.hero.statsNote}</p>
+        {statsUpdatedLabel && <p className="mt-1 text-xs text-zinc-500">{t.hero.statsUpdated.replace('{date}', `${statsUpdatedLabel} UTC`)}</p>}
         </div>
         </div>
       </section>

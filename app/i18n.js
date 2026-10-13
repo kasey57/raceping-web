@@ -1,7 +1,6 @@
 // All website copy lives here in both languages.
 // English stays the default; Polish is the second language.
-// Live bot reach (guild/user counts) is baked in at build time from stats.json,
-// refreshed nightly by the stats workflow (scripts/fetch-stats.mjs).
+// Build-time stats provide a fallback; the homepage refreshes public/stats.json at runtime.
 
 import liveStats from '../stats.json';
 
@@ -36,13 +35,15 @@ export const translations = {
       subtitle: 'Schedules, results, standings and reminders for 14 series — right inside Discord, in English and Polish.',
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
-      statsNote: '* Combined server reach estimate; includes bots and people on multiple servers. Refreshed periodically.',
+      statsNote: '* Combined server reach estimate; includes bots and people present in multiple servers.',
+      statsUpdated: 'Stats updated: {date}',
+      statsUpdatedAt: liveStats.updatedAt,
       demo: { label: 'Example preview', detail: 'Oct 23–25 · Austin · Circuit of The Americas · race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
         { value: '14', label: 'series covered' },
         { value: '15', label: 'slash commands' },
-        { value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'user*', other: 'users*' },
-        { value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
+        { key: 'users', value: fmt(liveStats.users, 'en-US'), count: liveStats.users, one: 'user*', other: 'users*' },
+        { key: 'guilds', value: fmt(liveStats.guilds, 'en-US'), count: liveStats.guilds, one: 'server', other: 'servers' },
       ],
     },
     sections: {
@@ -272,13 +273,15 @@ export const translations = {
       subtitle: 'Terminarze, wyniki, klasyfikacje i prywatne przypomnienia dla 14 serii — na Discordzie, po polsku i angielsku.',
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
-      statsNote: '* Łączny szacunkowy zasięg serwerów; obejmuje boty i osoby obecne na więcej niż jednym serwerze. Odświeżany okresowo.',
+      statsNote: '* Łączny szacunkowy zasięg; obejmuje boty i osoby obecne na wielu serwerach.',
+      statsUpdated: 'Statystyki zaktualizowano: {date}',
+      statsUpdatedAt: liveStats.updatedAt,
       demo: { label: 'Przykładowy podgląd', detail: '23–25 października · Austin · Circuit of The Americas · odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
         { value: '14', label: 'serii w jednym bocie' },
         { value: '15', label: 'komend slash' },
-        { value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'użytkownik*', few: 'użytkownicy*', many: 'użytkowników*' },
-        { value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
+        { key: 'users', value: fmt(liveStats.users, 'pl-PL'), count: liveStats.users, one: 'użytkownik*', few: 'użytkownicy*', many: 'użytkowników*' },
+        { key: 'guilds', value: fmt(liveStats.guilds, 'pl-PL'), count: liveStats.guilds, one: 'serwer', few: 'serwery', many: 'serwerów' },
       ],
     },
     sections: {

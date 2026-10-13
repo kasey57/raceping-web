@@ -1,13 +1,13 @@
 // Fetches live bot reach (guild + user counts) from the Discord API and writes
-// stats.json for the static site build. Runs nightly in GitHub Actions with
-// DISCORD_BOT_TOKEN (repo secret) and on demand locally.
-// Fail-soft: on any API error the previous stats.json is kept, so a Discord
-// outage never breaks the site build.
+// stats.json for the static site build and public/stats.json for browser refreshes. Runs in GitHub Actions with
+// DISCORD_BOT_TOKEN (repo secret) and on demand locally. Fail clearly on API
+// errors so Actions cannot report success while publishing stale statistics.
 
 import { writeFile } from 'node:fs/promises';
 
 const TOKEN = process.env.DISCORD_BOT_TOKEN;
 const OUT = new URL('../stats.json', import.meta.url);
+const PUBLIC_OUT = new URL('../public/stats.json', import.meta.url);
 
 async function api(path, attempt = 0) {
   const res = await fetch(`https://discord.com/api/v10${path}`, {
@@ -46,8 +46,10 @@ try {
     users += full.approximate_member_count;
   }
   const stats = { guilds: guilds.length, users, updatedAt: new Date().toISOString() };
-  await writeFile(OUT, JSON.stringify(stats, null, 2) + '\n');
+  const serialized = JSON.stringify(stats, null, 2) + '\n';
+  await Promise.all([writeFile(OUT, serialized), writeFile(PUBLIC_OUT, serialized)]);
   console.log(`stats: ${stats.guilds} guilds, ${stats.users} users`);
 } catch (error) {
-  console.warn(`stats: refresh failed, keeping previous file: ${error.message}`);
+  console.error(`stats: refresh failed: ${error.message}`);
+  process.exitCode = 1;
 }
