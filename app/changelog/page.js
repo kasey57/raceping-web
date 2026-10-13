@@ -7,6 +7,11 @@ import { translations } from '../i18n';
 // Keep changelog entries in English. Add major updates when they reach production.
 const entries = [
   {
+    date: '2026-10-13',
+    title: 'Formula 2 and Formula 3 plus full 2026-season results',
+    body: 'RacePing now supports 16 racing series and 18 top-level slash commands. Formula 2 and Formula 3 coverage includes calendars, sprint and feature race results, plus driver and team standings. /result can open any completed 2026 round for F1, F2, F3, WEC, ELMS and IMSA, while the new /result-endurance adds class filtering, WEC-only Hyperpole and Le Mans-only Hyperpole 1/2. /last shows the latest completed result with all endurance classes included. Endurance results use official Al Kamel classifications alongside OpenWEC, and result embeds received cosmetic polish with consistent session headers, podium layout and pagination.',
+  },
+  {
     date: '2026-10-12',
     title: 'Personal language and timezone settings',
     body: 'Each member can choose English or Polish for server commands with /lang en or /lang pl, check their choice with /lang current, and set a personal timezone with /timezone. Direct messages still follow the Discord client language. Administrators use /setup to choose the default language for shared channel posts.',
