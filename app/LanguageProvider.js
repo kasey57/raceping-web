@@ -2,37 +2,34 @@
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { translations } from './i18n';
-import { LANGUAGES } from './i18n';
+import { localizedPath } from './site';
 
 const LanguageContext = createContext(null);
-const STORAGE_KEY = 'raceping-lang';
 
-function initialLang() {
-  if (typeof window === 'undefined') return 'en';
-  let stored;
-  try { stored = window.localStorage.getItem(STORAGE_KEY); } catch { /* Storage may be blocked. */ }
-  if (stored && translations[stored]) return stored;
-  return navigator.language?.toLowerCase().startsWith('pl') ? 'pl' : 'en';
-}
-
-export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('en');
+export function LanguageProvider({ children, initialLang = 'en' }) {
+  const [lang, setLang] = useState(initialLang);
   const [ready, setReady] = useState(false);
 
-  // Resolve after mount so SSR and the first client render stay in sync.
+  // Locale is encoded in the URL so each language has a stable, crawlable page.
   useEffect(() => {
-    setLang(initialLang());
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const pathname = window.location.pathname.slice(basePath.length) || '/';
+    setLang(pathname === '/pl' || pathname.startsWith('/pl/') ? 'pl' : 'en');
     setReady(true);
   }, []);
 
   useEffect(() => {
     if (!ready) return;
-    try { window.localStorage.setItem(STORAGE_KEY, lang); } catch { /* Keep the interface usable. */ }
     document.documentElement.lang = lang;
   }, [lang, ready]);
 
   const toggle = useCallback(() => {
-    setLang((prev) => (prev === 'en' ? 'pl' : 'en'));
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const pathname = window.location.pathname.slice(basePath.length) || '/';
+    const isPolish = pathname === '/pl' || pathname.startsWith('/pl/');
+    const englishPath = isPolish ? pathname.slice(3) || '/' : pathname;
+    const target = localizedPath(englishPath, isPolish ? 'en' : 'pl');
+    window.location.assign(`${basePath}${target}${window.location.search}${window.location.hash}`);
   }, []);
 
   const value = { lang, setLang, toggle, t: translations[lang] ?? translations.en };
@@ -45,4 +42,3 @@ export function useLang() {
   return ctx;
 }
 
-export { LANGUAGES };

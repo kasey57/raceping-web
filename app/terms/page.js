@@ -3,7 +3,8 @@ import path from 'node:path';
 import LegalPage from '../LegalPage';
 
 export const metadata = {
-  title: 'Terms of Service — RacePing',
+  title: 'Terms of Service | RacePing',
+  robots: { index: false, follow: true },
 };
 
 function readLegal(name) {
