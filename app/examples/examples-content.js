@@ -9,11 +9,12 @@ import { INVITE_URL } from '../site';
 
 const EXAMPLES = [
   { key: 'help', file: 'help.png', width: 392, height: 411, command: '/help' },
-  { key: 'standings', file: 'standings.png', width: 268, height: 432, command: '/standings' },
-  { key: 'calendar', file: 'calendar.png', width: 442, height: 279, command: '/calendar' },
-  { key: 'result', file: 'result.png', width: 505, height: 631, command: '/result' },
+  { key: 'calendar', command: '/calendar', preview: true },
+  { key: 'result', command: '/result', preview: true },
   { key: 'schedule', file: 'schedule.png', width: 522, height: 319, command: '/schedule' },
   { key: 'endurance', file: 'result-endurance.png', width: 522, height: 740, command: '/result-endurance' },
+  { key: 'standings', command: '/standings', preview: true },
+  { key: 'raceweek', command: '/raceweek', preview: true },
 ];
 
 export default function ExamplesContent() {
@@ -28,15 +29,24 @@ export default function ExamplesContent() {
           <h3 className="mt-2 font-display text-xl font-bold">{copy.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">{copy.text}</p>
         </div>
-        <div className="flex min-h-28 items-start justify-center bg-[#17181c] p-3 sm:p-4">
-          <Image
-            src={`/examples/${example.file}`}
-            alt={`${example.command} — ${copy.title}`}
-            width={example.width}
-            height={example.height}
-            className="block h-auto max-w-full object-contain object-top"
-          />
-        </div>
+        {example.file ? (
+          <div className="flex min-h-28 items-start justify-center bg-[#17181c] p-3 sm:p-4">
+            <Image
+              src={`/examples/${example.file}`}
+              alt={`${example.command} — ${copy.title}`}
+              width={example.width}
+              height={example.height}
+              className="block h-auto max-w-full object-contain object-top"
+            />
+          </div>
+        ) : (
+          <div className="bg-[#17181c] p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-red-300">{copy.previewHeading}</p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-300">
+              {copy.previewLines.map((line) => <li key={line}>• {line}</li>)}
+            </ul>
+          </div>
+        )}
       </article>
     );
   };

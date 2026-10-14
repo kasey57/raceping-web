@@ -7,6 +7,11 @@ import { translations } from '../i18n';
 // Keep changelog entries in English. Add major updates when they reach production.
 const entries = [
   {
+    date: '2026-10-14',
+    title: 'Weekly race schedules and cleaner session views',
+    body: 'Members with Manage Server can use /raceweek to post every available session for selected series from Monday through Sunday; the roundup is sent each Monday at the configured time. Choose a channel, optional role ping and publication time in the bot server timezone (UTC by default); 09:00 is the default, and entering 12 means 12:00. Posts follow the server language set with /setup. /channel can also ping an optional role when automatic race results are posted. Calendar titles no longer include series emojis, and full-season calendars separate completed rounds from upcoming ones. Result views use clearer session icons and navigation between sessions under the pagination controls. Standings show rounds completed instead of highlighting the current leader, with a crown for P1 once the season is complete. /next also prefers circuit names and uses “GP” only in Formula 1 race names.',
+  },
+  {
     date: '2026-10-13',
     title: 'Formula 2 and Formula 3 plus full 2026-season results',
     body: 'RacePing now supports 16 racing series and 18 top-level slash commands. Formula 2 and Formula 3 coverage includes calendars, sprint and feature race results, plus driver and team standings. /result can open any completed 2026 round for F1, F2, F3, WEC, ELMS and IMSA, while the new /result-endurance adds class filtering, WEC-only Hyperpole and Le Mans-only Hyperpole 1/2. /last shows the latest completed result with all endurance classes included. Endurance results use official Al Kamel classifications alongside OpenWEC, and result embeds received cosmetic polish with consistent session headers, podium layout and pagination.',
