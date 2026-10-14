@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="770" viewBox="0 0 760 770">
+  <rect width="760" height="770" rx="12" fill="#222327"/>
+  <path d="M2 12a10 10 0 0 1 10-10h4v766h-4a10 10 0 0 1-10-10z" fill="#ed4245"/>
+  <g font-family="Arial,Segoe UI Emoji,sans-serif" fill="#f3f4f5">
+    <text x="30" y="43" font-size="17" font-weight="700">🏎️ Formula 1</text>
+    <text x="30" y="91" font-size="25" font-weight="700">🏆 F1 Driver Standings</text>
+    <text x="30" y="137" font-size="17" font-weight="700">🏁 Rounds completed: 17/23</text>
+    <g font-size="17">
+      <text x="30" y="190">1. 🇮🇹 Andrea Kimi Antonelli — 340 pts</text>
+      <text x="30" y="232">2. 🇬🇧 George Russell — 238 pts</text>
+      <text x="30" y="274">3. 🇬🇧 Lewis Hamilton — 229 pts</text>
+      <text x="30" y="316">4. 🇳🇱 Max Verstappen — 221 pts</text>
+      <text x="30" y="358">5. 🇲🇨 Charles Leclerc — 215 pts</text>
+      <text x="30" y="400">6. 🇬🇧 Lando Norris — 201 pts</text>
+      <text x="30" y="442">7. 🇦🇺 Oscar Piastri — 138 pts</text>
+      <text x="30" y="484">8. 🇫🇷 Isack Hadjar — 97 pts</text>
+      <text x="30" y="526">9. 🇳🇿 Liam Lawson — 75 pts</text>
+      <text x="30" y="568">10. 🇫🇷 Pierre Gasly — 41 pts</text>
+    </g>
+    <rect x="30" y="625" width="122" height="58" rx="8" fill="#2b2d31"/>
+    <rect x="164" y="625" width="177" height="58" rx="8" fill="#2b2d31"/>
+    <text x="45" y="650" font-size="14" font-weight="700">📊 Entries</text><text x="45" y="672" font-size="16">22</text>
+    <text x="179" y="650" font-size="14" font-weight="700">🔔 Reminder</text><text x="179" y="673" font-size="14" fill="#c8c9cd">/remindme f1</text>
+    <text x="30" y="740" font-size="12" fill="#b5bac1">RacePing · raceping.xyz · Example data · 14 Oct 2026</text>
+  </g>
+</svg>

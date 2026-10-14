@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="840" viewBox="0 0 780 840">
+  <rect width="780" height="840" rx="12" fill="#222327"/>
+  <path d="M2 12a10 10 0 0 1 10-10h4v836h-4a10 10 0 0 1-10-10z" fill="#ed4245"/>
+  <g font-family="Arial,Segoe UI Emoji,sans-serif" fill="#f3f4f5">
+    <text x="30" y="43" font-size="17" font-weight="700">🏎️ Formula 1</text>
+    <text x="30" y="88" font-size="25" font-weight="700">Formula 1 2026 calendar</text>
+    <g font-size="15">
+      <text x="30" y="132">R1. Australian Grand Prix — Sun, 8 Mar 2026, 04:00 UTC (Australia)</text>
+      <text x="30" y="156">R2. Chinese Grand Prix — Sun, 15 Mar 2026, 07:00 UTC (China)</text>
+      <text x="30" y="180">R3. Japanese Grand Prix — Sun, 29 Mar 2026, 05:00 UTC (Japan)</text>
+      <text x="30" y="204">R4. Miami Grand Prix — Sun, 3 May 2026, 20:00 UTC (USA)</text>
+      <text x="30" y="228">R5. Canadian Grand Prix — Sun, 24 May 2026, 20:00 UTC (Canada)</text>
+      <text x="30" y="252">R6. Monaco Grand Prix — Sun, 7 Jun 2026, 13:00 UTC (Monaco)</text>
+      <text x="30" y="276">R7. Barcelona Grand Prix — Sun, 14 Jun 2026, 13:00 UTC (Spain)</text>
+      <text x="30" y="300">R8. Austrian Grand Prix — Sun, 28 Jun 2026, 13:00 UTC (Austria)</text>
+      <text x="30" y="324">R9. British Grand Prix — Sun, 5 Jul 2026, 14:00 UTC (UK)</text>
+      <text x="30" y="348">R10. Belgian Grand Prix — Sun, 19 Jul 2026, 13:00 UTC (Belgium)</text>
+      <text x="30" y="372">R11. Hungarian Grand Prix — Sun, 26 Jul 2026, 13:00 UTC (Hungary)</text>
+      <text x="30" y="396">R12. Dutch Grand Prix — Sun, 23 Aug 2026, 13:00 UTC (Netherlands)</text>
+      <text x="30" y="420">R13. Italian Grand Prix — Sun, 6 Sept 2026, 13:00 UTC (Italy)</text>
+      <text x="30" y="444">R14. Spanish Grand Prix — Sun, 13 Sept 2026, 13:00 UTC (Spain)</text>
+      <text x="30" y="468">R15. Azerbaijan Grand Prix — Sat, 26 Sept 2026, 11:00 UTC (Azerbaijan)</text>
+      <text x="30" y="492">R16. Bahrain Grand Prix in Malaysia — Sun, 4 Oct 2026, 07:00 UTC (Malaysia)</text>
+      <text x="30" y="516">R17. Singapore Grand Prix — Sun, 11 Oct 2026, 12:00 UTC (Singapore)</text>
+    </g>
+    <path d="M30 537h720" stroke="#62646a" stroke-dasharray="4 6"/>
+    <g font-size="15">
+      <text x="30" y="562">R18. United States Grand Prix — Sun, 25 Oct 2026, 20:00 UTC (USA)</text>
+      <text x="30" y="586">R19. Mexico City Grand Prix — Sun, 1 Nov 2026, 20:00 UTC (Mexico)</text>
+      <text x="30" y="610">R20. Brazilian Grand Prix — Sun, 8 Nov 2026, 17:00 UTC (Brazil)</text>
+      <text x="30" y="634">R21. Las Vegas Grand Prix — Sun, 22 Nov 2026, 04:00 UTC (USA)</text>
+      <text x="30" y="658">R22. Qatar Grand Prix — Sun, 29 Nov 2026, 16:00 UTC (Qatar)</text>
+      <text x="30" y="682">R23. Abu Dhabi Grand Prix — Sun, 6 Dec 2026, 13:00 UTC (UAE)</text>
+    </g>
+    <rect x="30" y="716" width="105" height="54" rx="8" fill="#2b2d31"/>
+    <text x="43" y="739" font-size="14" font-weight="700">📊 Rounds</text>
+    <text x="43" y="759" font-size="16">23</text>
+    <text x="30" y="812" font-size="12" fill="#b5bac1">RacePing · raceping.xyz · Example data · 14 Oct 2026</text>
+  </g>
+</svg>

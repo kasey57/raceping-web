@@ -84,24 +84,23 @@ export const translations = {
     examplesPage: {
       meta: {
         title: 'Discord Motorsport Bot Overview | RacePing',
-        description: 'See real RacePing Discord replies for race calendars, weekend schedules, driver standings and full results across 16 motorsport series.',
+        description: 'Explore visual examples of RacePing Discord replies for calendars, schedules, standings and results across motorsport series.',
       },
       hero: {
         badge: 'RacePing overview',
         title: 'See RacePing in action',
-        text: 'Real response screenshots from Discord, showing how RacePing presents schedules, results and race information.',
+        text: 'See visual examples of RacePing command replies, including the current calendar, results, standings and weekly session roundup.',
       },
       galleryTitle: 'RacePing in action',
-      galleryText: 'Explore current RacePing features. Cards with screenshots show real English replies from production; updated calendar, result, standings and raceweek behavior is summarized until fresh screenshots are available.',
+      galleryText: 'Explore RacePing examples in the current message format. The calendar, results, standings and raceweek cards use current sample data; race schedules and points change during the season.',
       items: {
-        help: { title: 'Command overview', text: 'Browse the public slash commands, split across two pages.' },
-        calendar: { title: 'Season calendar', text: 'View the full current-season calendar, with completed rounds separated from upcoming ones.', previewHeading: 'Current-season view', previewLines: ['Full season calendar', 'Completed and upcoming rounds are separated'] },
+        calendar: { title: 'Season calendar', text: 'View the full current-season calendar, with completed rounds separated from upcoming ones.' },
         schedule: { title: 'Weekend schedule', text: 'Check session times for the upcoming race weekend.' },
         last: { title: 'Latest completed session', text: 'See the latest completed session and browse the classification.' },
-        result: { title: 'Race results', text: 'Browse the full classification with pagination and move between related sessions when available.', previewHeading: 'Session navigation', previewLines: ['Race and sprint use the checkered flag; qualifying and Hyperpole use a stopwatch', 'Session buttons appear below pagination', 'F1 sprint weekends link SQ → sprint → qualifying → race; F2 links qualifying → sprint → race'] },
+        result: { title: 'Race results', text: 'Browse the full classification with pagination and move between related sessions when available.' },
         endurance: { title: 'Endurance results', text: 'See WEC results with car numbers, drivers and class labels.' },
-        standings: { title: 'Championship standings', text: 'Check points and completed rounds; P1 gets a crown after the season ends.', previewHeading: 'Updated standings', previewLines: ['Completed rounds out of the season total', 'P1 is shown with a crown after the final round'] },
-        raceweek: { title: 'Weekly session roundup', text: 'Configure one Monday post for multiple series, all available sessions, an optional role ping and your preferred time.', previewHeading: 'Monday · bot server time (UTC by default)', previewLines: ['Every available session from Monday through Sunday', 'Multiple series and an optional role ping', 'Post language follows the server setting'] },
+        standings: { title: 'Championship standings', text: 'Check points and completed rounds; P1 gets a crown after the season ends.' },
+        raceweek: { title: 'Weekly session roundup', text: 'Configure one Monday post for multiple series, all available sessions, an optional role ping and your preferred time.' },
       },
     },
     sections: {
@@ -169,8 +168,8 @@ export const translations = {
         text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series and NASCAR Craftsman Truck Series.',
       },
       {
-        title: 'English & Polish',
-        text: 'Each member can choose English or Polish for server commands with /lang en or /lang pl. DMs still follow the Discord client language.',
+        title: 'Weekly Session Roundup',
+        text: 'Configure /raceweek to post every available session from selected series each Monday, with an optional role ping and custom time.',
       },
       {
         title: 'Free & Open Data',
@@ -178,7 +177,7 @@ export const translations = {
       },
       {
         title: 'Race-aware activity',
-        text: 'The bot shows the name of a race that is currently underway. When no race is live, its activity points to /help and raceping.xyz.',
+        text: 'The bot shows the name of a race that is currently underway. When no race is live, its activity points to raceping.xyz.',
       },
       {
         title: 'Times in your timezone',
@@ -192,19 +191,14 @@ export const translations = {
       ['/result [series] [session] [event]', 'Session results for non-endurance series'],
       ['/result-endurance [series]', 'Endurance results with class filter'],
       ['/last [series]', 'Most recent completed result'],
-      ['/standings f1 / f2 / endurance', 'Championship points & classes'],
+      ['/standings', 'Championship points & classes'],
       ['/remindme series [before]', 'DM reminders before races'],
-      ['/unremindme series', 'Stop reminders'],
       ['/reminders', 'Your active reminder subscriptions'],
       ['/info', 'Bot information and latest features'],
-      ['/channel add', 'Channel reminders & auto results (Manage Server)'],
-      ['/raceweek set', 'Weekly multi-series session roundup (Manage Server)'],
+      ['/raceweek', 'Weekly multi-series session roundup (Manage Server)'],
       ['/timezone [zone]', 'Set your personal timezone for race times'],
-      ['/lang', 'Choose your personal language for server commands'],
       ['/setup', 'Server settings (Manage Server)'],
       ['/gif [query]', 'Random funny motorsport GIF'],
-      ['/ping', 'Bot latency check'],
-      ['/help', 'Command list'],
     ],
     commandsMore: 'Full reference with every series and option →',
     commandPage: {
@@ -242,7 +236,6 @@ export const translations = {
       { cmd: '/setup [language]', desc: 'Set the default language for shared channel posts (requires Manage Server).', args: 'language: en, pl' },
       { cmd: '/gif [query]', desc: 'Post a random funny motorsport GIF, optionally filtered by driver or topic.', args: 'query: optional text up to 64 characters' },
       { cmd: '/ping', desc: 'Check bot response latency.', args: 'No options' },
-      { cmd: '/help', desc: 'Show the command guide in Discord.', args: 'No options' },
     ],
     steps: [
       {
@@ -392,24 +385,23 @@ export const translations = {
     examplesPage: {
       meta: {
         title: 'Bot motorsportowy na Discordzie — przegląd | RacePing',
-        description: 'Zobacz prawdziwe odpowiedzi RacePing na Discordzie: kalendarze, harmonogramy, klasyfikacje i wyniki 16 serii motorsportowych.',
+        description: 'Zobacz przykłady odpowiedzi RacePing na Discordzie: kalendarze, harmonogramy, klasyfikacje i wyniki serii motorsportowych.',
       },
       hero: {
         badge: 'Przegląd RacePing',
         title: 'Zobacz RacePing w akcji',
-        text: 'Autentyczne zrzuty odpowiedzi bota na Discordzie pokazują, jak RacePing prezentuje harmonogramy, wyniki i informacje o wyścigach.',
+        text: 'Zobacz przykłady odpowiedzi RacePing, w tym aktualny format kalendarza, wyników, klasyfikacji i tygodniowego podsumowania sesji.',
       },
       galleryTitle: 'RacePing w praktyce',
-      galleryText: 'Poznaj aktualne funkcje RacePing. Kafelki ze zrzutami pokazują prawdziwe angielskie odpowiedzi produkcyjnego bota; aktualne widoki kalendarzy, wyników, klasyfikacji i raceweek opisujemy tekstowo do czasu przygotowania nowych zrzutów.',
+      galleryText: 'Zobacz przykłady w aktualnym formacie wiadomości RacePing. Kafelki kalendarza, wyników, klasyfikacji i raceweek zawierają bieżące dane przykładowe; kalendarze i punkty zmieniają się w trakcie sezonu.',
       items: {
-        help: { title: 'Lista komend', text: 'Przeglądaj publiczne komendy slash na dwóch stronach.' },
-        calendar: { title: 'Kalendarz sezonu', text: 'Pełny kalendarz bieżącego sezonu z oddzieleniem rozegranych rund od nadchodzących.', previewHeading: 'Widok bieżącego sezonu', previewLines: ['Pełny kalendarz sezonu', 'Rozegrane rundy są oddzielone od nadchodzących'] },
+        calendar: { title: 'Kalendarz sezonu', text: 'Pełny kalendarz bieżącego sezonu z oddzieleniem rozegranych rund od nadchodzących.' },
         schedule: { title: 'Harmonogram weekendu', text: 'Sprawdź godziny sesji w nadchodzący weekend wyścigowy.' },
         last: { title: 'Ostatnia ukończona sesja', text: 'Zobacz najnowszą ukończoną sesję i przewijaj klasyfikację.' },
-        result: { title: 'Wyniki wyścigu', text: 'Przeglądaj pełną klasyfikację z paginacją i przechodź między powiązanymi sesjami, jeśli są dostępne.', previewHeading: 'Nawigacja między sesjami', previewLines: ['Wyścigi i sprinty mają flagę z szachownicą, kwalifikacje i Hyperpole — stoper', 'Przyciski sesji znajdują się pod paginacją', 'Sprintowe weekendy F1 łączą SQ → sprint → kwalifikacje → wyścig; F2 łączy kwalifikacje → sprint → wyścig'] },
+        result: { title: 'Wyniki wyścigu', text: 'Przeglądaj pełną klasyfikację z paginacją i przechodź między powiązanymi sesjami, jeśli są dostępne.' },
         endurance: { title: 'Wyniki endurance', text: 'Zobacz wynik WEC z numerami aut, kierowcami i klasami.' },
-        standings: { title: 'Klasyfikacja mistrzostw', text: 'Sprawdź punkty i liczbę rozegranych rund; po zakończeniu sezonu P1 otrzymuje koronę.', previewHeading: 'Aktualny widok klasyfikacji', previewLines: ['Rozegrane rundy z łącznej liczby w sezonie', 'Po ostatniej rundzie P1 jest oznaczone koroną'] },
-        raceweek: { title: 'Tygodniowe podsumowanie sesji', text: 'Ustaw jeden poniedziałkowy post dla wielu serii, ze wszystkimi dostępnymi sesjami, opcjonalnym pingiem roli i wybraną godziną.', previewHeading: 'Poniedziałek · czas serwera bota (domyślnie UTC)', previewLines: ['Wszystkie dostępne sesje od poniedziałku do niedzieli', 'Wiele serii i opcjonalny ping roli', 'Język posta zgodny z ustawieniem serwera'] },
+        standings: { title: 'Klasyfikacja mistrzostw', text: 'Sprawdź punkty i liczbę rozegranych rund; po zakończeniu sezonu P1 otrzymuje koronę.' },
+        raceweek: { title: 'Tygodniowe podsumowanie sesji', text: 'Ustaw jeden poniedziałkowy post dla wielu serii, ze wszystkimi dostępnymi sesjami, opcjonalnym pingiem roli i wybraną godziną.' },
       },
     },
     sections: {
@@ -477,8 +469,8 @@ export const translations = {
         text: 'Formula 1 (F1), Formula 2, Formula 3, Formula E, MotoGP, Moto2, Moto3, IndyCar, FIA World Endurance Championship (FIA WEC), European Le Mans Series (ELMS), Asian Le Mans Series (ALMS), Michelin Le Mans Cup, IMSA, NASCAR Cup Series, NASCAR O’Reilly Auto Parts Series i NASCAR Craftsman Truck Series.',
       },
       {
-        title: 'Angielski i polski',
-        text: 'Każdy wybiera język komend serwerowych przez /lang en lub /lang pl. W DM-ach bot nadal używa języka klienta Discorda.',
+        title: 'Tygodniowe podsumowanie sesji',
+        text: 'Skonfiguruj /raceweek, aby w każdy poniedziałek publikować wszystkie dostępne sesje wybranych serii, z opcjonalnym pingiem roli i wybraną godziną.',
       },
       {
         title: 'Darmowe i otwarte źródła',
@@ -486,7 +478,7 @@ export const translations = {
       },
       {
         title: 'Status podczas wy\u015bcigu',
-        text: 'Gdy trwa wy\u015bcig, bot pokazuje jego nazw\u0119 w aktywno\u015bci. Poza wy\u015bcigami aktywno\u015b\u0107 wskazuje /help i raceping.xyz.',
+        text: 'Gdy trwa wy\u015bcig, bot pokazuje jego nazw\u0119 w aktywno\u015bci. Poza wy\u015bcigami aktywno\u015b\u0107 wskazuje raceping.xyz.',
       },
       {
         title: 'Godziny w Twojej strefie',
@@ -500,19 +492,14 @@ export const translations = {
       ['/result [seria] [sesja] [wydarzenie]', 'Wyniki sesji serii poza endurance'],
       ['/result-endurance [series]', 'Wyniki endurance z filtrem klas'],
       ['/last [series]', 'Ostatni ukończony wynik'],
-      ['/standings f1 / f2 / endurance', 'Punktowe klasyfikacje i klasy'],
+      ['/standings', 'Punktowe klasyfikacje i klasy'],
       ['/remindme series [before]', 'Prywatne przypomnienia przed wyścigami'],
-      ['/unremindme series', 'Wyłącz przypomnienia'],
       ['/reminders', 'Twoje aktywne przypomnienia'],
       ['/info', 'Informacje o bocie i najnowsze funkcje'],
-      ['/channel add', 'Przypomnienia i wyniki na kanale (Zarządzanie serwerem)'],
-      ['/raceweek set', 'Cotygodniowe podsumowanie sesji wielu serii (Zarządzanie serwerem)'],
+      ['/raceweek', 'Cotygodniowe podsumowanie sesji wielu serii (Zarządzanie serwerem)'],
       ['/timezone [zone]', 'Ustaw osobistą strefę czasową'],
-      ['/lang', 'Wybierz osobisty język komend serwerowych'],
       ['/setup', 'Ustawienia serwera (Zarządzanie serwerem)'],
       ['/gif [query]', 'Losowy zabawny GIF motorsportowy'],
-      ['/ping', 'Sprawdzenie opóźnienia'],
-      ['/help', 'Lista komend'],
     ],
     commandsMore: 'Pełna lista z seriami i opcjami →',
     commandPage: {
@@ -550,7 +537,6 @@ export const translations = {
       { cmd: '/setup [j\u0119zyk]', desc: 'Ustaw domy\u015blny j\u0119zyk post\u00f3w na kana\u0142ach (wymaga uprawnienia Zarządzanie serwerem).', args: 'j\u0119zyk: opcjonalny, en lub pl' },
       { cmd: '/gif [has\u0142o]', desc: 'Wstaw losowy zabawny GIF motorsportowy, opcjonalnie wyszukany po kierowcy lub temacie.', args: 'has\u0142o: opcjonalne, tekst do 64 znak\u00f3w' },
       { cmd: '/ping', desc: 'Sprawdź opóźnienie bota.', args: 'Brak opcji' },
-      { cmd: '/help', desc: 'Pokaż przewodnik po komendach na Discordzie.', args: 'Brak opcji' },
     ],
     steps: [
       {

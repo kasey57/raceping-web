@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="610" viewBox="0 0 760 610">
+  <rect width="760" height="610" rx="12" fill="#222327"/>
+  <path d="M2 12a10 10 0 0 1 10-10h4v606h-4a10 10 0 0 1-10-10z" fill="#ed4245"/>
+  <g font-family="Arial,Segoe UI Emoji,sans-serif" fill="#f3f4f5">
+    <text x="30" y="83" font-size="24" font-weight="700">Race week · Mon, 12 Oct 2026 – Sun, 18 Oct 2026</text>
+    <text x="30" y="141" font-size="15" font-weight="700" fill="#d7d9dc">Fri, 16 Oct 2026 · FIA WEC · BARCELONA</text>
+    <text x="42" y="174" font-size="15">• <tspan font-weight="700">Free Practice 1</tspan> · Fri, 16 Oct 2026, 09:30 UTC</text>
+    <text x="42" y="202" font-size="15">• <tspan font-weight="700">Free Practice 2</tspan> · Fri, 16 Oct 2026, 14:30 UTC</text>
+    <text x="30" y="248" font-size="15" font-weight="700" fill="#d7d9dc">Sat, 17 Oct 2026 · FIA WEC · BARCELONA</text>
+    <text x="42" y="281" font-size="15">• <tspan font-weight="700">Free Practice 3</tspan> · Sat, 17 Oct 2026, 06:50 UTC</text>
+    <text x="42" y="309" font-size="15">• <tspan font-weight="700">Qualifying</tspan> · Sat, 17 Oct 2026, 09:50 UTC</text>
+    <text x="42" y="337" font-size="15">• <tspan font-weight="700">Hyperpole</tspan> · Sat, 17 Oct 2026, 10:10 UTC</text>
+    <text x="42" y="365" font-size="15">• <tspan font-weight="700">Free Practice 3</tspan> · Sat, 17 Oct 2026, 10:40 UTC</text>
+    <text x="42" y="393" font-size="15">• <tspan font-weight="700">Qualifying</tspan> · Sat, 17 Oct 2026, 13:40 UTC</text>
+    <text x="42" y="421" font-size="15">• <tspan font-weight="700">Hyperpole</tspan> · Sat, 17 Oct 2026, 14:00 UTC</text>
+    <text x="30" y="467" font-size="15" font-weight="700" fill="#d7d9dc">Sun, 18 Oct 2026 · FIA WEC · BARCELONA</text>
+    <text x="42" y="500" font-size="15">• <tspan font-weight="700">Race</tspan> · Sun, 18 Oct 2026, 10:00 UTC</text>
+    <text x="30" y="574" font-size="12" fill="#b5bac1">RacePing · raceping.xyz · Example data · 14 Oct 2026</text>
+  </g>
+</svg>
