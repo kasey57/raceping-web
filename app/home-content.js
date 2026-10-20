@@ -264,19 +264,37 @@ export default function Home() {
       </section>
 
       {/* Support */}
-      <section id="support" className="mx-auto max-w-3xl px-4 pb-20">
-        <div className="surface-card px-6 py-12 text-center sm:px-12">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.support.kicker}</p>
-          <h2 className="font-display text-3xl font-extrabold">{t.support.title}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-zinc-400">{t.support.text}</p>
-          <a
-            href={SUPPI_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary mt-8 px-10"
-          >
-            {t.support.cta}
-          </a>
+      <section id="discord-support" className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="surface-card flex flex-col items-center p-6 text-center sm:p-10">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.discordSupport.kicker}</p>
+            <h2 className="font-display text-2xl font-extrabold sm:text-3xl">{t.discordSupport.title}</h2>
+            <p className="mx-auto mt-3 max-w-xl flex-1 text-zinc-400">{t.discordSupport.text}</p>
+            <a
+              href="https://discord.gg/bDdx57YsHT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-discord mt-8 px-8"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+                <path d="M19.4 5.7A18.3 18.3 0 0 0 15 4.3l-.6 1.2a16.8 16.8 0 0 0-4.8 0L9 4.3a18.3 18.3 0 0 0-4.4 1.4C1.8 9.8 1 13.8 1.4 17.8a18.5 18.5 0 0 0 5.4 2.7l1.2-2a11.8 11.8 0 0 1-1.9-.9l.5-.4a13.2 13.2 0 0 0 10.8 0l.5.4a11.8 11.8 0 0 1-1.9.9l1.2 2a18.5 18.5 0 0 0 5.4-2.7c.5-4.6-.8-8.6-3.2-12.1ZM8.7 15.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z" />
+              </svg>
+              {t.discordSupport.cta}
+            </a>
+          </div>
+          <div id="support" className="surface-card flex flex-col items-center p-6 text-center sm:p-10">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-brand">{t.support.kicker}</p>
+            <h2 className="font-display text-2xl font-extrabold sm:text-3xl">{t.support.title}</h2>
+            <p className="mx-auto mt-3 max-w-xl flex-1 text-zinc-400">{t.support.text}</p>
+            <a
+              href={SUPPI_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-8 px-8"
+            >
+              {t.support.cta}
+            </a>
+          </div>
         </div>
       </section>
 

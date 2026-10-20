@@ -288,6 +288,12 @@ export const translations = {
       text: 'If you enjoy using RacePing, you can support its continued development on Suppi.',
       cta: 'Support on Suppi',
     },
+    discordSupport: {
+      kicker: 'Bot support',
+      title: 'Join the RacePing support server',
+      text: 'Get help with the bot, ask questions and share feedback with the RacePing community.',
+      cta: 'Join the Discord server',
+    },
     contact: {
       kicker: 'Contact',
       title: 'Talk racing with me',
@@ -588,6 +594,12 @@ export const translations = {
       title: 'Wesprzyj rozwój RacePing',
       text: 'Jeśli RacePing ułatwia Ci śledzenie wyścigów, możesz wesprzeć jego dalszy rozwój na Suppi.',
       cta: 'Wesprzyj na Suppi',
+    },
+    discordSupport: {
+      kicker: 'Pomoc dla bota',
+      title: 'Dołącz do serwera supportu RacePing',
+      text: 'Uzyskaj pomoc dotyczącą bota, zadaj pytanie lub podziel się opinią ze społecznością RacePing.',
+      cta: 'Dołącz do serwera Discord',
     },
     contact: {
       kicker: 'Kontakt',
