@@ -39,7 +39,7 @@ export const translations = {
       ctaPrimary: 'Add to Server',
       ctaSecondary: 'See commands',
       statsNote: '* Combined server reach estimate; includes bots and people present in multiple servers.',
-      demo: { label: 'Example preview', detail: 'Oct 23–25 · Austin · Circuit of The Americas · race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
+      demo: { label: 'Example preview', raceName: 'Mexico City Grand Prix', detail: 'Oct 30–Nov 1 · Mexico City · Autódromo Hermanos Rodríguez · race countdown', countdown: 'race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
       stats: [
         { value: '16', label: 'series covered' },
         { value: '19', label: 'slash commands' },
@@ -346,7 +346,7 @@ export const translations = {
       ctaPrimary: 'Dodaj na serwer',
       ctaSecondary: 'Zobacz komendy',
       statsNote: '* Łączny szacunkowy zasięg; obejmuje boty i osoby obecne na wielu serwerach.',
-      demo: { label: 'Przykładowy podgląd', detail: '23–25 października · Austin · Circuit of The Americas · odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
+      demo: { label: 'Przykładowy podgląd', raceName: 'Grand Prix Meksyku', detail: '30 października–1 listopada · Mexico City · Autódromo Hermanos Rodríguez · odliczanie do wyścigu', countdown: 'odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
       stats: [
         { value: '16', label: 'serii w jednym bocie' },
         { value: '19', label: 'komend slash' },

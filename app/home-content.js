@@ -18,10 +18,43 @@ function SectionTitle({ kicker, title, text }) {
   );
 }
 
+function formatWeekendRange(startDate, endDate, lang) {
+  const start = new Date(`${startDate}T00:00:00Z`);
+  const end = new Date(`${endDate}T00:00:00Z`);
+  const formatter = new Intl.DateTimeFormat(lang === 'pl' ? 'pl-PL' : 'en-US', {
+    day: 'numeric',
+    month: 'short',
+    timeZone: 'UTC',
+  });
+
+  return typeof formatter.formatRange === 'function'
+    ? formatter.formatRange(start, end)
+    : `${formatter.format(start)} – ${formatter.format(end)}`;
+}
+
+function getNextRaceName(race, lang) {
+  if (lang === 'pl' && race.Circuit?.Location?.country === 'Mexico') {
+    return 'Grand Prix Meksyku';
+  }
+
+  return race.raceName;
+}
+
+function getNextRaceDetail(race, lang, t) {
+  const startDate = race.FirstPractice?.date || race.date;
+  const location = race.Circuit?.Location?.locality || race.Circuit?.Location?.country;
+  const circuit = race.Circuit?.circuitName;
+  const parts = [formatWeekendRange(startDate, race.date, lang), location, circuit, t.hero.demo.countdown]
+    .filter(Boolean);
+
+  return parts.join(' · ');
+}
+
 export default function Home() {
   const { t, lang } = useLang();
   const href = (path) => localizedPath(path, lang);
   const [liveStats, setLiveStats] = useState(null);
+  const [nextRace, setNextRace] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -41,6 +74,32 @@ export default function Home() {
 
     refreshStats();
     const interval = setInterval(refreshStats, 15 * 60 * 1000);
+    return () => {
+      active = false;
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+
+    async function refreshNextRace() {
+      try {
+        const response = await fetch('https://api.jolpi.ca/ergast/f1/current/next.json?limit=1');
+        if (!response.ok) return;
+
+        const data = await response.json();
+        const race = data?.MRData?.RaceTable?.Races?.[0];
+        if (!race?.raceName || !race?.date) return;
+
+        if (active) setNextRace(race);
+      } catch {
+        // Keep the latest calendar value embedded in the page when the API is unavailable.
+      }
+    }
+
+    refreshNextRace();
+    const interval = setInterval(refreshNextRace, 6 * 60 * 60 * 1000);
     return () => {
       active = false;
       clearInterval(interval);
@@ -120,8 +179,8 @@ export default function Home() {
           </div>
           <div className="mx-4 mb-4 rounded-xl border border-white/[0.07] border-l-4 border-l-brand bg-carbon/80 p-4 sm:p-5">
             <p className="mb-2 text-xs uppercase tracking-wide text-zinc-500">{t.hero.demo.label}</p>
-            <p className="font-bold text-white">United States Grand Prix <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">F1</span></p>
-            <p className="mt-1 text-sm text-zinc-400">{t.hero.demo.detail}</p>
+            <p className="font-bold text-white">{nextRace ? getNextRaceName(nextRace, lang) : t.hero.demo.raceName} <span className="ml-2 rounded bg-brand/15 px-2 py-0.5 text-xs font-semibold text-red-300">F1</span></p>
+            <p className="mt-1 text-sm text-zinc-400">{nextRace ? getNextRaceDetail(nextRace, lang, t) : t.hero.demo.detail}</p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.qualifying}</span>
               <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">{t.hero.demo.race}</span>
