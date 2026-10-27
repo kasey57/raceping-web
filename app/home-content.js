@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -29,7 +29,7 @@ function formatWeekendRange(startDate, endDate, lang) {
 
   return typeof formatter.formatRange === 'function'
     ? formatter.formatRange(start, end)
-    : `${formatter.format(start)} – ${formatter.format(end)}`;
+    : `${formatter.format(start)} â€“ ${formatter.format(end)}`;
 }
 
 function getNextRaceName(race, lang) {
@@ -47,7 +47,7 @@ function getNextRaceDetail(race, lang, t) {
   const parts = [formatWeekendRange(startDate, race.date, lang), location, circuit, t.hero.demo.countdown]
     .filter(Boolean);
 
-  return parts.join(' · ');
+  return parts.join(' Â· ');
 }
 
 export default function Home() {
@@ -170,12 +170,12 @@ export default function Home() {
             <span className="h-2.5 w-2.5 rounded-full bg-brand/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-            <span className="ml-2">Discord — #race-weekend</span>
+            <span className="ml-2">Discord â€” #race-weekend</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-3">
             <span className="rounded bg-black/60 px-2 py-1 font-sans text-sm text-red-300">/next F1</span>
             <span className="h-5 w-px animate-pulse bg-brand" />
-            <span className="text-sm text-zinc-500">＋ schedule · result · standings</span>
+            <span className="text-sm text-zinc-500">ďĽ‹ schedule Â· result Â· standings</span>
           </div>
           <div className="mx-4 mb-4 rounded-xl border border-white/[0.07] border-l-4 border-l-brand bg-carbon/80 p-4 sm:p-5">
             <p className="mb-2 text-xs uppercase tracking-wide text-zinc-500">{t.hero.demo.label}</p>
@@ -330,7 +330,7 @@ export default function Home() {
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">{t.discordSupport.title}</h2>
             <p className="mx-auto mt-3 max-w-xl flex-1 text-zinc-400">{t.discordSupport.text}</p>
             <a
-              href="https://discord.gg/bDdx57YsHT"
+              href="https://discord.com/oauth2/authorize?client_id=1558550077948043345"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-discord mt-8 px-8"
