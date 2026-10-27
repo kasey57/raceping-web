@@ -330,7 +330,7 @@ export default function Home() {
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">{t.discordSupport.title}</h2>
             <p className="mx-auto mt-3 max-w-xl flex-1 text-zinc-400">{t.discordSupport.text}</p>
             <a
-              href="https://discord.com/oauth2/authorize?client_id=1558550077948043345"
+              href={INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-discord mt-8 px-8"
