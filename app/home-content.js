@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -47,7 +47,7 @@ function getNextRaceDetail(race, lang, t) {
   const parts = [formatWeekendRange(startDate, race.date, lang), location, circuit, t.hero.demo.countdown]
     .filter(Boolean);
 
-  return parts.join(' Â· ');
+  return parts.join(' · ');
 }
 
 export default function Home() {
@@ -170,12 +170,12 @@ export default function Home() {
             <span className="h-2.5 w-2.5 rounded-full bg-brand/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-            <span className="ml-2">Discord â€” #race-weekend</span>
+            <span className="ml-2">Discord — #race-weekend</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-3">
             <span className="rounded bg-black/60 px-2 py-1 font-sans text-sm text-red-300">/next F1</span>
             <span className="h-5 w-px animate-pulse bg-brand" />
-            <span className="text-sm text-zinc-500">ďĽ‹ schedule Â· result Â· standings</span>
+            <span className="text-sm text-zinc-500">/next · schedule · result · standings</span>
           </div>
           <div className="mx-4 mb-4 rounded-xl border border-white/[0.07] border-l-4 border-l-brand bg-carbon/80 p-4 sm:p-5">
             <p className="mb-2 text-xs uppercase tracking-wide text-zinc-500">{t.hero.demo.label}</p>
