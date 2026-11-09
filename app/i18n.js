@@ -1,4 +1,4 @@
-// All website copy lives here in both languages.
+﻿// All website copy lives here in both languages.
 // English stays the default; Polish is the second language.
 // Build-time stats provide a fallback; the homepage refreshes public/stats.json at runtime.
 
@@ -26,7 +26,7 @@ export const translations = {
       changelog: 'Changelog',
       faq: 'FAQ',
       contact: 'Contact',
-      cta: 'Add to Server',
+      cta: 'Add on Discord',
       langLabel: 'Language',
       menu: 'Menu',
       closeMenu: 'Close',
@@ -36,10 +36,10 @@ export const translations = {
       title1: 'Never miss a race ',
       title2: 'again',
       subtitle: 'Schedules, results, standings and reminders for 16 series — right inside Discord, in English and Polish.',
-      ctaPrimary: 'Add to Server',
+      ctaPrimary: 'Add on Discord',
       ctaSecondary: 'See commands',
       statsNote: '* Combined server reach estimate; includes bots and people present in multiple servers.',
-      demo: { label: 'Example preview', raceName: 'Mexico City Grand Prix', detail: 'Oct 30–Nov 1 · Mexico City · Autódromo Hermanos Rodríguez · race countdown', countdown: 'race countdown', qualifying: 'Qualifying Sat', race: 'Race Sun' },
+      demo: { label: 'Example preview', raceName: 'Las Vegas Grand Prix', detail: 'Nov 19–21 · Las Vegas · Las Vegas Strip Circuit · race countdown', countdown: 'race countdown', qualifying: 'Qualifying Fri', race: 'Race Sat' },
       stats: [
         { value: '16', label: 'series covered' },
         { value: '19', label: 'slash commands' },
@@ -53,16 +53,16 @@ export const translations = {
         description: 'Explore 16 motorsport series supported by RacePing, including F1, F2, F3, WEC, ELMS, IMSA, MotoGP and NASCAR.',
       },
       hero: {
-        badge: 'Series coverage',
+        badge: 'Supported championships',
         title1: '16 racing series, ',
         title2: 'one bot',
         subtitle: 'Follow the championships you care about with race schedules, results, standings and reminders on Discord.',
-        ctaPrimary: 'Add to Server',
+        ctaPrimary: 'Add on Discord',
         ctaSecondary: 'Explore series',
-        panelLabel: 'Coverage at a glance',
+        panelLabel: 'Championships at a glance',
         panelTitle: 'From single-seaters to endurance',
         categories: [
-          { name: 'Open-wheels', count: '5 series', items: 'F1 · F2 · F3 · Formula E · IndyCar' },
+          { name: 'Single-seater racing', count: '5 series', items: 'F1 · F2 · F3 · Formula E · IndyCar' },
           { name: 'Endurance racing', count: '5 series', items: 'FIA WEC · ELMS · ALMS · Le Mans Cup · IMSA' },
           { name: 'Grand Prix motorcycles', count: '3 series', items: 'MotoGP · Moto2 · Moto3' },
           { name: 'NASCAR', count: '3 series', items: 'Cup · O’Reilly · Craftsman Truck' },
@@ -105,7 +105,6 @@ export const translations = {
     },
     sections: {
       series: {
-        kicker: 'Coverage',
         title: 'Sixteen series, one bot',
         text: 'From Formula 1 (F1), Formula 2, Formula 3, Formula E and MotoGP to multi-class endurance racing.',
       },
@@ -129,19 +128,19 @@ export const translations = {
       },
     },
     series: [
-      { code: 'F1', name: 'Formula 1', emoji: '🏎️', note: 'The FIA Formula One World Championship is the pinnacle of single-seater racing; follow its schedule, session results and championship standings.' },
-      { code: 'F2', name: 'Formula 2', emoji: '🏎️', note: 'The final step before Formula 1, with sprint and feature races, full classifications and driver/team standings.' },
-      { code: 'F3', name: 'Formula 3', emoji: '🏎️', note: 'The entry-level FIA single-seater series, with sprint and feature races, full classifications and standings.' },
+      { code: 'F1', name: 'Formula 1', emoji: 'đźŹŽď¸Ź', note: 'The FIA Formula One World Championship is the pinnacle of single-seater racing; follow its schedule, session results and championship standings.' },
+      { code: 'F2', name: 'Formula 2', emoji: 'đźŹŽď¸Ź', note: 'The final step before Formula 1, with sprint and feature races, full classifications and driver/team standings.' },
+      { code: 'F3', name: 'Formula 3', emoji: 'đźŹŽď¸Ź', note: 'The entry-level FIA single-seater series, with sprint and feature races, full classifications and standings.' },
       { code: 'FE', name: 'Formula E', emoji: '⚡', note: 'The all-electric single-seater world championship.' },
       { code: 'MOTOGP', name: 'MotoGP', emoji: '🏍️', note: 'The premier class of Grand Prix motorcycle racing, featuring prototype bikes and the sport’s highest performance.' },
-      { code: 'MOTO2', name: 'Moto2', emoji: '🏍️', note: 'The intermediate 765 cc class and a common next step for riders progressing toward MotoGP.' },
-      { code: 'MOTO3', name: 'Moto3', emoji: '🏍️', note: 'The 250 cc entry class, where many riders begin their Grand Prix path toward Moto2 and MotoGP.' },
+      { code: 'MOTO2', name: 'Moto2', emoji: 'đźŹŤď¸Ź', note: 'The intermediate 765 cc class and a common next step for riders progressing toward MotoGP.' },
+      { code: 'MOTO3', name: 'Moto3', emoji: 'đźŹŤď¸Ź', note: 'The 250 cc entry class, where many riders begin their Grand Prix path toward Moto2 and MotoGP.' },
       { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'North America’s premier open-wheel series, racing on ovals, street circuits and road courses.' },
       { code: 'FIA WEC', name: 'FIA World Endurance Championship', emoji: '🏁', note: 'The FIA’s world championship for multi-class endurance racing.' },
-      { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'A European multi-class endurance series featuring LMP2, LMP3 and LMGT3 cars.' },
-      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Asia’s international multi-class endurance series.' },
-      { code: 'LMC', name: 'Michelin Le Mans Cup', emoji: '🏁', note: 'Endurance racing for LMP3 prototypes and GT3 cars.' },
-      { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'North American multi-class sports-car racing, with GTP and LMP2 prototypes alongside GTD cars.' },
+      { code: 'ELMS', name: 'European Le Mans Series', emoji: 'đźŹ', note: 'A European multi-class endurance series featuring LMP2, LMP3 and LMGT3 cars.' },
+      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: 'đźŹ', note: 'An international multi-class endurance championship.' },
+      { code: 'LMC', name: 'Michelin Le Mans Cup', emoji: 'đźŹ', note: 'Endurance racing for LMP3 prototypes and GT3 cars.' },
+      { code: 'IMSA', name: 'IMSA', emoji: 'đźŹŽď¸Ź', note: 'North American multi-class sports-car racing, with GTP and LMP2 prototypes alongside GTD cars.' },
       { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'NASCAR’s premier stock-car series, racing on oval, road and street courses.' },
       { code: 'O’REILLY', name: 'NASCAR O’Reilly Auto Parts Series', emoji: '🏁', note: 'NASCAR’s second-tier national stock-car series.' },
       { code: 'TRUCK', name: 'NASCAR Craftsman Truck Series', emoji: '🏁', note: 'NASCAR’s national series for racing trucks based on pickup designs.' },
@@ -241,7 +240,7 @@ export const translations = {
       {
         n: '1',
         title: 'Add the bot',
-        text: 'Invite RacePing to your server with the button below to get started.',
+        text: 'Add RacePing as a Discord app or invite it to a server with the button below.',
       },
       {
         n: '2',
@@ -280,7 +279,7 @@ export const translations = {
     final: {
       title: 'Lights out — are you watching?',
       text: 'Add RacePing to your server and get your first reminder before the next race.',
-      cta: 'Add to Server',
+      cta: 'Add on Discord',
     },
     support: {
       kicker: 'Support',
@@ -333,7 +332,7 @@ export const translations = {
       changelog: 'Zmiany',
       faq: 'FAQ',
       contact: 'Kontakt',
-      cta: 'Dodaj na serwer',
+      cta: 'Dodaj na Discorda',
       langLabel: 'Język',
       menu: 'Menu',
       closeMenu: 'Zamknij',
@@ -343,10 +342,10 @@ export const translations = {
       title1: 'Już nigdy nie przegap ',
       title2: 'wyścigu',
       subtitle: 'Terminarze, wyniki, klasyfikacje i prywatne przypomnienia dla 16 serii — na Discordzie, po polsku i angielsku.',
-      ctaPrimary: 'Dodaj na serwer',
+      ctaPrimary: 'Dodaj na Discorda',
       ctaSecondary: 'Zobacz komendy',
       statsNote: '* Łączny szacunkowy zasięg; obejmuje boty i osoby obecne na wielu serwerach.',
-      demo: { label: 'Przykładowy podgląd', raceName: 'Grand Prix Meksyku', detail: '30 października–1 listopada · Mexico City · Autódromo Hermanos Rodríguez · odliczanie do wyścigu', countdown: 'odliczanie do wyścigu', qualifying: 'Kwalifikacje: sobota', race: 'Wyścig: niedziela' },
+      demo: { label: 'Przykładowy podgląd', raceName: 'Grand Prix Las Vegas', detail: '19–21 listopada · Las Vegas · Las Vegas Strip Circuit · odliczanie do wyścigu', countdown: 'odliczanie do wyścigu', qualifying: 'Kwalifikacje: piątek', race: 'Wyścig: sobota' },
       stats: [
         { value: '16', label: 'serii w jednym bocie' },
         { value: '19', label: 'komend slash' },
@@ -364,12 +363,12 @@ export const translations = {
         title1: '16 serii wyścigowych, ',
         title2: 'jeden bot',
         subtitle: 'Śledź wybrane mistrzostwa dzięki harmonogramom, wynikom, klasyfikacjom i przypomnieniom na Discordzie.',
-        ctaPrimary: 'Dodaj na serwer',
+        ctaPrimary: 'Dodaj na Discorda',
         ctaSecondary: 'Poznaj serie',
-        panelLabel: 'Zakres w skrócie',
+        panelLabel: 'Serie w skrócie',
         panelTitle: 'Od bolidów po wyścigi długodystansowe',
         categories: [
-          { name: 'Openwheele', count: '5 serii', items: 'F1 · F2 · F3 · Formula E · IndyCar' },
+          { name: 'Bolidy jednomiejscowe', count: '5 serii', items: 'F1 · F2 · F3 · Formula E · IndyCar' },
           { name: 'Wyścigi endurance', count: '5 serii', items: 'FIA WEC · ELMS · ALMS · Le Mans Cup · IMSA' },
           { name: 'Motocyklowe Grand Prix', count: '3 serie', items: 'MotoGP · Moto2 · Moto3' },
           { name: 'NASCAR', count: '3 serie', items: 'Cup · O’Reilly · Craftsman Truck' },
@@ -382,7 +381,7 @@ export const translations = {
         text: 'Poznaj mistrzostwa śledzone przez RacePing i przeczytaj krótkie opisy każdej z nich.',
       },
       groupNames: {
-        formula: 'Openwheele',
+        formula: 'Bolidy jednomiejscowe',
         endurance: 'Wyścigi endurance',
         motorcycles: 'Motocyklowe Grand Prix',
         nascar: 'NASCAR',
@@ -412,7 +411,6 @@ export const translations = {
     },
     sections: {
       series: {
-        kicker: 'Zakres',
         title: 'Szesnaście serii, jeden bot',
         text: 'Od Formula 1 (F1), Formula 2, Formula 3, Formula E i MotoGP po wieloklasowe wyścigi długodystansowe.',
       },
@@ -423,8 +421,8 @@ export const translations = {
       },
       commands: {
         kicker: 'Komendy',
-        title: '19 głównych komend slash',
-        text: '19 komend głównych obejmuje skróty poszczególnych serii oraz warianty /standings, /channel i /raceweek.',
+        title: '19 komend slash',
+        text: 'To 19 publicznych poleceń, w tym skróty dla poszczególnych serii oraz warianty /standings, /channel i /raceweek.',
       },
       setup: {
         kicker: 'Konfiguracja',
@@ -446,7 +444,7 @@ export const translations = {
       { code: 'INDYCAR', name: 'IndyCar', emoji: '🏎️', note: 'Najważniejsza północnoamerykańska seria wyścigów jednomiejscowych; zawody odbywają się na owalach, ulicznych trasach i torach drogowych.' },
       { code: 'FIA WEC', name: 'FIA World Endurance Championship', emoji: '🏁', note: 'Mistrzostwa świata FIA w wieloklasowych wyścigach długodystansowych.' },
       { code: 'ELMS', name: 'European Le Mans Series', emoji: '🏁', note: 'Europejska wieloklasowa seria wyścigów długodystansowych aut LMP2, LMP3 i LMGT3.' },
-      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Międzynarodowa wieloklasowa seria wyścigów długodystansowych rozgrywana w Azji.' },
+      { code: 'ALMS', name: 'Asian Le Mans Series', emoji: '🏁', note: 'Międzynarodowa wieloklasowa seria wyścigów długodystansowych.' },
       { code: 'LMC', name: 'Michelin Le Mans Cup', emoji: '🏁', note: 'Seria wyścigów długodystansowych prototypów LMP3 i samochodów GT3.' },
       { code: 'IMSA', name: 'IMSA', emoji: '🏎️', note: 'Północnoamerykańskie wieloklasowe wyścigi aut sportowych: prototypy GTP i LMP2 obok samochodów klasy GTD.' },
       { code: 'NASCAR', name: 'NASCAR Cup Series', emoji: '🏁', note: 'Najwyższa seria NASCAR dla samochodów typu stock car, ścigających się na owalach, torach drogowych i ulicznych.' },
@@ -548,7 +546,7 @@ export const translations = {
       {
         n: '1',
         title: 'Dodaj bota',
-        text: 'Zaproś RacePing na swój serwer przyciskiem poniżej.',
+        text: 'Dodaj RacePing jako aplikację Discorda albo zaproś go na serwer przyciskiem poniżej.',
       },
       {
         n: '2',
@@ -587,7 +585,7 @@ export const translations = {
     final: {
       title: 'Światła gasną — oglądasz?',
       text: 'Dodaj RacePing na swój serwer i pierwsze przypomnienie dotrze przed następnym wyścigiem.',
-      cta: 'Dodaj na serwer',
+      cta: 'Dodaj na Discorda',
     },
     support: {
       kicker: 'Wsparcie',
@@ -626,3 +624,4 @@ export const translations = {
     },
   },
 };
+

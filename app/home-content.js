@@ -29,7 +29,7 @@ function formatWeekendRange(startDate, endDate, lang) {
 
   return typeof formatter.formatRange === 'function'
     ? formatter.formatRange(start, end)
-    : `${formatter.format(start)} â€“ ${formatter.format(end)}`;
+    : `${formatter.format(start)} – ${formatter.format(end)}`;
 }
 
 function getNextRaceName(race, lang) {
@@ -55,6 +55,7 @@ export default function Home() {
   const href = (path) => localizedPath(path, lang);
   const [liveStats, setLiveStats] = useState(null);
   const [nextRace, setNextRace] = useState(null);
+  const [commandFilter, setCommandFilter] = useState(0);
 
   useEffect(() => {
     let active = true;
@@ -158,6 +159,15 @@ export default function Home() {
             {t.hero.ctaSecondary}
           </a>
         </div>
+        <div className="mx-auto mt-5 flex max-w-xl items-start gap-3 rounded-xl border border-brand/20 bg-brand/[0.06] p-4 text-left lg:mx-0">
+          <span aria-hidden className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand/15 text-brand">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" d="M7 8h10M7 12h6m-9 8 2.2-3.3A8 8 0 1 1 20 17H9l-5 3Z" /></svg>
+          </span>
+          <div>
+            <p className="font-semibold text-zinc-100">{lang === 'pl' ? 'Nie masz serwera? To żaden problem.' : 'No Discord server? No problem.'}</p>
+            <p className="mt-1 text-sm leading-relaxed text-zinc-400">{lang === 'pl' ? 'Dodaj RacePing jako aplikację i używaj komend bezpośrednio w wiadomościach prywatnych.' : 'Add RacePing as an app and use its commands directly in your DMs.'}</p>
+          </div>
+        </div>
         <div className="mt-8 flex flex-wrap justify-center gap-2 lg:justify-start" aria-label="Supported series">
           {['F1', 'F2', 'F3', 'Formula E', 'MotoGP', 'Moto2', 'Moto3', 'IndyCar', 'WEC', 'ELMS', 'ALMS', 'Le Mans Cup', 'IMSA', 'NASCAR'].map((series) => (
             <span key={series} className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1 text-xs font-medium text-zinc-400">{series}</span>
@@ -211,7 +221,7 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.series.map((s) => (
             <div key={s.code} className="surface-card surface-card-hover group p-5">
-              <p className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.035] text-2xl transition group-hover:border-brand/30 group-hover:bg-brand/10">{s.emoji}</p>
+              <p aria-hidden className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.035] font-mono text-xs font-bold tracking-tight text-zinc-300 transition group-hover:border-brand/30 group-hover:bg-brand/10 group-hover:text-white">{s.code.replace(/^FIA\s+/, '').slice(0, 4)}</p>
               <p className="mt-2 font-bold">
                 {s.name} <span className="ml-1 rounded bg-white/10 px-2 py-0.5 text-xs text-zinc-300">{s.code}</span>
               </p>
@@ -248,8 +258,25 @@ export default function Home() {
           title={t.sections.commands.title}
           text={t.sections.commands.text}
         />
+        <div className="mb-6 flex flex-wrap justify-center gap-2" role="group" aria-label={lang === 'pl' ? 'Filtruj komendy' : 'Filter commands'}>
+          {[
+            lang === 'pl' ? 'Wszystkie' : 'All',
+            lang === 'pl' ? 'Weekend wyścigowy' : 'Race weekend',
+            lang === 'pl' ? 'Wyniki' : 'Results',
+            lang === 'pl' ? 'Ustawienia i przypomnienia' : 'Settings & reminders',
+          ].map((label, index) => (
+            <button key={label} type="button" onClick={() => setCommandFilter(index)} aria-pressed={commandFilter === index} className={`rounded-full border px-4 py-2 text-sm font-medium transition ${commandFilter === index ? 'border-brand/40 bg-brand/15 text-red-200' : 'border-white/10 bg-white/[0.03] text-zinc-400 hover:border-white/20 hover:text-white'}`}>
+              {label}
+            </button>
+          ))}
+        </div>
         <div className="grid gap-3 sm:grid-cols-2">
-          {t.commands.map(([cmd, desc], i) => (
+          {t.commands.filter(([cmd]) => {
+            if (commandFilter === 1) return /next|calendar|schedule|raceweek/.test(cmd);
+            if (commandFilter === 2) return /result|last|standings/.test(cmd);
+            if (commandFilter === 3) return /remind|timezone|setup|lang/.test(cmd);
+            return true;
+          }).map(([cmd, desc]) => (
             <div
               key={cmd}
               className="surface-card flex items-center justify-between gap-4 px-4 py-4 transition hover:border-white/20 sm:px-5"
