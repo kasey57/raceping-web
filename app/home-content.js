@@ -221,10 +221,7 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.series.map((s) => (
             <div key={s.code} className="surface-card surface-card-hover group p-5">
-              <p aria-hidden className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.035] font-mono text-xs font-bold tracking-tight text-zinc-300 transition group-hover:border-brand/30 group-hover:bg-brand/10 group-hover:text-white">{s.code.replace(/^FIA\s+/, '').slice(0, 4)}</p>
-              <p className="mt-2 font-bold">
-                {s.name} <span className="ml-1 rounded bg-white/10 px-2 py-0.5 text-xs text-zinc-300">{s.code}</span>
-              </p>
+              <p className="text-lg font-bold">{s.name}</p>
               <p className="mt-1 text-sm text-zinc-400">{s.note}</p>
             </div>
           ))}
@@ -382,6 +379,35 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Recommended */}
+      <section id="recommended" className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+        <SectionTitle kicker={t.recommended.kicker} title={t.recommended.title} />
+        <a
+          href="https://lmu.boci3k.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="surface-card surface-card-hover group relative block overflow-hidden p-6 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand sm:p-8"
+        >
+          <div aria-hidden className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-brand/10 blur-3xl transition group-hover:bg-brand/20" />
+          <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-black/30 p-3 sm:h-28 sm:w-28">
+              <img src="/broadcassst-control-logo.png" alt={t.recommended.logoAlt} className="h-full w-full rounded-xl object-contain" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-3">
+                <h3 className="font-display text-xl font-extrabold text-white sm:text-2xl">Broadcassst Control</h3>
+              </div>
+              <p className="mt-3 max-w-3xl leading-relaxed text-zinc-400">{t.recommended.text}</p>
+              <div className="mt-5">
+          <span className="mt-5 inline-flex items-center gap-2 font-semibold text-brand transition group-hover:gap-3">
+            {t.recommended.cta}<span aria-hidden>→</span>
+          </span>
+              </div>
+            </div>
+          </div>
+        </a>
       </section>
 
       {/* Final CTA */}

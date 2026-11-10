@@ -96,10 +96,7 @@ export default function SeriesContent() {
                     if (!series) return null;
                     return (
                       <article key={series.code} className="surface-card surface-card-hover group p-5">
-                        <p aria-hidden className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.035] font-mono text-xs font-bold tracking-tight text-zinc-300 transition group-hover:border-brand/30 group-hover:bg-brand/10 group-hover:text-white">{series.code.replace(/^FIA\s+/, '').slice(0, 4)}</p>
-                        <h4 className="mt-2 font-bold text-white">
-                          {series.name} <span className="ml-1 rounded bg-white/10 px-2 py-0.5 text-xs font-medium text-zinc-300">{series.code}</span>
-                        </h4>
+                        <h4 className="font-bold text-white">{series.name}</h4>
                         <p className="mt-2 text-sm leading-relaxed text-zinc-400">{series.note}</p>
                       </article>
                     );

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: { agentUpgrade: 'security' },
   // Static export: produces a plain `out/` folder (HTML/CSS/JS) that can be
   // uploaded to any shared hosting (cPanel/Plesk) as-is.
   output: 'export',
